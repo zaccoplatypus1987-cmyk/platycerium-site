@@ -1,0 +1,376 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="トップページ">
+  <style>
+    /* カスタムアニメーション */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient 15s ease infinite;
+    }
+
+    /* グラスモーフィズム */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-dark {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* 画像ホバーエフェクト */
+    .image-reveal {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-reveal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+      z-index: 10;
+    }
+
+    .image-reveal:hover::before {
+      left: 100%;
+    }
+  </style>
+
+  <Header />
+
+  <main class="bg-black">
+    <!-- ヒーローセクション - フルスクリーン・インパクト重視 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- 背景 - アニメーショングラデーション -->
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-950 via-black to-teal-950 animate-gradient"></div>
+
+      <!-- グリッド背景 -->
+      <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+      <!-- 装飾的な円 -->
+      <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+
+      <!-- メインコンテンツ -->
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto text-center">
+          <!-- 超巨大タイトル -->
+          <h1 class="text-8xl md:text-9xl font-black mb-8 leading-none">
+            <span class="block text-white" style="text-shadow: 0 0 80px rgba(16, 185, 129, 0.5);">PLATYCERIUM</span>
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 animate-gradient">COLLECTION</span>
+          </h1>
+
+          <!-- サブタイトル - 思いを伝える -->
+          <div class="max-w-3xl mx-auto mb-12">
+            <p class="text-2xl md:text-3xl text-gray-300 font-light mb-6 leading-relaxed">
+              5年間育ててきて感じた、<br class="hidden md:block">
+              ビカクシダの魅力を伝えたい。
+            </p>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
+              これから始める方にも、すでに育てている方にも。<br class="hidden md:block">
+              実際の栽培で学んだこと、失敗から得た知識、<br class="hidden md:block">
+              この植物の素晴らしさを、写真と一緒に共有します。
+            </p>
+          </div>
+
+          <!-- CTAボタン - グロー効果 -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a href="/gallery" class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-10 py-5 rounded-full font-bold text-lg overflow-hidden hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
+              <span class="relative z-10">ギャラリーを見る</span>
+              <svg class="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+              <div class="absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </a>
+            <a href="/guide" class="group inline-flex items-center gap-3 glass-dark text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all duration-300">
+              <span>育て方ガイド</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- 3つの特徴 - コンパクト -->
+          <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mb-3">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-400 text-sm">成長記録</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mb-3">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <p class="text-gray-400 text-sm">栽培ノウハウ</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mb-3">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-400 text-sm">知識の共有</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Box Grid - 写真を大胆に見せる -->
+    <section class="py-32 bg-black relative">
+      <!-- グラデーション背景 -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black via-emerald-950/20 to-black"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <!-- セクションヘッダー -->
+        <div class="max-w-4xl mx-auto text-center mb-20">
+          <h2 class="text-6xl md:text-7xl font-black text-white mb-6">
+            <span class="block">コンテンツ</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            爆速で育つやつから、ごんぶとになるやつまで。
+          </p>
+        </div>
+
+        <!-- Bento Grid - 非対称・モダン -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
+          <!-- 大: ギャラリー（左側、縦長） -->
+          <a href="/gallery" class="group md:col-span-5 md:row-span-2 relative overflow-hidden rounded-3xl image-reveal aspect-[4/5] md:aspect-auto">
+            <img
+              src="/images/gallery-card.jpg"
+              alt="ギャラリー"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            <div class="absolute inset-0 glass-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+              <div class="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                <span class="text-emerald-400 text-sm font-bold uppercase tracking-wider">Featured</span>
+              </div>
+              <h3 class="text-4xl md:text-5xl font-black text-white mb-4">
+                品種ギャラリー
+              </h3>
+              <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                各品種の成長過程を写真で記録。<br>
+                爆速で育つやつ、ごんぶとになるやつ。<br>
+                どんな風に変化していくのかを見てください。
+              </p>
+              <div class="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all">
+                <span>見る</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 中: 栽培ノウハウ（右上） -->
+          <a href="/guide" class="group md:col-span-7 relative overflow-hidden rounded-3xl image-reveal aspect-[16/9]">
+            <img
+              src="/images/guide-card.jpg"
+              alt="栽培ノウハウ"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-br from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 glass-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="absolute inset-0 p-8 flex flex-col justify-between">
+              <div class="inline-flex items-center gap-2 bg-teal-500/20 backdrop-blur-sm px-4 py-2 rounded-full self-start">
+                <span class="text-teal-400 text-sm font-bold uppercase tracking-wider">Guide</span>
+              </div>
+              <div>
+                <h3 class="text-3xl md:text-4xl font-black text-white mb-3">
+                  栽培ノウハウ
+                </h3>
+                <p class="text-gray-300 mb-4 max-w-lg">
+                  5年間の試行錯誤で学んだこと。<br>
+                  失敗談も含めて、実践的な育て方を共有します。
+                </p>
+                <div class="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all">
+                  <span>学ぶ</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 中: 使用道具（右下） -->
+          <a href="/tools" class="group md:col-span-4 relative overflow-hidden rounded-3xl image-reveal aspect-square">
+            <img
+              src="/images/tools-card.jpg"
+              alt="使用道具"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-br from-black/60 to-transparent"></div>
+            <div class="absolute inset-0 glass-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="absolute inset-0 p-6 flex flex-col justify-end">
+              <h3 class="text-2xl md:text-3xl font-black text-white mb-2">
+                使用道具
+              </h3>
+              <p class="text-gray-300 text-sm mb-3">
+                実際に使用している道具や資材。<br>
+                選んだ理由も一緒にご紹介します。
+              </p>
+              <div class="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all">
+                <span>見る</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 作成者について -->
+          <div class="md:col-span-3 glass-dark rounded-3xl p-6 md:p-8 flex flex-col justify-center aspect-square">
+            <div class="text-center">
+              <!-- ビカキンちゃん -->
+              <div class="mx-auto mb-4 w-24 h-24 relative">
+                <img
+                  src="/images/bikakin-standing-01.png"
+                  alt="ビカキンちゃん"
+                  class="w-full h-full object-contain drop-shadow-2xl hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">このサイトについて</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                5年間の栽培経験を持つ<br>
+                個人が運営しています
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特徴セクション - カード -->
+    <section class="py-32 bg-gradient-to-b from-black to-emerald-950/20 relative">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- カード1 -->
+            <div class="glass-dark rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">
+                成長の記録
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                写真で追う成長の軌跡。植え付けから現在まで、各品種の変化を記録しています。
+              </p>
+            </div>
+
+            <!-- カード2 -->
+            <div class="glass-dark rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+              <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">
+                経験から学ぶ
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                5年間の栽培で得た知識。成功だけでなく、失敗から学んだことも包み隠さず共有します。
+              </p>
+            </div>
+
+            <!-- カード3 -->
+            <div class="glass-dark rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">
+                魅力を伝える
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                この植物の魅力をもっと多くの人に知ってもらいたい。新しい発見は随時更新していきます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA - シンプル・強力 -->
+    <section class="py-32 bg-gradient-to-b from-emerald-950/20 to-black relative overflow-hidden">
+      <!-- 背景装飾 -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-3xl"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- ビカキンちゃんポスター -->
+            <div class="w-48 md:w-64 flex-shrink-0">
+              <img
+                src="/images/bikakin-poster-watering.png"
+                alt="教えてビカキンちゃん"
+                class="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <!-- テキストコンテンツ -->
+            <div class="flex-1 text-center md:text-left">
+              <h2 class="text-5xl md:text-6xl font-black text-white mb-6">
+                これから始める方へ
+              </h2>
+              <p class="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed">
+                ビカクシダに興味を持ってくれてありがとうございます。<br>
+                水やりの頻度、板付けのやり方、環境づくり。<br>
+                5年間の経験で学んだことを、順を追って解説します。
+              </p>
+
+              <a href="/guide/beginner" class="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-12 py-6 rounded-full font-bold text-xl overflow-hidden hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105">
+                <span class="relative z-10">初心者ガイドを読む</span>
+                <svg class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+                <div class="absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

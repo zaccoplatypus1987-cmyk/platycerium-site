@@ -1,0 +1,63 @@
+---
+// ヘッダーコンポーネント
+---
+
+<header class="bg-white shadow-sm">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <!-- ロゴ -->
+      <a href="/" class="text-2xl font-bold text-green-700 hover:text-green-800">
+        Platycerium Collection
+      </a>
+
+      <!-- ナビゲーションメニュー -->
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a href="/gallery" class="text-gray-700 hover:text-green-700 transition">
+            ギャラリー
+          </a>
+        </li>
+        <li>
+          <a href="/guide" class="text-gray-700 hover:text-green-700 transition">
+            栽培ノウハウ
+          </a>
+        </li>
+        <li>
+          <a href="/tools" class="text-gray-700 hover:text-green-700 transition">
+            使用道具
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="text-gray-700 hover:text-green-700 transition">
+            About
+          </a>
+        </li>
+      </ul>
+
+      <!-- モバイルメニューボタン -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+      <a href="/gallery" class="block py-2 text-gray-700 hover:text-green-700">ギャラリー</a>
+      <a href="/guide" class="block py-2 text-gray-700 hover:text-green-700">栽培ノウハウ</a>
+      <a href="/tools" class="block py-2 text-gray-700 hover:text-green-700">使用道具</a>
+      <a href="/about" class="block py-2 text-gray-700 hover:text-green-700">About</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // モバイルメニューの開閉
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
