@@ -1,0 +1,82 @@
+{
+  "species": {
+    "id": "ジサクボながいの",
+    "mainSpecies": "veitchii",
+    "tag": "#ジサクボながいの",
+    "displayName": "P.veitchii longfinger",
+    "count": 2,
+    "latestPost": {
+      "id": "1677978910-0",
+      "date": "2023-03-05",
+      "image": "instagram-data/media/posts/202303/18039663574432789.jpg",
+      "caption": "P.veitchii longfinger"
+    }
+  },
+  "posts": [
+    {
+      "id": "1677978910-0",
+      "date": "2023-03-05",
+      "timestamp": 1677978910,
+      "caption": "P.veitchii longfinger\nベイチー不毛の地である我が家にも一縷の望みが��\n\nついに尖りそうな株が出てきました。\n胞子もついているし、ついに成熟したのでしょうか。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#platyceriumveitchii\n\n#ジサクボながいの",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "platyceriumveitchii",
+        "ジサクボながいの"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202303/18039663574432789.jpg",
+          "timestamp": 1677978909
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17902834844745699.jpg",
+          "timestamp": 1677978909
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1677978910-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:longfinger vs ハッシュ:ながいの）"
+        }
+      }
+    },
+    {
+      "id": "1656584098-0",
+      "date": "2022-06-30",
+      "timestamp": 1656584098,
+      "caption": "なんか胞子葉がカールしてきました。病気？\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ普及委員会 \n#platycerium\n\n#ジサクボながいの",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ普及委員会",
+        "platycerium",
+        "ジサクボながいの"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202206/17950190137956835.jpg",
+          "timestamp": 1656584098
+        },
+        {
+          "path": "instagram-data/media/posts/202206/17881537730688301.jpg",
+          "timestamp": 1656584098
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1656584098-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    }
+  ]
+}

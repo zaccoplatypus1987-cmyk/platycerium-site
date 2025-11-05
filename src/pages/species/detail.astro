@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="品種別詳細 - Platycerium Collection">
+  <style>
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .post-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .post-image {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    /* 栽培管理タグのスタイル */
+    .care-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.375rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .care-tag:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Day バッジのスタイル */
+    .day-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #4A7C2F 0%, #6FA83F 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(74, 124, 47, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .day-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(74, 124, 47, 0.4);
+    }
+
+    /* タグごとの色設定（3種類 + 購入タグ） */
+    .care-tag-purchase {
+      background-color: #EF4444; /* red-500 */
+    }
+
+    .care-tag-remount {
+      background-color: #10B981; /* green-500 */
+    }
+
+    .care-tag-moss {
+      background-color: #6366F1; /* indigo-500 */
+    }
+
+    .care-tag-fertilize {
+      background-color: #F59E0B; /* amber-500 */
+    }
+
+    /* モバイル対応 */
+    @media (max-width: 768px) {
+      .care-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+      }
+
+      .day-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+
+  <Header />
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Breadcrumb -->
+    <nav class="mb-6 text-sm text-gray-600">
+      <a href="/" class="hover:text-forest-mid">ホーム</a>
+      <span class="mx-2">/</span>
+      <a href="/species/" class="hover:text-forest-mid">品種一覧</a>
+      <span class="mx-2">/</span>
+      <a id="breadcrumb-species-link" href="#" class="hover:text-forest-mid">...</a>
+      <span class="mx-2">/</span>
+      <span id="breadcrumb-subspecies" class="text-gray-900">...</span>
+    </nav>
+
+    <!-- Species Header -->
+    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <h2 id="species-name-ja" class="text-3xl md:text-4xl font-bold text-forest-dark mb-2">
+            <!-- JavaScript で設定 -->
+          </h2>
+          <p id="species-name-en" class="text-lg text-gray-500 italic mb-4">
+            <!-- JavaScript で設定 -->
+          </p>
+          <p id="species-count" class="text-gray-600">
+            <!-- JavaScript で設定 -->
+          </p>
+        </div>
+
+        <a href="/species/" class="text-forest-mid hover:text-forest-dark transition-colors flex items-center gap-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          一覧に戻る
+        </a>
+      </div>
+
+      <!-- 品種説明（Notion連携時に使用） -->
+      <div id="species-description" class="mt-4 text-gray-700 leading-relaxed hidden">
+        <!-- JavaScript で設定 -->
+      </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="text-center py-12">
+      <div class="inline-flex items-center gap-2 text-gray-600">
+        <svg class="animate-spin h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span class="text-lg">投稿を読み込んでいます...</span>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error" class="hidden text-center py-12">
+      <p class="text-xl text-red-600 mb-4"></p>
+      <div class="space-x-4">
+        <button onclick="location.reload()" class="bg-forest-mid hover:bg-forest-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+          再読み込み
+        </button>
+        <a href="/species/" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-6 rounded-lg transition-colors">
+          一覧に戻る
+        </a>
+      </div>
+    </div>
+
+    <!-- Posts Grid -->
+    <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Posts will be rendered here -->
+    </div>
+  </main>
+
+  <Footer />
+
+  <!-- JavaScript -->
+  <script type="module" src="/scripts/species-detail-app.js"></script>
+
+  <!-- Mobile Menu Toggle -->
+  <script is:inline>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+  </script>
+</BaseLayout>

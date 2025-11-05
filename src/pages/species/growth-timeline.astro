@@ -1,0 +1,515 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="成長タイムライン - Platycerium Collection">
+  <style>
+    /* Global Typography */
+    body {
+      font-family: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Timeline styles */
+    .timeline-container {
+      position: relative;
+      padding-left: 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 36px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6FA83F 0%, #bbf7d0 100%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -58px;
+      top: 12px;
+      width: 32px;
+      height: 32px;
+      background: white;
+      border-radius: 50%;
+      border: 5px solid #6FA83F;
+      box-shadow: 0 0 0 6px rgba(111, 168, 63, 0.15);
+      z-index: 10;
+      transition: transform 0.3s ease;
+    }
+
+    .timeline-marker.first {
+      width: 40px;
+      height: 40px;
+      left: -62px;
+      background: #2D5016;
+      border: 6px solid white;
+      box-shadow: 0 0 0 6px #2D5016, 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-item:hover .timeline-marker {
+      transform: scale(1.15);
+    }
+
+    .timeline-content {
+      background: white;
+      border-radius: 20px;
+      padding: 0;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .timeline-header {
+      padding: 2rem 2.5rem;
+      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .care-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.625rem 1.25rem;
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #6FA83F;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2D5016;
+      transition: all 0.25s ease;
+      box-shadow: 0 3px 8px rgba(111, 168, 63, 0.2);
+    }
+
+    .care-tag:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(111, 168, 63, 0.3);
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    }
+
+    .care-tag-emoji {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    /* NEW: 写真レイアウト（1枚目を大きく、2枚目以降を小さく） */
+    .photo-layout {
+      padding: 1.5rem;
+      background-color: #f9fafb;
+    }
+
+    /* 1枚目の写真（縮小 - 1画面で2投稿見られるように） */
+    .main-photo {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
+    .main-photo img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      min-height: 250px;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-photo img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 2枚目以降の写真（小さく） */
+    .sub-photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .sub-photos img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .sub-photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* NEW: キャプション表示 */
+    .caption-section {
+      margin-top: 1rem;
+      padding: 1rem 1.5rem;
+      background-color: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .caption-text {
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-height: 6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* モーダル（拡大表示） */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s;
+    }
+
+    .modal.active {
+      display: block;
+    }
+
+    .modal-content {
+      display: block;
+      margin: 2rem auto;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      animation: zoomIn 0.3s;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(0, 0, 0, 0.5);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .close-modal:hover,
+    .close-modal:focus {
+      background: rgba(255, 0, 0, 0.8);
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Stats card styling */
+    .stat-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 2px solid rgba(111, 168, 63, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(111, 168, 63, 0.2);
+      border-color: rgba(111, 168, 63, 0.5);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-value {
+      font-size: 2.25rem;
+      font-weight: 900;
+      color: #2D5016;
+      line-height: 1;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .timeline-container {
+        padding-left: 0;
+      }
+
+      .timeline-line,
+      .timeline-marker {
+        display: none;
+      }
+
+      .timeline-header {
+        padding: 1.5rem 1.75rem;
+      }
+
+      .photo-layout {
+        padding: 1rem;
+      }
+
+      .main-photo img {
+        max-height: 250px;
+        min-height: 200px;
+      }
+
+      .sub-photos {
+        grid-template-columns: 1fr;
+      }
+
+      .sub-photos img {
+        height: 120px;
+      }
+
+      .stat-value {
+        font-size: 1.75rem;
+      }
+
+      .care-tag {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .day-label {
+        font-size: 0.875rem !important;
+        padding: 0.4rem 0.75rem !important;
+      }
+
+      .date-label {
+        font-size: 1.125rem !important;
+      }
+
+      .close-modal {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+      }
+
+      .modal-content {
+        margin: 4rem auto;
+      }
+
+      .caption-text {
+        font-size: 0.875rem;
+      }
+    }
+
+    /* Loading skeleton */
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Header improvements */
+    .page-header {
+      background: linear-gradient(135deg, #2D5016 0%, #4A7C2F 100%);
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.875rem 1.75rem;
+      background: white;
+      color: #2D5016;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      background: #f0fdf4;
+    }
+
+    /* Day label styling */
+    .day-label {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(111, 168, 63, 0.15);
+      border-radius: 10px;
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: #2D5016;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Date label - 修正: Day と同じサイズに */
+    .date-label {
+      font-size: 1.125rem;
+      font-weight: 900;
+      color: #1f2937;
+      letter-spacing: -0.02em;
+    }
+  </style>
+
+  <!-- Header -->
+  <header class="page-header text-white shadow-2xl">
+    <div class="container mx-auto px-6 py-6">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-3xl md:text-4xl font-black hover:text-green-100 transition-colors">
+          🌿 Platycerium Collection
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 md:px-6 py-12">
+    <!-- Loading State -->
+    <div id="loading-indicator" class="flex justify-center items-center py-32">
+      <div class="animate-spin rounded-full h-20 w-20 border-4 border-forest-light border-t-transparent"></div>
+    </div>
+
+    <!-- Error State -->
+    <div id="error-container" class="hidden max-w-2xl mx-auto">
+      <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-8 text-center shadow-xl">
+        <h2 class="text-2xl font-bold text-red-800 mb-3">エラーが発生しました</h2>
+        <p id="error-message" class="text-red-700 mb-6 text-lg"></p>
+        <a href="/" class="inline-block px-8 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all font-semibold shadow-lg hover:shadow-xl">
+          ホームに戻る
+        </a>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="timeline-container" class="hidden">
+      <!-- Header Section -->
+      <section class="mb-12">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
+          <a href="/" class="back-button mb-6">
+            <span>←</span>
+            <span>戻る</span>
+          </a>
+
+          <h1 id="species-title" class="text-4xl md:text-5xl font-black text-gray-900 mb-10 mt-4 leading-tight">
+            成長タイムライン
+          </h1>
+
+          <!-- Summary Stats -->
+          <div id="summary-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div class="stat-card">
+              <div class="stat-label">総投稿数</div>
+              <div id="total-posts" class="stat-value">-</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">栽培期間</div>
+              <div id="cultivation-period" class="stat-value text-xl md:text-2xl">-</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">開始日</div>
+              <div id="start-date" class="stat-value text-xl md:text-2xl">-</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">最新更新</div>
+              <div id="latest-date" class="stat-value text-xl md:text-2xl">-</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section class="timeline-container">
+        <div class="timeline-line hidden md:block"></div>
+        <div id="timeline-items">
+          <!-- Timeline items will be generated here -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal (拡大表示) -->
+  <div id="photo-modal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-image" alt="拡大表示">
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-header text-white py-12 mt-20">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm text-gray-200 font-medium">&copy; 2025 Platycerium Collection. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="/scripts/growth-timeline-app.js"></script>
+</BaseLayout>

@@ -1,0 +1,45 @@
+{
+  "species": {
+    "id": "ジサクボクアドリ",
+    "mainSpecies": "quadridichotomum",
+    "tag": "#ジサクボクアドリ",
+    "displayName": "P. quadridichotomum",
+    "count": 1,
+    "latestPost": {
+      "id": "1687060969-0",
+      "date": "2023-06-18",
+      "image": "instagram-data/media/posts/202306/18013030555638804.jpg",
+      "caption": "P. quadridichotomum"
+    }
+  },
+  "posts": [
+    {
+      "id": "1687060969-0",
+      "date": "2023-06-18",
+      "timestamp": 1687060969,
+      "caption": "P. quadridichotomum\nfrom @choco_bat_8th \n泣く子も黙るチョコバット氏のクアドリをついにゲットしました。\nこれはワリチーの隣に飾る用です。\n\nveitchiiとwillinckiiのスペルを間違えずに書けたらビカクシダ中級者、quadridichotomumを間違えずに書けたらビカクシダ上級者です、多分。\n\n#京都エンデミカ \n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n\n#ジサクボクアドリ",
+      "hashtags": [
+        "京都エンデミカ",
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ジサクボクアドリ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202306/18013030555638804.jpg",
+          "timestamp": 1687060969
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1687060969-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（quadridichotomum）- 信頼性高い"
+        }
+      }
+    }
+  ]
+}

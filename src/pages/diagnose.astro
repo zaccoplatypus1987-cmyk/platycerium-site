@@ -1,0 +1,485 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="ワンクリック診断ツール - Platycerium Collection">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 800px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .header p {
+      opacity: 0.9;
+    }
+    .content {
+      padding: 30px;
+    }
+    .button-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .result {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+    .status {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+    }
+    .status.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    .status.warning {
+      background: #fff3cd;
+      color: #856404;
+    }
+    .check-item {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    .check-item h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .check-item pre {
+      background: #2d3748;
+      color: #e2e8f0;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .summary {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .summary h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .summary-stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+    }
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #667eea;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <div class="container">
+    <div class="header">
+      <h1>🔍 ワンクリック診断ツール</h1>
+      <p>品種一覧ページ（/species/）のフィルター問題を自動診断します</p>
+    </div>
+
+    <div class="content">
+      <div class="button-container">
+        <button id="diagnoseBtn" onclick="runDiagnosis()">
+          🚀 診断を開始
+        </button>
+      </div>
+
+      <div id="resultContainer"></div>
+    </div>
+  </div>
+
+  <script is:inline>
+    let diagnosticResults = {
+      total: 0,
+      passed: 0,
+      failed: 0,
+      warnings: 0,
+      checks: []
+    };
+
+    async function runDiagnosis() {
+      const btn = document.getElementById('diagnoseBtn');
+      const container = document.getElementById('resultContainer');
+
+      btn.disabled = true;
+      container.innerHTML = `
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>診断を実行中...</p>
+        </div>
+      `;
+
+      // 結果をリセット
+      diagnosticResults = {
+        total: 0,
+        passed: 0,
+        failed: 0,
+        warnings: 0,
+        checks: []
+      };
+
+      // 各チェックを実行
+      await checkPageAccess();
+      await checkScriptFiles();
+      await checkDOMStructure();
+      await checkGlobalVariables();
+      await checkFilterGeneration();
+      await checkDataLoading();
+
+      // 結果を表示
+      displayResults();
+
+      btn.disabled = false;
+    }
+
+    function addCheck(name, status, details) {
+      diagnosticResults.total++;
+      if (status === 'success') diagnosticResults.passed++;
+      else if (status === 'error') diagnosticResults.failed++;
+      else if (status === 'warning') diagnosticResults.warnings++;
+
+      diagnosticResults.checks.push({ name, status, details });
+    }
+
+    async function checkPageAccess() {
+      try {
+        const response = await fetch('/species/');
+        if (response.ok) {
+          addCheck('ページアクセス', 'success', `HTTP ${response.status} - ページが正常に読み込まれました`);
+        } else {
+          addCheck('ページアクセス', 'error', `HTTP ${response.status} - ページの読み込みに失敗しました`);
+        }
+      } catch (error) {
+        addCheck('ページアクセス', 'error', `エラー: ${error.message}`);
+      }
+    }
+
+    async function checkScriptFiles() {
+      const scripts = [
+        '/scripts/detail-app.js',
+        '/scripts/species-detail-app.js'
+      ];
+
+      for (const script of scripts) {
+        try {
+          const response = await fetch(script);
+          if (response.ok) {
+            const content = await response.text();
+            addCheck(`スクリプトファイル: ${script}`, 'success',
+              `サイズ: ${(content.length / 1024).toFixed(2)} KB`);
+          } else {
+            addCheck(`スクリプトファイル: ${script}`, 'warning',
+              `HTTP ${response.status} - ファイルが見つかりません`);
+          }
+        } catch (error) {
+          addCheck(`スクリプトファイル: ${script}`, 'error', `エラー: ${error.message}`);
+        }
+      }
+    }
+
+    async function checkDOMStructure() {
+      const iframe = document.createElement('iframe');
+      iframe.src = '/species/';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+
+      return new Promise((resolve) => {
+        iframe.onload = () => {
+          setTimeout(() => {
+            const doc = iframe.contentDocument;
+
+            const elements = [
+              'species-accordion',
+              'date-accordion',
+              'cards-container',
+              'loading'
+            ];
+
+            elements.forEach(id => {
+              const element = doc.getElementById(id);
+              if (element) {
+                addCheck(`DOM要素: #${id}`, 'success',
+                  `要素が存在します（innerHTML length: ${element.innerHTML.length}）`);
+              } else {
+                addCheck(`DOM要素: #${id}`, 'error',
+                  '要素が見つかりません');
+              }
+            });
+
+            document.body.removeChild(iframe);
+            resolve();
+          }, 2000);
+        };
+      });
+    }
+
+    async function checkGlobalVariables() {
+      const iframe = document.createElement('iframe');
+      iframe.src = '/species/';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+
+      return new Promise((resolve) => {
+        iframe.onload = () => {
+          setTimeout(() => {
+            const win = iframe.contentWindow;
+
+            const variables = {
+              'allSpeciesData': 'object',
+              'buildSpeciesFilter': 'function',
+              'buildDateFilter': 'function',
+              'applyFilters': 'function',
+              'renderCards': 'function'
+            };
+
+            for (const [varName, expectedType] of Object.entries(variables)) {
+              const actualType = typeof win[varName];
+              if (actualType !== 'undefined') {
+                let details = `型: ${actualType}`;
+                if (varName === 'allSpeciesData' && Array.isArray(win[varName])) {
+                  details += `, 件数: ${win[varName].length}`;
+                }
+                addCheck(`グローバル変数: ${varName}`, 'success', details);
+              } else {
+                addCheck(`グローバル変数: ${varName}`, 'error',
+                  `変数が undefined です（期待値: ${expectedType}）`);
+              }
+            }
+
+            document.body.removeChild(iframe);
+            resolve();
+          }, 3000);
+        };
+      });
+    }
+
+    async function checkFilterGeneration() {
+      const iframe = document.createElement('iframe');
+      iframe.src = '/species/';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+
+      return new Promise((resolve) => {
+        iframe.onload = () => {
+          setTimeout(() => {
+            const doc = iframe.contentDocument;
+            const speciesAccordion = doc.getElementById('species-accordion');
+            const dateAccordion = doc.getElementById('date-accordion');
+
+            if (speciesAccordion) {
+              const html = speciesAccordion.innerHTML;
+              if (html.includes('<!-- Will be dynamically generated -->')) {
+                addCheck('原種フィルター生成', 'error',
+                  'フィルターが生成されていません（コメントのまま）');
+              } else if (html.length > 100) {
+                const checkboxCount = (html.match(/type="checkbox"/g) || []).length;
+                addCheck('原種フィルター生成', 'success',
+                  `フィルターが生成されました（チェックボックス: ${checkboxCount}個）`);
+              } else {
+                addCheck('原種フィルター生成', 'warning',
+                  'フィルターHTML が短すぎます');
+              }
+            }
+
+            if (dateAccordion) {
+              const html = dateAccordion.innerHTML;
+              if (html.includes('<!-- Will be dynamically generated -->')) {
+                addCheck('投稿時期フィルター生成', 'error',
+                  'フィルターが生成されていません（コメントのまま）');
+              } else if (html.length > 100) {
+                const checkboxCount = (html.match(/type="checkbox"/g) || []).length;
+                addCheck('投稿時期フィルター生成', 'success',
+                  `フィルターが生成されました（チェックボックス: ${checkboxCount}個）`);
+              } else {
+                addCheck('投稿時期フィルター生成', 'warning',
+                  'フィルターHTML が短すぎます');
+              }
+            }
+
+            document.body.removeChild(iframe);
+            resolve();
+          }, 3500);
+        };
+      });
+    }
+
+    async function checkDataLoading() {
+      try {
+        const response = await fetch('/data/species-data-transformed.json');
+        if (response.ok) {
+          const data = await response.json();
+          if (Array.isArray(data)) {
+            addCheck('データファイル読み込み', 'success',
+              `データ件数: ${data.length}件`);
+
+            // データ構造の検証
+            if (data.length > 0) {
+              const firstItem = data[0];
+              const requiredFields = ['id', 'species', 'subspecies', 'imageUrl', 'caption', 'timestamp'];
+              const missingFields = requiredFields.filter(field => !(field in firstItem));
+
+              if (missingFields.length === 0) {
+                addCheck('データ構造検証', 'success',
+                  '必須フィールドがすべて存在します');
+              } else {
+                addCheck('データ構造検証', 'warning',
+                  `不足フィールド: ${missingFields.join(', ')}`);
+              }
+            }
+          } else {
+            addCheck('データファイル読み込み', 'error',
+              'データが配列ではありません');
+          }
+        } else {
+          addCheck('データファイル読み込み', 'error',
+            `HTTP ${response.status} - ファイルが見つかりません`);
+        }
+      } catch (error) {
+        addCheck('データファイル読み込み', 'error', `エラー: ${error.message}`);
+      }
+    }
+
+    function displayResults() {
+      const container = document.getElementById('resultContainer');
+
+      let html = `
+        <div class="summary">
+          <h2>診断結果サマリー</h2>
+          <div class="summary-stats">
+            <div class="stat">
+              <div class="stat-number" style="color: #28a745;">${diagnosticResults.passed}</div>
+              <div class="stat-label">成功</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" style="color: #ffc107;">${diagnosticResults.warnings}</div>
+              <div class="stat-label">警告</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" style="color: #dc3545;">${diagnosticResults.failed}</div>
+              <div class="stat-label">失敗</div>
+            </div>
+          </div>
+        </div>
+        <div class="result">
+      `;
+
+      diagnosticResults.checks.forEach(check => {
+        html += `
+          <div class="check-item">
+            <h3>
+              ${check.name}
+              <span class="status ${check.status}">
+                ${check.status === 'success' ? '✅ 成功' :
+                  check.status === 'error' ? '❌ 失敗' : '⚠️ 警告'}
+              </span>
+            </h3>
+            <pre>${check.details}</pre>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+
+      // 診断結果をコンソールにも出力
+      console.log('='.repeat(60));
+      console.log('診断結果詳細');
+      console.log('='.repeat(60));
+      console.log(JSON.stringify(diagnosticResults, null, 2));
+    }
+  </script>
+</BaseLayout>

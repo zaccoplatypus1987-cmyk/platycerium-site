@@ -1,0 +1,543 @@
+{
+  "species": {
+    "id": "ジサクボハス",
+    "mainSpecies": "hillii",
+    "tag": "#ジサクボハス",
+    "displayName": "P.hillii has",
+    "count": 15,
+    "latestPost": {
+      "id": "1750919202-0",
+      "date": "2025-06-26",
+      "image": "instagram-data/media/posts/202506/18056255282359131.jpg",
+      "caption": "P.hillii has"
+    }
+  },
+  "posts": [
+    {
+      "id": "1750919202-0",
+      "date": "2025-06-26",
+      "timestamp": 1750919202,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であり九州糜会の名誉調整役 aka ザ・コミュ力モンスター であられる @zutto_kin 氏よりもたらされたものになります。\n\n下葉が全部落ちてスマートになりました。。。\n\n胞子でも蒔こうかな。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202506/18056255282359131.jpg",
+          "timestamp": 1750919201
+        },
+        {
+          "path": "instagram-data/media/posts/202506/18072424106292848.jpg",
+          "timestamp": 1750919201
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1750919202-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1747143392-0",
+      "date": "2025-05-13",
+      "timestamp": 1747143392,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であり九州糜会の名誉調整役であられる @zutto_kin 氏よりもたらされたものになります。\n手前味噌でありますが個人的に「〇〇氏よりもたらされた」という表現が仰々しくてたいへん気に入っております。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202505/17956063277939674.jpg",
+          "timestamp": 1747143392
+        },
+        {
+          "path": "instagram-data/media/posts/202505/18099739603544929.jpg",
+          "timestamp": 1747143392
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1747143392-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1744903352-0",
+      "date": "2025-04-17",
+      "timestamp": 1744903352,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であられる @zutto_kin 氏よりもたらされたものになります。\n最近ヒリーが好きです。\n白いブランコです。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202504/18050664098058377.jpg",
+          "timestamp": 1744903350
+        },
+        {
+          "path": "instagram-data/media/posts/202504/18125706655384984.jpg",
+          "timestamp": 1744903350
+        },
+        {
+          "path": "instagram-data/media/posts/202504/18004872761587222.jpg",
+          "timestamp": 1744903350
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1744903352-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1742548748-0",
+      "date": "2025-03-21",
+      "timestamp": 1742548748,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であられる @zutto_kin 氏よりもたらされたものになります。\n球状になってまいりました。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202503/17914899231083868.jpg",
+          "timestamp": 1742548747
+        },
+        {
+          "path": "instagram-data/media/posts/202503/17865547446357729.jpg",
+          "timestamp": 1742548747
+        },
+        {
+          "path": "instagram-data/media/posts/202503/18062411359959518.jpg",
+          "timestamp": 1742548747
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1742548748-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1740115288-0",
+      "date": "2025-02-21",
+      "timestamp": 1740115288,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であられる @zutto_kin 氏よりもたらされたものになります。\n今日はなぜか会長ハスをよく見ますね。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202502/18484696138054336.jpg",
+          "timestamp": 1740115287
+        },
+        {
+          "path": "instagram-data/media/posts/202502/18039095777161962.jpg",
+          "timestamp": 1740115287
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1740115288-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1736591768-0",
+      "date": "2025-01-11",
+      "timestamp": 1736591768,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であられる @zutto_kin 氏よりもたらされたものになります。\nいつのまにかモリゾーになってました。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202501/18083608099575809.jpg",
+          "timestamp": 1736591768
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1736591768-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1734955467-0",
+      "date": "2024-12-23",
+      "timestamp": 1734955467,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会会長兼東海糜会副会長であられる @zutto_kin 氏よりもたらされたものになります。\n擬似貯水葉のおかげなのか、首折れの気配が今のところありません。CCOスタイルです。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202412/18020593166635013.jpg",
+          "timestamp": 1734955466
+        },
+        {
+          "path": "instagram-data/media/posts/202412/18114370213381988.jpg",
+          "timestamp": 1734955466
+        },
+        {
+          "path": "instagram-data/media/posts/202412/17989563350758516.jpg",
+          "timestamp": 1734955466
+        },
+        {
+          "path": "instagram-data/media/posts/202412/18262993795267411.jpg",
+          "timestamp": 1734955466
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1734955467-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1732630316-0",
+      "date": "2024-11-26",
+      "timestamp": 1732630316,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の会長 @zutto_kin 氏よりもたらされたものになります。\nヒリーも良いなと思わせるコンパクトで表現豊かな良いビカクです。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202411/18344521561130240.jpg",
+          "timestamp": 1732630315
+        },
+        {
+          "path": "instagram-data/media/posts/202411/18377124151106591.jpg",
+          "timestamp": 1732630315
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1732630316-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1729680506-0",
+      "date": "2024-10-23",
+      "timestamp": 1729680506,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の会長 @zutto_kin 氏よりもたらされたものになります。\nヨトウムシに成長点を齧られたこともありましたが、立派に成長することができました。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202410/18052810048746214.jpg",
+          "timestamp": 1729680505
+        },
+        {
+          "path": "instagram-data/media/posts/202410/18057751663836473.jpg",
+          "timestamp": 1729680504
+        },
+        {
+          "path": "instagram-data/media/posts/202410/18021142208285917.jpg",
+          "timestamp": 1729680504
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1729680506-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1725769035-0",
+      "date": "2024-09-08",
+      "timestamp": 1725769035,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の現会長であられる @zutto_kin 氏よりもたらされたものになります。\nマニアック過ぎて皆様知らないかもしれませんが、ヒリーというビカクシダがありまして。なかなか良いですよ。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202409/18086450836491995.jpg",
+          "timestamp": 1725769035
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1725769035-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1724418695-0",
+      "date": "2024-08-23",
+      "timestamp": 1724418695,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の現会長であられる @zutto_kin 氏よりもたらされたものになります。\nお世辞抜きにかなり好きなビカクです。\nコンパクトなヒリーはさいつよかも知れませんね。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202408/18073689340546259.jpg",
+          "timestamp": 1724418695
+        },
+        {
+          "path": "instagram-data/media/posts/202408/17907803409006814.jpg",
+          "timestamp": 1724418695
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1724418695-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1722038261-0",
+      "date": "2024-07-26",
+      "timestamp": 1722038261,
+      "caption": "P.hillii has\nこの株はその昔、今や全国を飛び回る三重糜会の現会長であられる @zutto_kin 氏よりもたらされたものになります。\nコンパクトで可愛いやつです。\n\nヒリーといえばRP。あれが今めっちゃ欲しい��\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202407/17912812067972134.jpg",
+          "timestamp": 1722038261
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1722038261-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1717584184-0",
+      "date": "2024-06-05",
+      "timestamp": 1717584184,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の現会長であられる @zutto_kin 氏よりもたらされたものになります。\nヒリーもなかなかよいものです。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202406/18014762336148163.jpg",
+          "timestamp": 1717584182
+        },
+        {
+          "path": "instagram-data/media/posts/202406/18022994564008495.jpg",
+          "timestamp": 1717584182
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1717584184-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1714727050-0",
+      "date": "2024-05-03",
+      "timestamp": 1714727050,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の会長であられる @zutto_kin 氏よりもたらされたものになります。\nそしてこの株の親株は、某有名販売者様の阪急ポップアップ店において、会長が数ある胞子培養株の中から自らの慧眼をもって選抜し購入した株でもあります。\nありがたや〜\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202405/18032541076815227.jpg",
+          "timestamp": 1714727049
+        },
+        {
+          "path": "instagram-data/media/posts/202405/18038506681722921.jpg",
+          "timestamp": 1714727049
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1714727050-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    },
+    {
+      "id": "1709515974-0",
+      "date": "2024-03-04",
+      "timestamp": 1709515974,
+      "caption": "P.hillii has\nこの株はその昔、三重糜会の会長であられる @zutto_kin 氏よりもたらされたものになります。\n\nヤトウムシに成長点を齧られたりしましたが、ここまで大きくなりました��\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#platyceriumhillii \n#ビカクシダヒリー \n\n#ジサクボハス",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "platyceriumhillii",
+        "ビカクシダヒリー",
+        "ジサクボハス"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202403/18029662843745634.jpg",
+          "timestamp": 1709515973
+        },
+        {
+          "path": "instagram-data/media/posts/202403/17871162360017645.jpg",
+          "timestamp": 1709515973
+        },
+        {
+          "path": "instagram-data/media/posts/202403/18063227941503840.jpg",
+          "timestamp": 1709515973
+        },
+        {
+          "path": "instagram-data/media/posts/202403/18015746837481380.jpg",
+          "timestamp": 1709515973
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1709515974-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:has vs ハッシュ:ハス）"
+        }
+      }
+    }
+  ]
+}

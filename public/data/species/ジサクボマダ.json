@@ -1,0 +1,54 @@
+{
+  "species": {
+    "id": "ジサクボマダ",
+    "mainSpecies": "madagascariense",
+    "tag": "#ジサクボマダ",
+    "displayName": "P.madagascariense",
+    "count": 1,
+    "latestPost": {
+      "id": "1760536404-0",
+      "date": "2025-10-15",
+      "image": "instagram-data/media/posts/202510/17970016541958313.jpg",
+      "caption": "P.madagascariense "
+    }
+  },
+  "posts": [
+    {
+      "id": "1760536404-0",
+      "date": "2025-10-15",
+      "timestamp": 1760536404,
+      "caption": "P.madagascariense \nfrom @keiki_521 \n一回枯らしているので、ちょっと本気で育ててみます。\n群生にしたらめっちゃ面白そうなので、群生を想定したコケの盛り方にしてみました。\n多分半年後くらいにマダガスカリエンセはいいぞおじさんになってます。\n\n#ビカクシダ \n#マダガスカリエンセ \n#ジサクボマダ",
+      "hashtags": [
+        "ビカクシダ",
+        "マダガスカリエンセ",
+        "ジサクボマダ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202510/17970016541958313.jpg",
+          "timestamp": 1760536403
+        },
+        {
+          "path": "instagram-data/media/posts/202510/18106960336593239.jpg",
+          "timestamp": 1760536403
+        },
+        {
+          "path": "instagram-data/media/posts/202510/17919120510049132.jpg",
+          "timestamp": 1760536403
+        },
+        {
+          "path": "instagram-data/media/posts/202510/17985679463860023.jpg",
+          "timestamp": 1760536403
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1760536404-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（madagascariense）- 信頼性高い"
+        }
+      }
+    }
+  ]
+}

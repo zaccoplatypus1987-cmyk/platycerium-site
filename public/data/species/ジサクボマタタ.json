@@ -1,0 +1,440 @@
+{
+  "species": {
+    "id": "ジサクボマタタ",
+    "mainSpecies": null,
+    "tag": "#ジサクボマタタ",
+    "displayName": "P.hakuna Matara",
+    "count": 9,
+    "latestPost": {
+      "id": "1694432713-0",
+      "date": "2023-09-11",
+      "image": "instagram-data/media/posts/202309/18055597849458448.jpg",
+      "caption": "P.hakuna Matara"
+    }
+  },
+  "posts": [
+    {
+      "id": "1694432713-0",
+      "date": "2023-09-11",
+      "timestamp": 1694432713,
+      "caption": "P.hakuna Matara\n次の胞子葉は大人の胞子葉ぽい気がします。\nもう少しでエルサの隣に飾れそう？\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202309/18055597849458448.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/17889144548909263.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/17867211017987054.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/18203084005256933.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/17985373235183024.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/17976895160585877.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/18000530213079741.jpg",
+          "timestamp": 1694432712
+        },
+        {
+          "path": "instagram-data/media/posts/202309/17999923057910206.jpg",
+          "timestamp": 1694432712
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1694432713-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:matara vs ハッシュ:マタタ）"
+        }
+      }
+    },
+    {
+      "id": "1680000103-0",
+      "date": "2023-03-28",
+      "timestamp": 1680000103,
+      "caption": "P.hakunamatata\n1枚目2023.3.28\n2枚目2022.11.14\n\nエルサと比較して感じたこと(あくまで個人的意見)7枚目参照\nエルサに比べて光への指向性が弱い気がする(むしろエルサの光への指向性が強すぎる？)\nなので、エルサと比べて横に綺麗に展開する葉を出しやすい。一方エルサは光を求めてどんどん縦に展開し形を崩す傾向があるような気がします��\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202303/17987455420799660.jpg",
+          "timestamp": 1680000102
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17999113837733345.jpg",
+          "timestamp": 1680000102
+        },
+        {
+          "path": "instagram-data/media/posts/202303/18154543888303212.jpg",
+          "timestamp": 1680000102
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17867760269840811.jpg",
+          "timestamp": 1680000102
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17862363674910089.jpg",
+          "timestamp": 1680000102
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17971490918192968.jpg",
+          "timestamp": 1680000102
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17978722616090709.jpg",
+          "timestamp": 1680000102
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1680000103-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:hakunamatata vs ハッシュ:マタタ）"
+        }
+      }
+    },
+    {
+      "id": "1677754421-0",
+      "date": "2023-03-02",
+      "timestamp": 1677754421,
+      "caption": "ハクナマタタ\nいつの間にか結構好きなビカクになってます。\n成長スピード早め。\nビギナーの皆様、養生された株を買いましょう！\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202303/17967001682484531.jpg",
+          "timestamp": 1677754421
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17864166317879622.jpg",
+          "timestamp": 1677754421
+        },
+        {
+          "path": "instagram-data/media/posts/202303/17947663676384233.jpg",
+          "timestamp": 1677754421
+        },
+        {
+          "path": "instagram-data/media/posts/202303/18208490875224665.jpg",
+          "timestamp": 1677754421
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1677754421-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    },
+    {
+      "id": "1676120152-0",
+      "date": "2023-02-11",
+      "timestamp": 1676120152,
+      "caption": "ハクナマタタ\n苔増し板替え記念\nついに大人用の板になりました。\nめでたい！\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202302/18165549859282981.jpg",
+          "timestamp": 1676120151
+        },
+        {
+          "path": "instagram-data/media/posts/202302/17959334576163061.jpg",
+          "timestamp": 1676120151
+        },
+        {
+          "path": "instagram-data/media/posts/202302/18204516388211062.jpg",
+          "timestamp": 1676120151
+        },
+        {
+          "path": "instagram-data/media/posts/202302/17953637498426762.jpg",
+          "timestamp": 1676120151
+        },
+        {
+          "path": "instagram-data/media/posts/202302/18165981130273200.jpg",
+          "timestamp": 1676120151
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1676120152-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    },
+    {
+      "id": "1674691579-0",
+      "date": "2023-01-26",
+      "timestamp": 1674691579,
+      "caption": "ハクナマタタ\n一枚目2023.1.26\n二枚目2022.11.14\nやはり成長点が太っていると成長が早いですね。\n逆も然り��\nメルカリ等で趣味家さんから買われる場合は、成長点が大きいかどうかも確認すべきですね。\n\n先日親指の爪サイズの小株が数万円で取引されているのを見てひっくり返りました��\nまさに初心者狩り��\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202301/17974035050060305.jpg",
+          "timestamp": 1674691579
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17979617479807787.jpg",
+          "timestamp": 1674691579
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17988760615742453.jpg",
+          "timestamp": 1674691579
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17877289331805394.jpg",
+          "timestamp": 1674691579
+        },
+        {
+          "path": "instagram-data/media/posts/202301/18001394605595546.jpg",
+          "timestamp": 1674691579
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17998484230561236.jpg",
+          "timestamp": 1674691579
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17999774239613899.jpg",
+          "timestamp": 1674691579
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1674691579-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    },
+    {
+      "id": "1673608426-0",
+      "date": "2023-01-13",
+      "timestamp": 1673608426,
+      "caption": "ハクナマタタ\n根が板に到達したので苔増し記念。\nほんとによく育つ子。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202301/18006887347543034.jpg",
+          "timestamp": 1673608425
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17947845725316277.jpg",
+          "timestamp": 1673608425
+        },
+        {
+          "path": "instagram-data/media/posts/202301/17929512971623781.jpg",
+          "timestamp": 1673608425
+        },
+        {
+          "path": "instagram-data/media/posts/202301/18071544052339614.jpg",
+          "timestamp": 1673608425
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1673608426-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    },
+    {
+      "id": "1672145827-0",
+      "date": "2022-12-27",
+      "timestamp": 1672145827,
+      "caption": "ハクナマタタ\n成長早めです。\nもしかしてsnow queen シリーズはみんな速い？？\n\n皆様の好きなFシリーズは何ですか？\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202212/17906658710694075.jpg",
+          "timestamp": 1672145826
+        },
+        {
+          "path": "instagram-data/media/posts/202212/17963634323163455.jpg",
+          "timestamp": 1672145826
+        },
+        {
+          "path": "instagram-data/media/posts/202212/17853116561890915.jpg",
+          "timestamp": 1672145826
+        },
+        {
+          "path": "instagram-data/media/posts/202212/18028983229432196.jpg",
+          "timestamp": 1672145826
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1672145827-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    },
+    {
+      "id": "1671024842-0",
+      "date": "2022-12-14",
+      "timestamp": 1671024842,
+      "caption": "ハクナマタタ\n根が板に到達したので苔増し記念。\nよく育つ子。\n\nfrom @hananow.a さん\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202212/17949649682463788.jpg",
+          "timestamp": 1671024842
+        },
+        {
+          "path": "instagram-data/media/posts/202212/18016473619475721.jpg",
+          "timestamp": 1671024842
+        },
+        {
+          "path": "instagram-data/media/posts/202212/17866306091789604.jpg",
+          "timestamp": 1671024842
+        },
+        {
+          "path": "instagram-data/media/posts/202212/17945820539302320.jpg",
+          "timestamp": 1671024842
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1671024842-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    },
+    {
+      "id": "1668428695-0",
+      "date": "2022-11-14",
+      "timestamp": 1668428695,
+      "caption": "ハクナマタタ\n苔増し記念。\n根っこがめちゃくちゃ元気です。これは成長早い系ビカクの予感がします��\n早くエルサの横に飾りたいですね��\nfrom @hananow.a さん\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#staghornfern \n#糜角羊歯\n#platyceriumhakunamatata\n\n#ジサクボマタタ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "staghornfern",
+        "糜角羊歯",
+        "platyceriumhakunamatata",
+        "ジサクボマタタ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202211/18030935371411954.jpg",
+          "timestamp": 1668428695
+        },
+        {
+          "path": "instagram-data/media/posts/202211/17887915385742169.jpg",
+          "timestamp": 1668428695
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1668428695-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
+        }
+      }
+    }
+  ]
+}

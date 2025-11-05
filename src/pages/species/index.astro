@@ -1,0 +1,826 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout title="ギャラリー（大分類） - Platycerium Collection">
+  <style>
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .species-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .species-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .species-thumbnail {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      width: 100%;
+      height: 250px;
+    }
+
+    .badge-pure {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .badge-hybrid {
+      background-color: #fff3e0;
+      color: #ef6c00;
+    }
+
+    .filter-active {
+      background-color: #4A7C2F !important;
+      color: white !important;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: #f3f4f6;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-icon.rotate {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-content.open {
+      max-height: 2000px;
+    }
+
+    .filter-item {
+      transition: all 0.2s ease;
+    }
+
+    .filter-item.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .subspecies-item {
+      padding-left: 1rem;
+      border-left: 2px solid #e5e7eb;
+      font-size: 0.875rem;
+    }
+
+    .month-item {
+      padding-left: 1rem;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 1024px) {
+      aside {
+        position: static !important;
+      }
+    }
+  </style>
+
+  <Header />
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Sidebar Filters -->
+      <aside class="lg:w-64 flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-md p-6 lg:sticky lg:top-24">
+          <h2 class="text-xl font-bold mb-4">フィルター</h2>
+
+          <!-- Species Filter (2-level accordion) -->
+          <div class="mb-6">
+            <div class="accordion-header flex items-center justify-between p-2 rounded"
+                 onclick="toggleAccordion('species-accordion')">
+              <h3 class="font-semibold">原種</h3>
+              <svg class="accordion-icon w-5 h-5 text-gray-600 rotate" id="species-accordion-icon"
+                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div class="accordion-content open mt-2" id="species-accordion">
+              <!-- Will be dynamically generated -->
+            </div>
+          </div>
+
+          <!-- Post Date Filter (3-level accordion) -->
+          <div class="mb-6">
+            <div class="accordion-header flex items-center justify-between p-2 rounded"
+                 onclick="toggleAccordion('date-accordion')">
+              <h3 class="font-semibold">投稿時期</h3>
+              <svg class="accordion-icon w-5 h-5 text-gray-600 rotate" id="date-accordion-icon"
+                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div class="accordion-content open mt-2" id="date-accordion">
+              <!-- Will be dynamically generated -->
+            </div>
+          </div>
+
+          <!-- Clear Button -->
+          <button id="clear-filters" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded transition-colors">
+            すべてクリア
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1">
+        <!-- Hero Section -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-forest-dark mb-4">
+            ギャラリー（大分類）
+          </h2>
+          <p class="text-gray-600 text-lg" id="gallery-stats">
+            ビカクシダの原種18種と交配種（Hybrids）を分類しています。気になる品種をクリックすると、より詳細な品種を表示します。
+          </p>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="text-center py-12">
+          <div class="inline-flex items-center gap-2 text-gray-600">
+            <svg class="animate-spin h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span class="text-lg">品種データを読み込んでいます...</span>
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="hidden text-center py-12">
+          <p class="text-xl text-red-600 mb-4"></p>
+          <button onclick="location.reload()" class="bg-forest-mid hover:bg-forest-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+            再読み込み
+          </button>
+        </div>
+
+        <!-- Pure Species Section -->
+        <div id="pure-species-section" class="hidden mb-12">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-forest-dark mb-2">
+              🌱 原種18種（Pure Species）
+            </h3>
+            <p class="text-gray-600">
+              自然界に存在するビカクシダの原種。それぞれ独自の特徴を持っています。
+            </p>
+          </div>
+          <div id="pure-species-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Pure species cards will be rendered here -->
+          </div>
+        </div>
+
+        <!-- Hybrid Species Section -->
+        <div id="hybrid-species-section" class="hidden">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-forest-dark mb-2">
+              🧬 交配種・交雑種（Hybrids）
+            </h3>
+            <p class="text-gray-600">
+              原種同士の交配や品種改良によって生まれた品種。個性豊かな魅力があります。
+            </p>
+          </div>
+          <div id="hybrid-species-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Hybrid species cards will be rendered here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+
+  <!-- JavaScript -->
+  <script type="module" src="/scripts/navigation.js"></script>
+  <script type="module">
+    // 原種名マッピング（英語表記）
+    const speciesNameMap = {
+      'bifurcatum': 'P. bifurcatum',
+      'willinckii': 'P. willinckii',
+      'coronarium': 'P. coronarium',
+      'ridleyi': 'P. ridleyi',
+      'wandae': 'P. wandae',
+      'superbum': 'P. superbum',
+      'veitchii': 'P. veitchii',
+      'hillii': 'P. hillii',
+      'alcicorne': 'P. alcicorne',
+      'elephantotis': 'P. elephantotis',
+      'ellisii': 'P. ellisii',
+      'holttumii': 'P. holttumii',
+      'stemaria': 'P. stemaria',
+      'andinum': 'P. andinum',
+      'quadridichotomum': 'P. quadridichotomum',
+      'grande': 'P. grande',
+      'wallichii': 'P. wallichii',
+      'madagascariense': 'P. madagascariense',
+      'hybrid': '交配種 (Hybrids)'
+    };
+
+    // グローバル状態
+    let allSpeciesData = [];
+    let allSubspeciesData = {}; // 品種IDごとの投稿データ
+    let currentFilters = {
+      species: 'all',      // 原種ID or 'all'
+      subspecies: 'all',   // 園芸品種ID or 'all'
+      year: 'all',         // 年 or 'all'
+      month: 'all'         // 月 or 'all'
+    };
+    let searchQuery = '';
+
+    // 階層構造インデックス読み込み
+    async function loadMainSpecies() {
+      const loading = document.getElementById('loading');
+      const error = document.getElementById('error');
+      const stats = document.getElementById('gallery-stats');
+      const pureSection = document.getElementById('pure-species-section');
+      const hybridSection = document.getElementById('hybrid-species-section');
+      const pureGrid = document.getElementById('pure-species-grid');
+      const hybridGrid = document.getElementById('hybrid-species-grid');
+
+      try {
+        const response = await fetch('/data/species-hierarchy-index.json');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Loaded data:', data);
+
+        // hierarchy配列から原種と交配種を分離
+        const hierarchyData = data.hierarchy || [];
+        allSpeciesData = hierarchyData;
+
+        // フィルターを構築
+        buildSpeciesFilter(hierarchyData);
+        buildDateFilter(data.species || []);
+
+        // 検索機能を設定
+        setupSearch();
+
+        // クリアボタンの設定
+        const clearBtn = document.getElementById('clear-filters');
+        if (clearBtn) {
+          clearBtn.addEventListener('click', () => {
+            clearFilters();
+          });
+        }
+
+        // 初期表示
+        applyFilters();
+
+        loading.classList.add('hidden');
+
+      } catch (err) {
+        console.error('データ読み込みエラー:', err);
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+        error.querySelector('p').textContent = `データの読み込みに失敗しました: ${err.message}`;
+      }
+    }
+
+    // 原種フィルターを構築（2階層アコーディオン）
+    function buildSpeciesFilter(hierarchyData) {
+      const container = document.getElementById('species-accordion');
+      if (!container) return;
+
+      // 投稿がある原種のみフィルター（純粋な原種のみ、交配種は除外）
+      const pureSpecies = hierarchyData.filter(item =>
+        item.type === 'pure' && item.totalPosts > 0
+      );
+
+      let html = `
+        <button class="filter-item w-full text-left px-3 py-2 rounded hover:bg-gray-100 transition-colors filter-active mb-1"
+                data-filter-type="species" data-filter-value="all"
+                onclick="selectSpecies('all', event)">
+          すべて
+        </button>
+      `;
+
+      // 各原種とその園芸品種
+      pureSpecies.forEach(species => {
+        const speciesKey = species.id;
+        const speciesName = speciesNameMap[speciesKey] || `P. ${speciesKey}`;
+        const accordionId = `subspecies-${speciesKey}`;
+
+        html += `
+          <div class="mb-1">
+            <div class="flex items-center">
+              <button class="filter-item flex-1 text-left px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                      data-filter-type="species" data-filter-value="${speciesKey}"
+                      onclick="selectSpecies('${speciesKey}', event)">
+                ${speciesName}
+              </button>
+              <button class="p-2 hover:bg-gray-100 rounded"
+                      onclick="toggleSubAccordion('${accordionId}', event)">
+                <svg class="w-4 h-4 text-gray-600 accordion-icon" id="${accordionId}-icon"
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content mt-1" id="${accordionId}" style="max-height: 0;">
+        `;
+
+        // 園芸品種リスト（交配種を除外）
+        if (species.subSpecies && species.subSpecies.length > 0) {
+          // 交配種（displayNameに×が含まれる、またはmainSpeciesがhybrid）を除外
+          const pureSubspecies = species.subSpecies.filter(sub => {
+            const hasHybridMarker = sub.displayName && sub.displayName.includes('×');
+            return !hasHybridMarker;
+          });
+
+          pureSubspecies.forEach(sub => {
+            html += `
+              <button class="filter-item subspecies-item w-full text-left px-3 py-1 rounded hover:bg-gray-100 transition-colors text-sm"
+                      data-filter-type="subspecies" data-filter-value="${sub.id}"
+                      onclick="selectSubspecies('${sub.id}', event)">
+                ${sub.displayName}
+              </button>
+            `;
+          });
+        }
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      // 交配種グループ（サブアコーディオン付き）
+      const hybridSpecies = hierarchyData.filter(item => item.type === 'hybrid' && item.totalPosts > 0);
+      const hybridAccordionId = 'subspecies-hybrid';
+
+      html += `
+        <div class="mb-1">
+          <div class="flex items-center">
+            <button class="filter-item flex-1 text-left px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                    data-filter-type="species" data-filter-value="hybrid"
+                    onclick="selectSpecies('hybrid', event)">
+              交配種
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded"
+                    onclick="toggleSubAccordion('${hybridAccordionId}', event)">
+              <svg class="w-4 h-4 text-gray-600 accordion-icon" id="${hybridAccordionId}-icon"
+                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-content mt-1" id="${hybridAccordionId}" style="max-height: 0;">
+      `;
+
+      // 交配種リスト
+      hybridSpecies.forEach(hybrid => {
+        html += `
+          <button class="filter-item subspecies-item w-full text-left px-3 py-1 rounded hover:bg-gray-100 transition-colors text-sm"
+                  data-filter-type="subspecies" data-filter-value="${hybrid.id}"
+                  onclick="selectSubspecies('${hybrid.id}', event)">
+            ${hybrid.name || hybrid.displayName || hybrid.id}
+          </button>
+        `;
+      });
+
+      html += `
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    // 投稿時期フィルターを構築（3階層アコーディオン）
+    async function buildDateFilter(allSpeciesList) {
+      const container = document.getElementById('date-accordion');
+      if (!container) return;
+
+      // すべての品種から投稿日付を抽出
+      const dateSet = new Set();
+
+      // species 配列（全76品種）から latestPostDate を抽出
+      if (allSpeciesList && allSpeciesList.length > 0) {
+        allSpeciesList.forEach(species => {
+          if (species.latestPostDate) {
+            const [year, month] = species.latestPostDate.split('-');
+            if (year && month) {
+              dateSet.add(`${year}-${month}`);
+            }
+          }
+        });
+      }
+
+      console.log('Extracted dates:', Array.from(dateSet).sort());
+      console.log('Total unique months:', dateSet.size);
+
+      // 年月をソート
+      const sortedDates = Array.from(dateSet).sort().reverse();
+
+      // 年でグループ化
+      const yearMap = {};
+      sortedDates.forEach(dateStr => {
+        const [year, month] = dateStr.split('-');
+        if (!yearMap[year]) {
+          yearMap[year] = [];
+        }
+        yearMap[year].push(month);
+      });
+
+      let html = `
+        <button class="filter-item w-full text-left px-3 py-2 rounded hover:bg-gray-100 transition-colors filter-active mb-1"
+                data-filter-type="date" data-filter-value="all"
+                onclick="selectDateAll(event)">
+          すべて
+        </button>
+      `;
+
+      // 各年とその月
+      Object.keys(yearMap).sort().reverse().forEach(year => {
+        const accordionId = `year-${year}`;
+
+        html += `
+          <div class="mb-1">
+            <div class="flex items-center">
+              <button class="filter-item flex-1 text-left px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                      data-filter-type="year" data-filter-value="${year}"
+                      onclick="selectYear('${year}', event)">
+                ${year}年
+              </button>
+              <button class="p-2 hover:bg-gray-100 rounded"
+                      onclick="toggleSubAccordion('${accordionId}', event)">
+                <svg class="w-4 h-4 text-gray-600 accordion-icon" id="${accordionId}-icon"
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content mt-1" id="${accordionId}" style="max-height: 0;">
+        `;
+
+        // 月リスト
+        yearMap[year].sort().forEach(month => {
+          html += `
+            <button class="filter-item month-item w-full text-left px-3 py-1 rounded hover:bg-gray-100 transition-colors text-sm"
+                    data-filter-type="month" data-filter-value="${year}-${month}"
+                    onclick="selectMonth('${year}', '${month}', event)">
+              ${parseInt(month)}月
+            </button>
+          `;
+        });
+
+        html += `
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // 検索機能の設定
+    function setupSearch() {
+      const searchInput = document.getElementById('search-input');
+      if (!searchInput) return;
+
+      let searchTimeout;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          searchQuery = e.target.value.toLowerCase();
+          applyFilters();
+        }, 300);
+      });
+    }
+
+    // アコーディオン開閉（サブアコーディオン用）
+    window.toggleSubAccordion = function(accordionId, event) {
+      event.stopPropagation();
+      const content = document.getElementById(accordionId);
+      const icon = document.getElementById(accordionId + '-icon');
+
+      if (content && icon) {
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        content.style.maxHeight = isOpen ? '0' : '2000px';
+        icon.classList.toggle('rotate');
+      }
+    }
+
+    // 原種選択
+    window.selectSpecies = function(speciesKey, event) {
+      event.stopPropagation();
+
+      // フィルターボタンのアクティブ状態を更新
+      document.querySelectorAll('[data-filter-type="species"]').forEach(btn => {
+        btn.classList.remove('filter-active');
+      });
+      event.target.classList.add('filter-active');
+
+      // 園芸品種フィルターをクリア
+      currentFilters.species = speciesKey;
+      currentFilters.subspecies = 'all';
+
+      // フィルター適用
+      applyFilters();
+    }
+
+    // 園芸品種選択（投稿ページに遷移）
+    window.selectSubspecies = function(subspeciesId, event) {
+      event.stopPropagation();
+
+      // 園芸品種の投稿ページに遷移
+      window.location.href = `/species/detail.html?id=${subspeciesId}`;
+    }
+
+    // 年選択
+    window.selectYear = function(year, event) {
+      event.stopPropagation();
+
+      // フィルターボタンのアクティブ状態を更新
+      document.querySelectorAll('[data-filter-type="year"], [data-filter-type="month"]').forEach(btn => {
+        btn.classList.remove('filter-active');
+      });
+      event.target.classList.add('filter-active');
+
+      currentFilters.year = year;
+      currentFilters.month = 'all';
+
+      // フィルター適用
+      applyFilters();
+    }
+
+    // 月選択
+    window.selectMonth = function(year, month, event) {
+      event.stopPropagation();
+
+      // フィルターボタンのアクティブ状態を更新
+      document.querySelectorAll('[data-filter-type="year"], [data-filter-type="month"]').forEach(btn => {
+        btn.classList.remove('filter-active');
+      });
+      event.target.classList.add('filter-active');
+
+      currentFilters.year = year;
+      currentFilters.month = month;
+
+      // フィルター適用
+      applyFilters();
+    }
+
+    // 投稿時期「すべて」選択
+    window.selectDateAll = function(event) {
+      event.stopPropagation();
+
+      // フィルターボタンのアクティブ状態を更新
+      document.querySelectorAll('[data-filter-type="date"], [data-filter-type="year"], [data-filter-type="month"]').forEach(btn => {
+        btn.classList.remove('filter-active');
+      });
+      event.target.classList.add('filter-active');
+
+      currentFilters.year = 'all';
+      currentFilters.month = 'all';
+
+      // フィルター適用
+      applyFilters();
+    }
+
+    // フィルター適用（簡略版 - 完全な実装はスクリプトファイルから取得）
+    function applyFilters() {
+      let filteredSpecies = [...allSpeciesData];
+
+      // 原種フィルター
+      if (currentFilters.species !== 'all') {
+        filteredSpecies = filteredSpecies.filter(species => {
+          return species.id === currentFilters.species ||
+                 (currentFilters.species === 'hybrid' && species.type === 'hybrid');
+        });
+      }
+
+      // 統計情報を更新
+      updateStats(filteredSpecies);
+
+      // 再レンダリング
+      renderFilteredSpecies(filteredSpecies);
+    }
+
+    // フィルタークリア
+    function clearFilters() {
+      currentFilters = {
+        species: 'all',
+        subspecies: 'all',
+        year: 'all',
+        month: 'all'
+      };
+
+      document.querySelectorAll('.filter-item').forEach(btn => {
+        btn.classList.remove('filter-active');
+        if (btn.dataset.filterValue === 'all') {
+          btn.classList.add('filter-active');
+        }
+      });
+
+      applyFilters();
+    }
+
+    // 統計情報更新
+    function updateStats(filteredSpecies) {
+      const statsElement = document.getElementById('gallery-stats');
+      if (statsElement) {
+        const totalCount = allSpeciesData.length;
+        const filteredCount = filteredSpecies.length;
+        const totalPosts = filteredSpecies.reduce((sum, s) => sum + (s.totalPosts || s.count || 0), 0);
+
+        statsElement.textContent = `${filteredCount}品種 / ${totalPosts}件の投稿を表示中（全${totalCount}品種）`;
+      }
+    }
+
+    // フィルター済み品種を表示
+    function renderFilteredSpecies(filteredSpecies) {
+      const pureSection = document.getElementById('pure-species-section');
+      const hybridSection = document.getElementById('hybrid-species-section');
+      const pureGrid = document.getElementById('pure-species-grid');
+
+      const pureSpecies = filteredSpecies.filter(item => item.type === 'pure');
+      const hybridSpecies = filteredSpecies.filter(item => item.type === 'hybrid');
+
+      // 交配種を1つのグループカードにまとめる
+      const hasHybrids = allSpeciesData.some(item => item.type === 'hybrid');
+      let hybridGroupCard = '';
+
+      if (hasHybrids && (hybridSpecies.length > 0 || currentFilters.species === 'all' || currentFilters.species === 'hybrid')) {
+        const allHybrids = allSpeciesData.filter(item => item.type === 'hybrid');
+        hybridGroupCard = createHybridGroupCard(allHybrids);
+      }
+
+      // 原種グリッド表示
+      if (pureSpecies.length > 0 || hybridGroupCard) {
+        let gridContent = pureSpecies.map(createSpeciesCard).join('');
+        if (hybridGroupCard) {
+          gridContent += hybridGroupCard;
+        }
+        pureGrid.innerHTML = gridContent;
+        pureSection.classList.remove('hidden');
+      } else {
+        pureSection.classList.add('hidden');
+      }
+
+      hybridSection.classList.add('hidden');
+
+      // 結果が0件の場合
+      if (pureSpecies.length === 0 && !hybridGroupCard) {
+        pureGrid.innerHTML = '<p class="text-gray-600 col-span-full text-center py-12">該当する品種が見つかりませんでした</p>';
+        pureSection.classList.remove('hidden');
+      }
+    }
+
+    // 交配種グループカードを生成
+    function createHybridGroupCard(allHybrids) {
+      if (allHybrids.length === 0) return '';
+
+      const totalHybridCount = allHybrids.length;
+      const totalHybridPosts = allHybrids.reduce((sum, hybrid) =>
+        sum + (hybrid.totalPosts || hybrid.count || 0), 0
+      );
+
+      const representativeHybrid = allHybrids.reduce((max, hybrid) =>
+        (hybrid.totalPosts || 0) > (max.totalPosts || 0) ? hybrid : max
+      , allHybrids[0]);
+
+      const imageSrc = representativeHybrid.latestImage
+        ? `/${representativeHybrid.latestImage}`
+        : '/images/placeholder-leaf.svg';
+
+      const linkUrl = '/species/subspecies.html?parent=hybrid';
+
+      return `
+        <div class="species-card bg-white rounded-lg shadow-md overflow-hidden fade-in"
+             onclick="window.location.href='${linkUrl}'">
+          <img src="${imageSrc}"
+               alt="交配種 / Hybrids"
+               class="species-thumbnail"
+               loading="lazy"
+               onerror="this.src='/images/placeholder-leaf.svg'">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-2xl font-bold text-forest-dark">
+                交配種 / Hybrids
+              </h3>
+            </div>
+            <div class="flex items-center justify-between text-sm text-gray-600">
+              <span>📸 ${totalHybridPosts}件の投稿</span>
+              <span class="text-sm text-gray-500">🌿 ${totalHybridCount}品種</span>
+            </div>
+          </div>
+          <div class="bg-forest-light bg-opacity-10 px-6 py-3 flex items-center justify-between">
+            <span class="text-sm text-forest-dark font-semibold">
+              品種を見る
+            </span>
+            <svg class="w-5 h-5 text-forest-mid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </div>
+      `;
+    }
+
+    // 品種カード生成関数
+    function createSpeciesCard(species) {
+      let linkUrl;
+      if (species.type === 'pure' && species.subSpeciesCount > 0) {
+        linkUrl = `/species/subspecies.html?parent=${species.id}`;
+      } else {
+        linkUrl = `/species/detail.html?id=${species.id}`;
+      }
+
+      let imageSrc = '/images/placeholder-leaf.svg';
+      if (species.latestImage) {
+        imageSrc = `/${species.latestImage}`;
+      } else if (species.subSpecies && species.subSpecies.length > 0 && species.subSpecies[0].latestImage) {
+        imageSrc = `/${species.subSpecies[0].latestImage}`;
+      }
+
+      const displayName = speciesNameMap[species.id] || species.displayName || species.name || species.id;
+      const postCount = species.totalPosts || species.count || 0;
+      const subSpeciesInfo = species.type === 'pure' && species.subSpeciesCount > 0
+        ? `<span class="text-sm text-gray-500">🌿 ${species.subSpeciesCount}品種</span>`
+        : '';
+
+      return `
+        <div class="species-card bg-white rounded-lg shadow-md overflow-hidden fade-in"
+             onclick="window.location.href='${linkUrl}'">
+          <img src="${imageSrc}"
+               alt="${displayName}"
+               class="species-thumbnail"
+               loading="lazy"
+               onerror="this.src='/images/placeholder-leaf.svg'">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-2xl font-bold text-forest-dark">
+                ${displayName}
+              </h3>
+            </div>
+            <div class="flex items-center justify-between text-sm text-gray-600">
+              <span>📸 ${postCount}件の投稿</span>
+              ${subSpeciesInfo}
+            </div>
+          </div>
+          <div class="bg-forest-light bg-opacity-10 px-6 py-3 flex items-center justify-between">
+            <span class="text-sm text-forest-dark font-semibold">
+              ${species.type === 'pure' && species.subSpeciesCount > 0 ? '品種を見る' : '投稿を見る'}
+            </span>
+            <svg class="w-5 h-5 text-forest-mid" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </div>
+      `;
+    }
+
+    // ページロード時に実行
+    loadMainSpecies();
+  </script>
+
+  <!-- Accordion Toggle -->
+  <script is:inline>
+    window.toggleAccordion = function(accordionId) {
+      const content = document.getElementById(accordionId);
+      const icon = document.getElementById(accordionId + '-icon');
+
+      if (content && icon) {
+        content.classList.toggle('open');
+        icon.classList.toggle('rotate');
+      }
+    }
+  </script>
+</BaseLayout>

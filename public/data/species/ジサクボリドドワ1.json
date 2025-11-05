@@ -1,0 +1,64 @@
+{
+  "species": {
+    "id": "ジサクボリドドワ1",
+    "mainSpecies": "ridleyi",
+    "tag": "#ジサクボリドドワ1",
+    "displayName": "Platycerium ridleyi dwarf",
+    "count": 1,
+    "latestPost": {
+      "id": "1697455469-0",
+      "date": "2023-10-16",
+      "image": "instagram-data/media/posts/202310/17974042994416357.jpg",
+      "caption": "Platycerium ridleyi dwarf"
+    }
+  },
+  "posts": [
+    {
+      "id": "1697455469-0",
+      "date": "2023-10-16",
+      "timestamp": 1697455469,
+      "caption": "Platycerium ridleyi dwarf\nシルバー？シルベリー？シルベスタスタローン？\n派手派手なのもいいですが、こういう奥ゆかしい？やつもいいですね。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダリドレイ \n#リドレイ \n#platycerium \n#platyceriumridleyi\n#ジサクボリドドワ1",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダリドレイ",
+        "リドレイ",
+        "platycerium",
+        "platyceriumridleyi",
+        "ジサクボリドドワ1"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202310/17974042994416357.jpg",
+          "timestamp": 1697455468
+        },
+        {
+          "path": "instagram-data/media/posts/202310/18047512060507490.jpg",
+          "timestamp": 1697455468
+        },
+        {
+          "path": "instagram-data/media/posts/202310/17891005634914494.jpg",
+          "timestamp": 1697455468
+        },
+        {
+          "path": "instagram-data/media/posts/202310/18052006360493548.jpg",
+          "timestamp": 1697455468
+        },
+        {
+          "path": "instagram-data/media/posts/202310/18068183833437274.jpg",
+          "timestamp": 1697455468
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1697455469-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
+        }
+      }
+    }
+  ]
+}

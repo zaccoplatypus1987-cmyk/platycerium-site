@@ -1,0 +1,113 @@
+{
+  "species": {
+    "id": "ジサクボナダレ",
+    "mainSpecies": "willinckii",
+    "tag": "#ジサクボナダレ",
+    "displayName": "P.willinckii nadare",
+    "count": 3,
+    "latestPost": {
+      "id": "1756994143-0",
+      "date": "2025-09-04",
+      "image": "instagram-data/media/posts/202509/17945649483035959.jpg",
+      "caption": "P.willinckii nadare "
+    }
+  },
+  "posts": [
+    {
+      "id": "1756994143-0",
+      "date": "2025-09-04",
+      "timestamp": 1756994143,
+      "caption": "P.willinckii nadare \nfrom @190cm_botanical \n貯水葉が綺麗に展開しそう。\n#ビカクシダ\n#ビカクシダウィリンキー \n#ウィリンキー \n#platycerium \n#platyceriumwallichii \n#ジサクボナダレ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダウィリンキー",
+        "ウィリンキー",
+        "platycerium",
+        "platyceriumwallichii",
+        "ジサクボナダレ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202509/17945649483035959.jpg",
+          "timestamp": 1756994143
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1756994143-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
+    {
+      "id": "1754495159-0",
+      "date": "2025-08-06",
+      "timestamp": 1754495159,
+      "caption": "P.willinckii nadare \nfrom @190cm_botanical \n根が板に達しまくってたので、苔増し、板替え、マグァンプ。\n@190cm_botanical さん秋には例のブツ送れそうです！\n#ビカクシダ\n#ビカクシダウィリンキー \n#ウィリンキー \n#platycerium \n#platyceriumwallichii \n#ジサクボナダレ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダウィリンキー",
+        "ウィリンキー",
+        "platycerium",
+        "platyceriumwallichii",
+        "ジサクボナダレ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202508/18036737525425209.jpg",
+          "timestamp": 1754495157
+        },
+        {
+          "path": "instagram-data/media/posts/202508/17906201643211738.jpg",
+          "timestamp": 1754495157
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1754495159-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
+    {
+      "id": "1749041069-0",
+      "date": "2025-06-04",
+      "timestamp": 1749041069,
+      "caption": "P.willinckii nadare \nfrom @190cm_botanical \nこれも良いウィリンキーですよね。\n沖縄からついに我が家にやってきました。\n@190cm_botanical さん立派な株をありがとうございました��バキバキの標本株にします！\n\n#ビカクシダ\n#ビカクシダウィリンキー \n#ウィリンキー \n#platycerium \n#platyceriumwallichii \n#ジサクボナダレ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダウィリンキー",
+        "ウィリンキー",
+        "platycerium",
+        "platyceriumwallichii",
+        "ジサクボナダレ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202506/17877374037345981.jpg",
+          "timestamp": 1749041068
+        },
+        {
+          "path": "instagram-data/media/posts/202506/17858638776429441.jpg",
+          "timestamp": 1749041068
+        },
+        {
+          "path": "instagram-data/media/posts/202506/18044689163227240.jpg",
+          "timestamp": 1749041068
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1749041069-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    }
+  ]
+}

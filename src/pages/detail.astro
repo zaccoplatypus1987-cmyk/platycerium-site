@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="投稿詳細 - Platycerium Collection">
+  <style>
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-btn.prev {
+      left: 1rem;
+    }
+
+    .carousel-btn.next {
+      right: 1rem;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .carousel-container {
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .day-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #4A7C2F 0%, #6FA83F 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(74, 124, 47, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin: 1rem 0;
+    }
+
+    .day-badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(74, 124, 47, 0.4);
+    }
+
+    .navigation-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0;
+      gap: 1rem;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background-color: #4A7C2F;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: #2D5016;
+      transform: translateY(-2px);
+    }
+
+    .nav-btn.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <Header />
+
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Breadcrumb -->
+    <nav id="breadcrumb" class="mb-6 text-sm text-gray-600 hidden">
+      <a href="/" class="hover:text-forest-mid">ホーム</a>
+      <span class="mx-2">/</span>
+      <a href="/species/" class="hover:text-forest-mid">ギャラリー</a>
+      <span class="mx-2">/</span>
+      <a id="breadcrumb-species-link" href="#" class="hover:text-forest-mid">...</a>
+      <span class="mx-2">/</span>
+      <a id="breadcrumb-subspecies-link" href="#" class="hover:text-forest-mid">...</a>
+      <span class="mx-2">/</span>
+      <span id="breadcrumb-current" class="text-gray-900">...</span>
+    </nav>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="text-center py-12">
+      <div class="inline-flex items-center gap-2 text-gray-600">
+        <svg class="animate-spin h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span class="text-lg">投稿を読み込んでいます...</span>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error" class="hidden text-center py-12">
+      <p class="text-xl text-red-600 mb-4"></p>
+      <a href="/gallery.html" class="inline-block bg-primary hover:bg-secondary text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+        ギャラリーに戻る
+      </a>
+    </div>
+
+    <!-- Detail Container -->
+    <div id="detail-container">
+      <!-- Post Detail will be rendered here -->
+    </div>
+
+    <!-- Post Detail (OLD - keeping for structure reference) -->
+    <article id="post-detail" class="bg-white rounded-lg shadow-lg overflow-hidden hidden">
+      <!-- Image Carousel -->
+      <div class="carousel-container" id="carousel">
+        <div class="carousel-track" id="carousel-track">
+          <!-- Images will be dynamically loaded here -->
+        </div>
+
+        <!-- Navigation Buttons (shown when multiple images) -->
+        <button class="carousel-btn prev hidden" id="prev-btn" aria-label="前の画像">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button class="carousel-btn next hidden" id="next-btn" aria-label="次の画像">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+
+        <!-- Image Indicators -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2" id="indicators">
+          <!-- Indicators will be dynamically loaded here -->
+        </div>
+      </div>
+
+      <!-- Post Information -->
+      <div class="p-6 md:p-8">
+        <!-- Plant Name & Date -->
+        <div class="flex items-center justify-between mb-4">
+          <h2 id="post-title" class="text-2xl md:text-3xl font-bold text-gray-900">
+            <!-- Title will be dynamically loaded -->
+          </h2>
+          <time id="post-date" class="text-gray-600 text-sm md:text-base" datetime="">
+            <!-- Date will be dynamically loaded -->
+          </time>
+        </div>
+
+        <!-- Hashtags -->
+        <div id="post-hashtags" class="flex flex-wrap gap-2 mb-6">
+          <!-- Hashtags will be dynamically loaded -->
+        </div>
+
+        <!-- Caption -->
+        <div id="post-caption" class="prose max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap">
+          <!-- Caption will be dynamically loaded -->
+        </div>
+
+        <!-- Metadata -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+          <dl class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <dt class="font-semibold text-gray-600">投稿ID</dt>
+              <dd id="post-id" class="text-gray-900">-</dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-gray-600">画像数</dt>
+              <dd id="post-image-count" class="text-gray-900">-</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <!-- Recommended Products Section (Affiliate) -->
+    <section class="mt-12 bg-white rounded-lg shadow-lg p-6 md:p-8">
+      <h3 class="text-xl font-bold mb-4 flex items-center">
+        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded mr-2">広告</span>
+        おすすめ商品
+      </h3>
+      <p class="text-gray-600 mb-6">ビカクシダの育成に役立つアイテム</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="affiliate-products">
+        <!-- Affiliate products will be dynamically loaded here -->
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <!-- JavaScript -->
+  <script type="module" src="/scripts/navigation.js"></script>
+  <script type="module" src="/scripts/detail-app.js?v=3"></script>
+</BaseLayout>

@@ -1,0 +1,42 @@
+{
+  "species": {
+    "id": "ジサクボ4クイーン",
+    "mainSpecies": "willinckii",
+    "tag": "#ジサクボ4クイーン",
+    "displayName": "P.willinckii cv 4queen sporeling",
+    "count": 1,
+    "latestPost": {
+      "id": "1719617361-0",
+      "date": "2024-06-28",
+      "image": "instagram-data/media/posts/202406/18023470505217098.jpg",
+      "caption": "P.willinckii cv 4queen sporeling"
+    }
+  },
+  "posts": [
+    {
+      "id": "1719617361-0",
+      "date": "2024-06-28",
+      "timestamp": 1719617361,
+      "caption": "P.willinckii cv 4queen sporeling\nfrom @botaniquelife \n\nこの感じは好きなウィリンキーな気がする。\n\n#ビカクシダ \n#ウィリンキー \n#ジサクボ4クイーン",
+      "hashtags": [
+        "ビカクシダ",
+        "ウィリンキー",
+        "ジサクボ4クイーン"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202406/18023470505217098.jpg",
+          "timestamp": 1719617361
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1719617361-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:フォンシキ vs ハッシュ:4クイーン）"
+        }
+      }
+    }
+  ]
+}
