@@ -2,262 +2,416 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+
+const siteTitle = "ジサクボ's ジサクラボ | ビカクシダ栽培研究所";
 ---
 
-<BaseLayout title="トップページ">
+<BaseLayout title={siteTitle}>
   <Header />
 
   <main>
-    <!-- ヒーローセクション - フルスクリーン -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-      <!-- 背景画像 - パララックス効果 -->
-      <div class="absolute inset-0 z-0">
-        <img
-          src="/images/hero-bg.jpg"
-          alt="Beautiful Platycerium"
-          class="w-full h-full object-cover scale-110"
-        />
-        <!-- グラデーションオーバーレイ -->
-        <div class="absolute inset-0 bg-gradient-to-br from-green-900/80 via-green-800/70 to-green-600/60"></div>
+    <!-- ヒーローセクション -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-green-900 to-gray-900">
+      <!-- 背景パターン -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
       </div>
 
-      <!-- コンテンツ -->
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <!-- 小見出し -->
-          <p class="text-green-200 text-lg mb-4 tracking-wider uppercase font-light">
-            Staghorn Fern Specialist
-          </p>
-
+      <div class="container mx-auto px-4 relative z-10 py-20">
+        <div class="max-w-5xl mx-auto">
           <!-- メインタイトル -->
-          <h1 class="text-7xl md:text-8xl font-black mb-8 text-white leading-tight">
-            Platycerium<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-400">
-              Collection
-            </span>
-          </h1>
+          <div class="text-center mb-16">
+            <p class="text-green-400 text-sm md:text-base mb-4 tracking-widest uppercase font-semibold">
+              100% Real Experience
+            </p>
 
-          <!-- 説明文 -->
-          <p class="text-xl md:text-2xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed">
-            ビカクシダ、めっちゃええで。<br>
-            1,000枚以上の写真と、実際に育てて分かった<br class="hidden md:block">
-            リアルなノウハウを全部見せます。
-          </p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white leading-tight">
+              ジサクボ's<br class="md:hidden">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-300 to-teal-300">
+                ジサクラボ
+              </span>
+            </h1>
 
-          <!-- CTAボタン -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/gallery" class="group relative inline-flex items-center gap-2 bg-white text-green-800 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105">
-              <span>ギャラリーを見る</span>
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
-            </a>
-            <a href="/guide" class="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-green-800 transition-all">
-              <span>育て方ガイド</span>
-            </a>
+            <p class="text-xl md:text-2xl text-green-100 mb-4 font-light">
+              ビカクシダ栽培研究所
+            </p>
+
+            <div class="h-1 w-24 bg-gradient-to-r from-green-400 to-emerald-400 mx-auto mb-8"></div>
+
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
+              2020年から30株育ててきた、<br class="md:hidden">
+              完全室内栽培のリアルな記録。<br>
+              <span class="text-white font-semibold">失敗も成功も、全部見せます。</span>
+            </p>
+
+            <!-- CTAボタン -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/gallery/" class="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-600 hover:to-emerald-600 transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105">
+                <span>成長記録を見る</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </a>
+              <a href="https://instagram.com/jisakubo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all backdrop-blur-sm">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- スクロールインジケーター -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
       </div>
     </section>
 
-    <!-- 主要コンテンツへの導線 - 非対称グリッド -->
-    <section class="container mx-auto px-4 py-24">
-      <!-- セクションタイトル -->
-      <div class="text-center mb-16">
-        <h2 class="text-5xl font-bold mb-4 text-gray-900">
-          Explore More
-        </h2>
-        <p class="text-xl text-gray-600">
-          あなたの興味に合わせてコンテンツを探索
-        </p>
-      </div>
-
-      <!-- 非対称グリッド -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- メインカード（大） - ギャラリー -->
-        <a href="/gallery" class="group relative overflow-hidden rounded-3xl shadow-2xl row-span-2 h-[600px] lg:h-auto">
-          <div class="absolute inset-0">
-            <img
-              src="/images/gallery-card.jpg"
-              alt="ビカクシダギャラリー"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
-            <span class="inline-block text-green-400 text-sm font-semibold mb-3 uppercase tracking-wider">
-              Featured
-            </span>
-            <h3 class="text-4xl lg:text-5xl font-bold text-white mb-4">
-              品種ギャラリー
-            </h3>
-            <p class="text-lg text-white/90 mb-6 max-w-md">
-              爆速で育つやつ、ごんぶとになるやつ。各品種の成長記録を写真で追いかけてます。
-            </p>
-            <span class="inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>探索する</span>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- サブカード（小） - 栽培ノウハウ -->
-        <a href="/guide" class="group relative overflow-hidden rounded-3xl shadow-xl h-[280px]">
-          <div class="absolute inset-0">
-            <img
-              src="/images/guide-card.jpg"
-              alt="栽培ノウハウ"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-green-600/70"></div>
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-8">
-            <h3 class="text-3xl font-bold text-white mb-2">
-              栽培ノウハウ
-            </h3>
-            <p class="text-white/90 mb-4">
-              一回枯らしても大丈夫。失敗から学んだ育て方のコツ
-            </p>
-            <span class="inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>学ぶ</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- サブカード（小） - 使用道具 -->
-        <a href="/tools" class="group relative overflow-hidden rounded-3xl shadow-xl h-[280px]">
-          <div class="absolute inset-0">
-            <img
-              src="/images/tools-card.jpg"
-              alt="使用道具"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-blue-600/70"></div>
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-8">
-            <h3 class="text-3xl font-bold text-white mb-2">
-              使用道具
-            </h3>
-            <p class="text-white/90 mb-4">
-              実際に使ってるやつ全部。板も用土も肥料も
-            </p>
-            <span class="inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>見る</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- 新着情報セクション（将来的に記事を表示） -->
-    <section class="bg-gradient-to-b from-white to-gray-50 py-24">
+    <!-- 自己紹介セクション -->
+    <section class="py-20 md:py-32 bg-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-5xl font-bold mb-4 text-gray-900">
-            Latest Articles
-          </h2>
-          <p class="text-xl text-gray-600">
-            新着の栽培ノウハウをチェック
-          </p>
-        </div>
-
-        <!-- プレースホルダー -->
         <div class="max-w-4xl mx-auto">
-          <div class="bg-white rounded-3xl shadow-lg p-12 text-center border-2 border-dashed border-gray-200">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-6">
-              <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-              </svg>
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
+            <!-- ビカキンちゃん -->
+            <div class="flex-shrink-0">
+              <img src="/images/bikakin-standing-01.png" alt="ビカキンちゃん" class="w-32 md:w-40 h-auto">
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-3">記事を準備中</h3>
-            <p class="text-gray-600 mb-6">
-              Markdownで書くだけで、ここに自動的に表示されます。<br>
-              Instagram感覚で記事を追加できます。
-            </p>
-            <span class="inline-block px-6 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-              Coming Soon
-            </span>
+
+            <!-- テキスト -->
+            <div class="flex-1">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                はじめまして、ジサクボです
+              </h2>
+
+              <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  2020年、YouTubeのインテリア系動画でビカクシダを見て、<br>
+                  「なんだこれ、かっこいいな」と思ったのが始まり。
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  最初の1株はステマリア。8000円という値札を見て2時間くらい悩んだけど、<br>
+                  やっぱり欲しくて買いました。
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-4">
+                  それから約5年。<br>
+                  今では完全室内で30株くらい育ててます。
+                </p>
+
+                <p class="text-gray-700 leading-relaxed mb-6">
+                  <strong class="text-gray-900">失敗もたくさんしました。</strong><br>
+                  日焼けで枯らしたり、カイガラムシで枯らしたり、<br>
+                  高額な株を病気で失ったこともあります。
+                </p>
+
+                <p class="text-lg font-semibold text-green-700">
+                  でも、だからこそ伝えられることがある。<br>
+                  このサイトは、そんな私の備忘録です。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 初心者向けガイドへの誘導 - モダンCTA -->
-    <section class="relative py-32 overflow-hidden">
-      <!-- 背景グラデーション -->
-      <div class="absolute inset-0 bg-gradient-to-br from-green-50 via-green-100 to-green-50"></div>
+    <!-- このサイトについて -->
+    <section class="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-green-50/30">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+            このサイトについて
+          </h2>
 
-      <!-- 装飾的な円 -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-green-200/30 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
-
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <!-- アイコン -->
-          <div class="inline-flex items-center justify-center w-20 h-20 bg-green-600 rounded-full mb-8">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
+          <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
+              <span class="text-3xl">📝</span>
+              なぜ作ったか
+            </h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Instagramで投稿してたら、「水やりってどうやるの？」「この品種って何？」って質問がたくさん来るようになって。
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              でもInstagramって、過去の投稿を時系列で追いにくいじゃないですか。
+            </p>
+            <p class="text-gray-700 leading-relaxed font-semibold text-gray-900">
+              だから、品種ごとに写真をまとめて、成長記録を整理したかった。<br>
+              それが一番の理由です。
+            </p>
           </div>
 
-          <h2 class="text-5xl font-bold mb-6 text-gray-900">
-            初めての方へ
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
+                <span class="text-3xl">🎯</span>
+                伝えたいこと
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 text-xl flex-shrink-0">✓</span>
+                  <span class="text-gray-700">環境や育て方で、同じ品種でも全然違う姿になる。その多様性が面白い。</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 text-xl flex-shrink-0">✓</span>
+                  <span class="text-gray-700">「こういう風にしたい」と狙って育てる、ゲームみたいな楽しさがある。</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 text-xl flex-shrink-0">✓</span>
+                  <span class="text-gray-700">室内でも育てられるし、難しくない。</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
+                <span class="text-3xl">👥</span>
+                こんな人に
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 text-xl flex-shrink-0">✓</span>
+                  <span class="text-gray-700">これからビカクシダを始めたい人</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 text-xl flex-shrink-0">✓</span>
+                  <span class="text-gray-700">既に育ててて、成長の目安が知りたい人</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 text-xl flex-shrink-0">✓</span>
+                  <span class="text-gray-700">「この品種、どんな感じに育つんだろう？」と気になってる人</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl shadow-lg p-8 md:p-12 text-white text-center">
+            <p class="text-xl md:text-2xl font-bold mb-4">
+              ビカクシダブームを、<br class="md:hidden">
+              ブームで終わらせたくない。
+            </p>
+            <p class="text-lg opacity-90">
+              園芸の一つの普遍的なジャンルとして、<br>
+              裾野を広げていきたいと思っています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 名言セクション -->
+    <section class="py-20 md:py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
+            ジサクボの栽培哲学
           </h2>
-          <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
-            初めてでも大丈夫やで。<br>
-            水やりの頻度、板付けのやり方、肥料の選び方。<br>
-            <span class="text-green-700 font-semibold">全部、実際に育てて分かったことです。</span>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-100">
+              <div class="text-4xl mb-4">🏡</div>
+              <h3 class="text-xl font-bold mb-4 text-gray-900">心地よい空間</h3>
+              <p class="text-gray-700 leading-relaxed">
+                人間が心地よいと思う空間が、ビカクシダも好きな空間。
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-100">
+              <div class="text-4xl mb-4">💚</div>
+              <h3 class="text-xl font-bold mb-4 text-gray-900">好きを育てる</h3>
+              <p class="text-gray-700 leading-relaxed">
+                心がときめいたものを育てるべき。好きだからこそ、よく観察できる。
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-100">
+              <div class="text-4xl mb-4">💡</div>
+              <h3 class="text-xl font-bold mb-4 text-gray-900">環境投資</h3>
+              <p class="text-gray-700 leading-relaxed">
+                環境はケチらない方がいい。高いライト1個より、安いライトを広範囲に。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 失敗談セクション -->
+    <section class="py-20 md:py-32 bg-gradient-to-br from-red-50/30 to-orange-50/30">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900">
+            失敗談も全部見せます
+          </h2>
+          <p class="text-center text-gray-600 mb-12 text-lg">
+            たくさん枯らしてきたからこそ、伝えられることがある
           </p>
 
-          <!-- 特徴リスト -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <p class="text-gray-700 font-medium">初心者向け</p>
+          <div class="space-y-6">
+            <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-red-500">
+              <h3 class="font-bold text-lg text-gray-900 mb-2">
+                日焼けでベイチーを枯らした
+              </h3>
+              <p class="text-gray-700">
+                「光に強く直射で育てるといい」と聞いて、春に外に出したら一気に日焼けして枯れました。情報を鵜呑みにせず、徐々に慣らすべきでした。
+              </p>
             </div>
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-              </div>
-              <p class="text-gray-700 font-medium">豊富な写真</p>
+
+            <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-orange-500">
+              <h3 class="font-bold text-lg text-gray-900 mb-2">
+                高額株を病気で失った
+              </h3>
+              <p class="text-gray-700">
+                普通に管理していたのに、急に胞子葉が元気がなくなってしなしなに。どんどん胞子葉が抜けていって、最終的に枯れました。これが一番ショックでした。
+              </p>
             </div>
-            <div class="flex flex-col items-center">
-              <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-3">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <p class="text-gray-700 font-medium">実践的</p>
+
+            <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-500">
+              <h3 class="font-bold text-lg text-gray-900 mb-2">
+                カイガラムシの恐怖
+              </h3>
+              <p class="text-gray-700 mb-3">
+                全く観察していなかったら、どんどん付いていって枯れたことも。観察が最重要です。
+              </p>
+              <p class="text-sm text-gray-600 bg-gray-50 rounded p-3">
+                <strong>対処法：</strong> 毎日チェック。見たら手で取る、温かいシャワーをかけて取りやすくしてから全部取る。
+              </p>
             </div>
           </div>
 
-          <a href="/guide/beginner" class="group inline-flex items-center gap-3 bg-green-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-green-700 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
-            <span>初心者ガイドを読む</span>
-            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-            </svg>
+          <div class="mt-12 bg-green-600 rounded-2xl shadow-lg p-8 text-white text-center">
+            <p class="text-xl font-bold mb-3">
+              失敗を隠さないのが、このサイトのスタンス
+            </p>
+            <p class="opacity-90">
+              100%自分の経験を伝えます。嘘はありません。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- コンテンツグリッド -->
+    <section class="py-20 md:py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
+          コンテンツ
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- ギャラリー -->
+          <a href="/gallery/" class="group relative overflow-hidden rounded-2xl shadow-xl h-[400px] bg-gradient-to-br from-green-600 to-emerald-600 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+            <div class="relative h-full flex flex-col justify-end p-8">
+              <span class="inline-block text-green-200 text-sm font-semibold mb-3 uppercase tracking-wider">
+                Main Content
+              </span>
+              <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                成長記録ギャラリー
+              </h3>
+              <p class="text-white/90 mb-6 leading-relaxed">
+                購入時から現在までの成長記録を品種ごとに掲載。<br>
+                「だいたいこれくらいでこんな感じになる」が分かります。
+              </p>
+              <div class="flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
+                <span>見る</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+            </div>
           </a>
+
+          <!-- 使っている道具 -->
+          <a href="/tools" class="group relative overflow-hidden rounded-2xl shadow-xl h-[400px] bg-gradient-to-br from-blue-600 to-cyan-600 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+            <div class="relative h-full flex flex-col justify-end p-8">
+              <span class="inline-block text-blue-200 text-sm font-semibold mb-3 uppercase tracking-wider">
+                Tools & Tips
+              </span>
+              <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                使っている道具
+              </h3>
+              <p class="text-white/90 mb-6 leading-relaxed">
+                LED照明、水苔、肥料、板など。<br>
+                実際に使っているものを詳しく紹介します。
+              </p>
+              <div class="flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
+                <span>見る</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 準備中のコンテンツ -->
+        <div class="mt-12 max-w-5xl mx-auto">
+          <div class="bg-gray-50 rounded-2xl p-8 border-2 border-dashed border-gray-300">
+            <h3 class="text-xl font-bold text-center mb-4 text-gray-900">
+              準備中のコンテンツ
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4 text-center">
+              <div class="bg-white rounded-lg p-4">
+                <p class="text-gray-700 font-semibold">📚 育て方ガイド</p>
+                <p class="text-sm text-gray-500 mt-2">水やり、光、温度管理など</p>
+              </div>
+              <div class="bg-white rounded-lg p-4">
+                <p class="text-gray-700 font-semibold">🌿 チランジア紹介</p>
+                <p class="text-sm text-gray-500 mt-2">ビカクシダと同じくらい好き</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram連携 -->
+    <section class="py-20 md:py-32 bg-gradient-to-br from-purple-50 to-pink-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-8">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
+
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Instagram でも発信中
+          </h2>
+
+          <p class="text-xl text-gray-700 mb-4">
+            日々の成長記録、栽培のコツ、失敗談など<br>
+            リアルタイムで更新しています
+          </p>
+
+          <p class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-8">
+            2万人が見ている栽培記録
+          </p>
+
+          <a href="https://instagram.com/jisakubo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>@jisakubo をフォロー</span>
+          </a>
+
+          <div class="mt-12 bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-gray-700 mb-4">
+              <strong class="text-gray-900">オフ会もやってます！</strong>
+            </p>
+            <p class="text-gray-600">
+              「ビカクシダ交え」というオフ会を開催中。<br>
+              Instagramで告知しているので、興味ある方はフォローしてくださいね。
+            </p>
+          </div>
         </div>
       </div>
     </section>

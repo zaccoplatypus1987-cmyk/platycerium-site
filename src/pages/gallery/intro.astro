@@ -1,0 +1,442 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="原種紹介 - Platycerium Collection">
+  <style is:global>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cultivar-card {
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #4A7C2F;
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .cultivar-card:hover {
+      transform: translateX(4px);
+      background: #f3f4f6;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .breadcrumb-separator {
+      color: #999;
+    }
+
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f0f7ed;
+      color: #4A7C2F;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-right: 1rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-icon {
+      color: #4A7C2F;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+  </style>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb text-sm text-gray-600">
+      <a href="/" class="hover:text-forest-mid transition-colors">ホーム</a>
+      <span class="breadcrumb-separator">/</span>
+      <a href="/gallery/" class="hover:text-forest-mid transition-colors">ギャラリー</a>
+      <span class="breadcrumb-separator">/</span>
+      <span id="breadcrumb-current" class="text-forest-dark font-semibold">読み込み中...</span>
+    </nav>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="text-center py-12">
+      <div class="inline-flex items-center gap-2 text-gray-600">
+        <svg class="animate-spin h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span class="text-lg">データを読み込んでいます...</span>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error" class="hidden text-center py-12">
+      <p class="text-xl text-red-600 mb-4"></p>
+      <a href="/gallery/" class="inline-block bg-forest-mid hover:bg-forest-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+        ギャラリーに戻る
+      </a>
+    </div>
+
+    <!-- Main Content -->
+    <div id="content" class="hidden">
+      <!-- Hero Section -->
+      <div class="section-card fade-in">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h1 id="species-title" class="text-4xl md:text-5xl font-bold text-forest-dark mb-2">
+              読み込み中...
+            </h1>
+            <p id="species-subtitle" class="text-2xl text-gray-500 italic mb-4">
+              <!-- 学名 -->
+            </p>
+            <div class="mb-6">
+              <span class="stat-badge">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span id="total-posts">0</span>件の投稿
+              </span>
+              <span class="stat-badge">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                <span id="cultivar-count">0</span>品種
+              </span>
+            </div>
+            <div id="species-overview" class="text-gray-700 text-lg leading-relaxed">
+              <!-- 概要 -->
+            </div>
+          </div>
+          <div>
+            <img id="hero-image" src="" alt="" class="hero-image" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 原産地・生息地 -->
+      <div class="section-card fade-in">
+        <h2 class="text-2xl font-bold text-forest-dark mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          原産地・生息地
+        </h2>
+        <div id="origin-content" class="text-gray-700">
+          <!-- 原産地情報 -->
+        </div>
+      </div>
+
+      <!-- 特徴 -->
+      <div class="section-card fade-in">
+        <h2 class="text-2xl font-bold text-forest-dark mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          特徴
+        </h2>
+        <ul id="features-list" class="feature-list">
+          <!-- 特徴リスト -->
+        </ul>
+      </div>
+
+      <!-- 魅力 -->
+      <div class="section-card fade-in bg-gradient-to-br from-forest-light/10 to-white">
+        <h2 class="text-2xl font-bold text-forest-dark mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+          魅力
+        </h2>
+        <div id="charm-content" class="text-gray-700 text-lg">
+          <!-- 魅力の説明 -->
+        </div>
+      </div>
+
+      <!-- 栽培のポイント -->
+      <div class="section-card fade-in">
+        <h2 class="text-2xl font-bold text-forest-dark mb-4 flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+          栽培のポイント
+        </h2>
+        <ul id="cultivation-list" class="feature-list">
+          <!-- 栽培ポイント -->
+        </ul>
+      </div>
+
+      <!-- 代表的な品種 -->
+      <div class="section-card fade-in">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-forest-dark flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+            代表的な品種
+          </h2>
+          <a id="all-cultivars-link" href="#" class="text-forest-mid hover:text-forest-dark transition-colors font-semibold flex items-center gap-1">
+            すべての品種を見る
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div id="cultivars-list">
+          <!-- 代表的な品種リスト -->
+        </div>
+      </div>
+
+      <!-- 投稿ギャラリー -->
+      <div class="section-card fade-in">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-forest-dark flex items-center gap-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            最近の投稿
+          </h2>
+        </div>
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- 投稿ギャラリー -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script is:inline type="module">
+    // URLパラメータから原種IDを取得
+    const urlParams = new URLSearchParams(window.location.search);
+    const speciesId = urlParams.get('id');
+
+    // 原種データマップ
+    const speciesDataMap = {
+      'willinckii': {
+        nameJa: 'ウィリンキー',
+        nameEn: 'P. bifurcatum subsp. willinckii',
+        overview: 'ウィリンキー（P. bifurcatum subsp. willinckii）は、インドネシアのジャワ島、小スンダ列島、スラウェシ島原産のビカクシダです。以前は独立種P. willinckiiとして分類されていましたが、現在はP. bifurcatumの亜種とされています。園芸愛好家の間で高い人気を誇り、多数の園芸品種が作出されています。',
+        origin: 'インドネシアのジャワ島、小スンダ列島（バリ島など）、スラウェシ島の熱帯雨林に自生しています。標高の低い熱帯雨林の樹木に着生し、温暖で湿度の高い環境を好みます。',
+        features: [
+          '貯水葉（シールドフロンド）は直立し、縁が深く切れ込む特徴的な形状',
+          '胞子葉（ファータイルフロンド）は下垂し、多数に分岐して2メートル以上に成長',
+          '胞子嚢群（スポアパッチ）は葉の先端部に形成',
+          '子株（プップ）を旺盛に出し、群生しやすい',
+          '葉色は深緑色で、白い星状毛（トリコーム）が美しい',
+        ],
+        charm: 'ウィリンキーの最大の魅力は、その多様性と成長の早さです。深く切れ込んだ貯水葉の美しいフォルム、長く垂れ下がる胞子葉のダイナミックな姿は圧巻です。また、栽培が比較的容易で子株をよく出すため、初心者から上級者まで幅広く楽しめます。様々な園芸品種が存在し、葉の形状や色、サイズなど、コレクション性が高いのも魅力の一つです。',
+        cultivation: [
+          '明るい日陰〜半日陰で管理（直射日光は避ける）',
+          '高温多湿を好む（最低温度12℃以上を保つ）',
+          '水苔での板付けが一般的（通気性が重要）',
+          '春〜秋は週2〜3回、冬は週1回程度の灌水',
+          '春〜秋の成長期に月1〜2回の液肥を与える',
+          '風通しの良い環境で栽培することで病害虫を予防',
+        ],
+      },
+      // 他の原種のデータもここに追加可能
+    };
+
+    async function loadSpeciesIntro() {
+      const loading = document.getElementById('loading');
+      const error = document.getElementById('error');
+      const content = document.getElementById('content');
+
+      if (!speciesId) {
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+        error.querySelector('p').textContent = '原種IDが指定されていません';
+        return;
+      }
+
+      try {
+        // データ読み込み
+        const response = await fetch('/data/species-hierarchy-index.json');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        const speciesData = data.hierarchy.find(item => item.id === speciesId);
+
+        if (!speciesData) {
+          throw new Error(`原種 "${speciesId}" が見つかりません`);
+        }
+
+        const staticData = speciesDataMap[speciesId];
+        if (!staticData) {
+          throw new Error(`原種 "${speciesId}" の説明データがありません`);
+        }
+
+        // ページタイトル更新
+        document.title = `${staticData.nameJa} - 原種紹介 - Platycerium Collection`;
+
+        // Breadcrumb更新
+        document.getElementById('breadcrumb-current').textContent = staticData.nameJa;
+
+        // ヘッダー情報
+        document.getElementById('species-title').textContent = staticData.nameJa;
+        document.getElementById('species-subtitle').textContent = staticData.nameEn;
+        document.getElementById('total-posts').textContent = speciesData.totalPosts;
+        document.getElementById('cultivar-count').textContent = speciesData.subSpeciesCount;
+        document.getElementById('species-overview').textContent = staticData.overview;
+
+        // ヒーロー画像（最新の投稿画像を使用）
+        if (speciesData.latestImage) {
+          document.getElementById('hero-image').src = `/${speciesData.latestImage}`;
+          document.getElementById('hero-image').alt = staticData.nameJa;
+        }
+
+        // 原産地
+        document.getElementById('origin-content').textContent = staticData.origin;
+
+        // 特徴リスト
+        const featuresList = document.getElementById('features-list');
+        featuresList.innerHTML = staticData.features.map(feature => `
+          <li>
+            <span class="feature-icon">✓</span>
+            <span>${feature}</span>
+          </li>
+        `).join('');
+
+        // 魅力
+        document.getElementById('charm-content').textContent = staticData.charm;
+
+        // 栽培ポイント
+        const cultivationList = document.getElementById('cultivation-list');
+        cultivationList.innerHTML = staticData.cultivation.map(point => `
+          <li>
+            <span class="feature-icon">🌱</span>
+            <span>${point}</span>
+          </li>
+        `).join('');
+
+        // 代表的な品種（上位5品種）
+        const topCultivars = speciesData.subSpecies ? speciesData.subSpecies.slice(0, 5) : [];
+        const cultivarsList = document.getElementById('cultivars-list');
+        cultivarsList.innerHTML = topCultivars.map(cultivar => `
+          <div class="cultivar-card" onclick="window.location.href='/species/detail?id=${cultivar.id}'">
+            <h3 class="font-bold text-forest-dark mb-1">${cultivar.displayName}</h3>
+            <p class="text-sm text-gray-600">${cultivar.count}件の投稿</p>
+          </div>
+        `).join('');
+
+        // すべての品種を見るリンク
+        document.getElementById('all-cultivars-link').href = `/species/subspecies?parent=${speciesId}`;
+
+        // 投稿ギャラリー（最新12件の画像）
+        await loadGallery(speciesData);
+
+        loading.classList.add('hidden');
+        content.classList.remove('hidden');
+
+      } catch (err) {
+        console.error('エラー:', err);
+        loading.classList.add('hidden');
+        error.classList.remove('hidden');
+        error.querySelector('p').textContent = `エラー: ${err.message}`;
+      }
+    }
+
+    async function loadGallery(speciesData) {
+      const galleryGrid = document.getElementById('gallery-grid');
+
+      // 各品種から最新の画像を収集
+      const allImages = [];
+      if (speciesData.subSpecies) {
+        for (const subspecies of speciesData.subSpecies) {
+          if (subspecies.latestImage) {
+            allImages.push({
+              image: subspecies.latestImage,
+              name: subspecies.displayName,
+              id: subspecies.id
+            });
+          }
+        }
+      }
+
+      // 最新12件を表示
+      const displayImages = allImages.slice(0, 12);
+
+      galleryGrid.innerHTML = displayImages.map(item => `
+        <div class="gallery-item" onclick="window.location.href='/species/detail?id=${item.id}'">
+          <img src="/${item.image}" alt="${item.name}" loading="lazy" />
+        </div>
+      `).join('');
+    }
+
+    // ページロード時に実行
+    document.addEventListener('DOMContentLoaded', () => {
+      loadSpeciesIntro();
+    });
+  </script>
+</BaseLayout>

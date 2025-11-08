@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout title="投稿詳細 - Platycerium Collection">
-  <style>
+  <style is:global>
     .carousel-container {
       position: relative;
       overflow: hidden;
@@ -121,7 +121,7 @@ import Footer from '../components/Footer.astro';
     <nav id="breadcrumb" class="mb-6 text-sm text-gray-600 hidden">
       <a href="/" class="hover:text-forest-mid">ホーム</a>
       <span class="mx-2">/</span>
-      <a href="/species/" class="hover:text-forest-mid">ギャラリー</a>
+      <a href="/gallery/" class="hover:text-forest-mid">ギャラリー</a>
       <span class="mx-2">/</span>
       <a id="breadcrumb-species-link" href="#" class="hover:text-forest-mid">...</a>
       <span class="mx-2">/</span>

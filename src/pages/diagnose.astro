@@ -168,7 +168,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div class="container">
     <div class="header">
       <h1>🔍 ワンクリック診断ツール</h1>
-      <p>品種一覧ページ（/species/）のフィルター問題を自動診断します</p>
+      <p>品種一覧ページ（/gallery/）のフィルター問題を自動診断します</p>
     </div>
 
     <div class="content">
@@ -237,7 +237,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     async function checkPageAccess() {
       try {
-        const response = await fetch('/species/');
+        const response = await fetch('/gallery/');
         if (response.ok) {
           addCheck('ページアクセス', 'success', `HTTP ${response.status} - ページが正常に読み込まれました`);
         } else {
@@ -273,7 +273,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     async function checkDOMStructure() {
       const iframe = document.createElement('iframe');
-      iframe.src = '/species/';
+      iframe.src = '/gallery/';
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
 
@@ -309,7 +309,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     async function checkGlobalVariables() {
       const iframe = document.createElement('iframe');
-      iframe.src = '/species/';
+      iframe.src = '/gallery/';
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
 
@@ -349,7 +349,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     async function checkFilterGeneration() {
       const iframe = document.createElement('iframe');
-      iframe.src = '/species/';
+      iframe.src = '/gallery/';
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
 

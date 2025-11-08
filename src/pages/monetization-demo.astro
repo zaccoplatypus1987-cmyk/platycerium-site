@@ -1,0 +1,321 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// デモ用の商品データ
+const demoProduct = {
+  name: 'BRIM-COSMO 植物育成ライト',
+  description: '反射板＆集光レンズ付きで効率的に光を届けます。室内栽培に最適。',
+  price: '6,980円',
+  image: '/images/display-setup.jpg',
+  amazonUrl: 'https://www.amazon.co.jp/dp/B0CJJMCRYF',
+};
+---
+
+<BaseLayout title="収益化デモページ - 広告配置イメージ">
+  <style is:global>
+    /* Google AdSense風のプレースホルダー */
+    .adsense-placeholder {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+      border: 2px dashed #9e9e9e;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    .adsense-placeholder::before {
+      content: '🤖 Google AdSense 広告エリア';
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .adsense-placeholder::after {
+      content: 'クリック課金・自動配信・コード1つで完了';
+      display: block;
+      font-size: 0.875rem;
+      color: #999;
+    }
+
+    /* 横長バナー */
+    .adsense-banner {
+      height: 90px;
+    }
+
+    /* レクタングル */
+    .adsense-rectangle {
+      height: 250px;
+      max-width: 300px;
+      margin: 2rem auto;
+    }
+
+    /* Amazon商品カード */
+    .amazon-product {
+      background: white;
+      border: 2px solid #FF9900;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(255, 153, 0, 0.2);
+      position: relative;
+    }
+
+    .amazon-product::before {
+      content: '🛒 Amazonアソシエイト商品リンク';
+      display: block;
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #FF9900;
+      margin-bottom: 1rem;
+      background: #FFF8E1;
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+
+    .amazon-product::after {
+      content: '成果報酬・購入で収益・手動で商品選定';
+      display: block;
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .product-content {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .product-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #f5f5f5;
+    }
+
+    .product-info h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #232f3e;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      font-size: 1.5rem;
+      color: #B12704;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    .amazon-button {
+      display: inline-block;
+      background: #FF9900;
+      color: #232f3e;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .amazon-button:hover {
+      background: #fa8900;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 153, 0, 0.4);
+    }
+
+    .content-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .comparison-table th {
+      background: #f5f5f5;
+      font-weight: bold;
+    }
+
+    .label-adsense {
+      background: #4285f4;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    .label-amazon {
+      background: #ff9900;
+      color: #232f3e;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .product-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <h1 class="text-4xl font-bold text-forest-dark mb-4">
+      💰 収益化デモページ
+    </h1>
+    <p class="text-lg text-gray-600 mb-8">
+      実際のページでGoogle AdSenseとAmazonアソシエイトがどう配置されるか見てみましょう
+    </p>
+
+    <!-- 【1】上部：Google AdSense バナー広告 -->
+    <div class="adsense-placeholder adsense-banner"></div>
+
+    <!-- 【2】記事コンテンツ -->
+    <div class="content-section">
+      <h2 class="text-2xl font-bold text-forest-dark mb-4">
+        ビカクシダの室内栽培に最適なライト
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        室内でビカクシダを育てる際、最も重要なのが光の管理です。
+        自然光だけでは不足しがちな光を補うために、植物育成ライトの導入がおすすめです。
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        特に冬場や日当たりの悪い部屋では、LEDライトを使うことで
+        健康的な成長を促すことができます。以下では、実際に使用している
+        おすすめのライトを紹介します。
+      </p>
+    </div>
+
+    <!-- 【3】Amazonアソシエイト 商品リンク -->
+    <div class="amazon-product">
+      <div class="product-content">
+        <img
+          src={demoProduct.image}
+          alt={demoProduct.name}
+          class="product-image"
+          onerror="this.style.display='none'"
+        />
+        <div class="product-info">
+          <h3>{demoProduct.name}</h3>
+          <p class="text-gray-600 text-sm mb-2">
+            {demoProduct.description}
+          </p>
+          <div class="product-price">
+            ¥{demoProduct.price}
+          </div>
+          <a
+            href={demoProduct.amazonUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="amazon-button"
+          >
+            📦 Amazonで詳細を見る
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 【4】記事コンテンツ続き -->
+    <div class="content-section">
+      <h3 class="text-xl font-bold text-forest-dark mb-3">
+        使用レビュー
+      </h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        このライトを導入してから、貯水葉の成長が明らかに早くなりました。
+        反射板と集光レンズのおかげで、効率的に光が当たっているようです。
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        特に冬場の日照不足を補うのに最適で、色艶も良くなりました。
+        複数の株を育てている方には特におすすめです。
+      </p>
+    </div>
+
+    <!-- 【5】サイドバー風：Google AdSense レクタングル広告 -->
+    <div class="adsense-placeholder adsense-rectangle"></div>
+
+    <!-- 【6】比較表 -->
+    <div class="content-section">
+      <h2 class="text-2xl font-bold text-forest-dark mb-4">
+        📊 Google AdSense vs Amazonアソシエイト
+      </h2>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th><span class="label-adsense">AdSense</span></th>
+            <th><span class="label-amazon">Amazon</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>表示内容</strong></td>
+            <td>自動（Googleが選ぶ）</td>
+            <td>手動（あなたが選ぶ）</td>
+          </tr>
+          <tr>
+            <td><strong>収益条件</strong></td>
+            <td>クリックのみ</td>
+            <td>購入が必要</td>
+          </tr>
+          <tr>
+            <td><strong>単価</strong></td>
+            <td>20-200円/クリック</td>
+            <td>商品価格の2-8%</td>
+          </tr>
+          <tr>
+            <td><strong>設定の手間</strong></td>
+            <td>コード1つ貼るだけ</td>
+            <td>商品ごとにリンク作成</td>
+          </tr>
+          <tr>
+            <td><strong>向いてるページ</strong></td>
+            <td>全ページ</td>
+            <td>商品レビュー・道具紹介</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+        <p class="text-sm text-gray-700">
+          <strong>💡 ポイント：</strong>
+          この2つは競合しません！むしろ併用が推奨されています。
+          AdSenseで安定収入を確保しつつ、Amazonで高単価商品の成果報酬を狙うのが理想的です。
+        </p>
+      </div>
+    </div>
+
+    <!-- 【7】下部：Google AdSense バナー広告 -->
+    <div class="adsense-placeholder adsense-banner"></div>
+
+    <!-- 戻るリンク -->
+    <div class="mt-8 text-center">
+      <a href="/" class="text-forest-mid hover:text-forest-dark transition-colors font-semibold">
+        ← ホームに戻る
+      </a>
+    </div>
+  </main>
+</BaseLayout>

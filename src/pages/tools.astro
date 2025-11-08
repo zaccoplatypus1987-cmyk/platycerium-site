@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// 道具データ（後で編集してください）
+const toolCategories = [
+  {
+    id: 'boards',
+    name: '板・フレーム',
+    icon: '🪵',
+    items: [
+      {
+        id: 'cork-board',
+        name: 'コルク板',
+        description: '通気性が良く、ビカクシダの着生に最適。軽量で扱いやすい。',
+        image: '/images/tools/cork-board.jpg', // ← ここに写真を配置
+        rakutenUrl: '', // ← 楽天のURLを入れてください
+        amazonUrl: '',  // ← AmazonのURLを入れてください
+        priceRange: '1,000円〜3,000円',
+      },
+      {
+        id: 'hego-board',
+        name: 'ヘゴ板',
+        description: '保水性が高く、根の張りが良い。重量感があり安定性抜群。',
+        image: '/images/tools/hego-board.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '1,500円〜4,000円',
+      },
+    ],
+  },
+  {
+    id: 'soil',
+    name: '用土・資材',
+    icon: '🌱',
+    items: [
+      {
+        id: 'sphagnum-moss',
+        name: '水苔（ミズゴケ）',
+        description: '板付けの基本資材。保水性と通気性のバランスが良い。',
+        image: '/images/tools/sphagnum-moss.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '500円〜2,000円',
+      },
+      {
+        id: 'bark-chips',
+        name: 'バークチップ',
+        description: '排水性に優れ、根腐れ防止に効果的。鉢植えに使用。',
+        image: '/images/tools/bark-chips.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '300円〜1,000円',
+      },
+    ],
+  },
+  {
+    id: 'fertilizer',
+    name: '肥料',
+    icon: '💊',
+    items: [
+      {
+        id: 'liquid-fertilizer',
+        name: '液体肥料',
+        description: '成長期に週1回程度使用。即効性があり効果が分かりやすい。',
+        image: '/images/tools/liquid-fertilizer.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '500円〜1,500円',
+      },
+      {
+        id: 'solid-fertilizer',
+        name: '固形肥料',
+        description: 'ゆっくり効く緩効性肥料。水苔の上に置くだけで簡単。',
+        image: '/images/tools/solid-fertilizer.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '500円〜2,000円',
+      },
+    ],
+  },
+  {
+    id: 'tools',
+    name: '道具',
+    icon: '🔧',
+    items: [
+      {
+        id: 'spray-bottle',
+        name: '霧吹き',
+        description: '葉水や水やりに必須。細かいミストが出るものがおすすめ。',
+        image: '/images/tools/spray-bottle.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '500円〜2,000円',
+      },
+      {
+        id: 'pruning-scissors',
+        name: '剪定ばさみ',
+        description: '枯れた葉や子株の切り離しに使用。切れ味の良いものを。',
+        image: '/images/tools/pruning-scissors.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '1,000円〜3,000円',
+      },
+      {
+        id: 'wire',
+        name: '針金（ワイヤー）',
+        description: '板付け時の固定に使用。錆びにくいステンレス製がおすすめ。',
+        image: '/images/tools/wire.jpg',
+        rakutenUrl: '',
+        amazonUrl: '',
+        priceRange: '300円〜800円',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout title="使用道具 - Platycerium Collection">
+  <style is:global>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tool-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-size: 3rem;
+    }
+
+    .tool-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .link-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .rakuten-btn {
+      background: #bf0000;
+      color: white;
+    }
+
+    .rakuten-btn:hover {
+      background: #a00000;
+      transform: translateY(-2px);
+    }
+
+    .amazon-btn {
+      background: #ff9900;
+      color: #232f3e;
+    }
+
+    .amazon-btn:hover {
+      background: #fa8900;
+      transform: translateY(-2px);
+    }
+
+    .link-button.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .category-section {
+      margin-bottom: 3rem;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #4A7C2F;
+    }
+
+    .category-icon {
+      font-size: 2rem;
+    }
+
+    .affiliate-notice {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .price-range {
+      display: inline-block;
+      background: #f0f7ed;
+      color: #4A7C2F;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  </style>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- ページヘッダー -->
+    <div class="mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-forest-dark mb-4">
+        🛠️ 使用道具
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
+        ビカクシダ栽培で実際に使っている道具を紹介します。初心者の方の参考になれば幸いです。
+      </p>
+
+      <!-- アフィリエイト表記 -->
+      <div class="affiliate-notice">
+        <p class="text-sm text-gray-800">
+          ⚠️ このページには楽天・Amazonのアフィリエイトリンクが含まれています。
+          リンクから商品を購入いただくと、サイト運営の支援になります。
+        </p>
+      </div>
+    </div>
+
+    <!-- カテゴリ別の道具一覧 -->
+    {toolCategories.map((category) => (
+      <div class="category-section fade-in">
+        <div class="category-header">
+          <span class="category-icon">{category.icon}</span>
+          <h2 class="text-3xl font-bold text-forest-dark">{category.name}</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {category.items.map((item) => (
+            <div class="tool-card">
+              <!-- 商品画像 -->
+              <div class="tool-image">
+                {item.image ? (
+                  <img src={item.image} alt={item.name} onerror="this.style.display='none'; this.parentElement.innerHTML='📸'" />
+                ) : (
+                  <span>📸</span>
+                )}
+              </div>
+
+              <!-- 商品情報 -->
+              <div class="p-4">
+                <h3 class="text-xl font-bold text-forest-dark mb-2">{item.name}</h3>
+                <p class="text-gray-600 text-sm mb-3 leading-relaxed">{item.description}</p>
+
+                <div class="mb-4">
+                  <span class="price-range">{item.priceRange}</span>
+                </div>
+
+                <!-- 購入リンク -->
+                <div class="flex flex-wrap gap-2">
+                  {item.rakutenUrl ? (
+                    <a href={item.rakutenUrl} target="_blank" rel="noopener noreferrer" class="link-button rakuten-btn">
+                      🛒 楽天で見る
+                    </a>
+                  ) : (
+                    <span class="link-button rakuten-btn disabled" title="リンク未設定">
+                      🛒 楽天で見る
+                    </span>
+                  )}
+
+                  {item.amazonUrl ? (
+                    <a href={item.amazonUrl} target="_blank" rel="noopener noreferrer" class="link-button amazon-btn">
+                      📦 Amazonで見る
+                    </a>
+                  ) : (
+                    <span class="link-button amazon-btn disabled" title="リンク未設定">
+                      📦 Amazonで見る
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <!-- 補足情報 -->
+    <div class="mt-12 bg-white rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold text-forest-dark mb-4">💡 道具選びのポイント</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-2">
+          <span class="text-forest-mid">✓</span>
+          <span><strong>板選び：</strong>コルク板は軽くて扱いやすく初心者向け。ヘゴ板は保水性が高く大型種に適している。</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-forest-mid">✓</span>
+          <span><strong>水苔：</strong>ニュージーランド産の長繊維水苔が品質が良くおすすめ。</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-forest-mid">✓</span>
+          <span><strong>肥料：</strong>春〜秋の成長期に使用。冬は控えめに。</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-forest-mid">✓</span>
+          <span><strong>霧吹き：</strong>細かいミストが出るものを選ぶと葉水がしやすい。</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ギャラリーに戻るリンク -->
+    <div class="mt-8 text-center">
+      <a href="/gallery/" class="inline-flex items-center gap-2 text-forest-mid hover:text-forest-dark transition-colors font-semibold">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        ギャラリーに戻る
+      </a>
+    </div>
+  </main>
+</BaseLayout>
