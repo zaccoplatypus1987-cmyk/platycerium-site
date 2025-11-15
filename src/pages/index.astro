@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="ジサクボ's ジサクラボ | ビカクシダ栽培メモ">
+<BaseLayout title="ジサクボ's ジサクログ | ビカクシダ栽培メモ">
   <style>
     @keyframes fadeInUp {
       from {
@@ -45,7 +45,7 @@ import Footer from '../components/Footer.astro';
           <h1 class="text-6xl md:text-8xl lg:text-9xl font-black leading-none mb-8 text-white fade-in-up">
             ジサクボ's<br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-300 to-teal-300">
-              ジサクラボ
+              ジサクログ
             </span>
           </h1>
 
@@ -90,41 +90,47 @@ import Footer from '../components/Footer.astro';
                 <img src="/images/bikakin-standing-01.png" alt="ビカキンちゃん" class="w-full cursor-pointer transition-transform group-hover:scale-105">
 
                 <!-- ホバー時の吹き出し（右側に表示） -->
-                <div class="bikakin-tooltip hidden md:block absolute left-full ml-6 top-1/2 -translate-y-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 w-[320px]">
-                  <!-- 吹き出し本体 -->
-                  <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-5 border-4 border-emerald-500 shadow-2xl relative">
-                    <!-- 吹き出しのしっぽ（左向き） -->
-                    <div class="absolute right-full -mr-1 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent border-r-[20px] border-r-emerald-500"></div>
-                    <div class="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-r-[16px] border-r-emerald-50"></div>
+                <div class="bikakin-tooltip hidden md:block absolute left-full ml-8 top-[20%] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 w-[340px]">
+                  <!-- 手書き風の枠 -->
+                  <div class="relative bg-gradient-to-br from-green-50 to-emerald-50 px-7 py-6 border-[3px] border-emerald-600"
+                       style="border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+                              box-shadow: 4px 5px 0px rgba(5, 150, 105, 0.3), 8px 9px 15px rgba(0, 0, 0, 0.1);
+                              transform: rotate(-0.5deg);">
 
-                    <!-- 「裏設定」タグ -->
-                    <div class="text-center mb-3">
-                      <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">🤫 裏設定</span>
+                    <!-- 見出し（手書き風下線） -->
+                    <div class="relative mb-4 pb-3">
+                      <h3 class="text-lg font-black text-gray-900 text-center" style="letter-spacing: 0.05em;">
+                        ビカキンちゃん
+                      </h3>
+                      <!-- 手書き風下線 -->
+                      <div class="absolute left-0 right-0 h-[2px] bg-emerald-500"
+                           style="bottom: 0; transform: rotate(-0.3deg);"></div>
                     </div>
 
-                    <div class="space-y-3 text-sm">
+                    <div class="space-y-4 text-sm text-gray-800 leading-relaxed">
                       <div>
-                        <p class="font-black text-emerald-700 mb-1 text-xs">本当の性格</p>
-                        <ul class="text-gray-700 space-y-1 text-xs leading-relaxed">
-                          <li>• 好奇心旺盛で新しい品種が大好き</li>
-                          <li>• 観察好きでじっくり派</li>
-                          <li>• 悪魔の囁きで散財させる悪い妖怪</li>
-                          <li class="text-[10px] text-gray-500">（でも本気で一緒に楽しみたいだけ）</li>
+                        <p class="font-black text-emerald-700 mb-2 text-base">性格</p>
+                        <ul class="space-y-1.5 text-sm leading-relaxed">
+                          <li>• 好奇心旺盛で、新しい品種を見るとワクワクする</li>
+                          <li>• 観察好きでじっくり派。小さな変化も見逃さない</li>
+                          <li>• 人がビカクシダを買おうか迷っている時に「買っちゃえば？」と悪魔の囁きをして散財させることに喜びを感じる悪い妖怪</li>
                         </ul>
                       </div>
 
                       <div class="border-t-2 border-emerald-200 pt-3">
-                        <p class="font-black text-emerald-700 mb-1 text-xs">密かな楽しみ</p>
-                        <ul class="text-gray-700 space-y-1 text-xs leading-relaxed">
-                          <li>• 人が「ポチる」瞬間を見ること</li>
-                          <li>• 「あと1株くらいいけるよ」って囁くこと</li>
-                          <li>• 単眼でじっと成長を観察すること</li>
-                        </ul>
-                      </div>
-
-                      <div class="border-t-2 border-emerald-200 pt-3">
-                        <p class="font-black text-emerald-700 mb-1 text-xs">口癖</p>
+                        <p class="font-black text-emerald-700 mb-2 text-base">口癖</p>
                         <p class="text-gray-900 font-bold text-sm">「ビカクには愛情と観察が一番大事ビカ」</p>
+                      </div>
+
+                      <div class="border-t-2 border-emerald-200 pt-3">
+                        <p class="font-black text-emerald-700 mb-2 text-base">好きなこと</p>
+                        <ul class="space-y-1.5 text-sm leading-relaxed">
+                          <li>• 新しい品種との出会い</li>
+                          <li>• 人がビカクシダを「ポチる」瞬間を見ること</li>
+                          <li>• 毎朝のビカクシダ観察（単眼でじっと見る）</li>
+                          <li>• 成長記録の撮影</li>
+                          <li>• 「あと1株くらいいけるよ」って囁いて散財させて生活を困窮させること</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -135,17 +141,19 @@ import Footer from '../components/Footer.astro';
               <div class="mt-6 text-center">
                 <div class="inline-block relative" style="transform: rotate(-1deg);">
                   <!-- 手書き風の枠 -->
-                  <div class="relative bg-white px-8 py-5 border-[3px] border-emerald-600"
+                  <div class="relative bg-white px-8 py-6 border-[3px] border-emerald-600"
                        style="border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
                               box-shadow: 3px 4px 0px rgba(5, 150, 105, 0.3), 6px 7px 10px rgba(0, 0, 0, 0.1);">
                     <!-- 下線（手書き風） -->
                     <div class="absolute left-4 right-4 h-[2px] bg-emerald-500 opacity-40"
-                         style="bottom: 38%; transform: rotate(-0.5deg);"></div>
+                         style="bottom: 50%; transform: rotate(-0.5deg);"></div>
 
-                    <p class="text-2xl font-black text-gray-900 mb-2 relative"
+                    <p class="text-2xl font-black text-gray-900 mb-3 relative"
                        style="letter-spacing: 0.05em;">ビカキンちゃん</p>
-                    <p class="text-sm text-emerald-700 font-bold relative">
-                      このサイトの案内役だよ！
+                    <p class="text-sm text-emerald-700 font-bold relative leading-relaxed">
+                      このサイトの案内役。<br>
+                      親切にビカクシダの魅力を伝えてくれるけど、<br>
+                      実はあなたをビカクシダ沼に引き込もうとしている悪い妖怪。
                     </p>
                   </div>
                 </div>
@@ -154,10 +162,16 @@ import Footer from '../components/Footer.astro';
 
             <div class="order-1 md:order-2">
               <h2 class="text-5xl md:text-6xl font-black mb-8 text-gray-900 leading-tight">
-                はじめまして
+                はじめまして<br>
+                <span class="text-emerald-700">ジサクボです</span>
               </h2>
 
               <div class="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
+                <p class="text-base text-gray-600 border-l-4 border-emerald-500 pl-4">
+                  しがないサラリーマンをしながら、趣味でビカクシダとチランジアを育てています。<br>
+                  Instagram (@j39bo) では日々の栽培記録を投稿中。
+                </p>
+
                 <p class="text-3xl md:text-4xl font-bold text-gray-900">
                   「なんだこれ、かっこいいな」
                 </p>
@@ -169,10 +183,108 @@ import Footer from '../components/Footer.astro';
 
                 <p class="text-xl">
                   枯らした株もたくさんあるし、失敗もたくさんしました。<br>
-                  <strong class="text-emerald-700">でもその分、室内で育てるコツは掴めてきたと思います。</strong>
+                  <strong class="text-emerald-700">でもその分、室内で育てるコツは掴めてきた感じです。</strong>
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 最新投稿 -->
+    <section class="py-16 md:py-20 bg-white border-t border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <!-- セクション見出し -->
+          <div class="text-center mb-8">
+            <div class="inline-block bg-emerald-50 px-4 py-1.5 rounded-full mb-3">
+              <span class="text-emerald-600 font-bold text-xs tracking-wider">📷 LATEST POSTS</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-2">
+              最新投稿
+            </h2>
+            <p class="text-sm text-gray-600">
+              Instagramで最近投稿したビカクシダたち
+            </p>
+          </div>
+
+          <!-- 最新4件のカード -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6">
+            <!-- 1. P.willinckii 伊弉諾 -->
+            <a href="https://www.instagram.com/j39bo/" target="_blank" rel="noopener noreferrer"
+               class="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="/instagram-data/media/posts/202510/18060319199430313.jpg"
+                   alt="P.willinckii 伊弉諾"
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-2">
+                  <p class="text-white font-bold text-xs mb-0.5">P.willinckii 伊弉諾</p>
+                  <p class="text-white/80 text-[10px]">2025-10-22</p>
+                </div>
+              </div>
+              <div class="absolute top-2 right-2 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                NEW
+              </div>
+            </a>
+
+            <!-- 2. P.coronarium waiwai -->
+            <a href="https://www.instagram.com/j39bo/" target="_blank" rel="noopener noreferrer"
+               class="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="/instagram-data/media/posts/202510/18149837926417038.jpg"
+                   alt="P.coronarium waiwai"
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-2">
+                  <p class="text-white font-bold text-xs mb-0.5">P.coronarium waiwai</p>
+                  <p class="text-white/80 text-[10px]">2025-10-21</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- 3. P.Phenomenal -->
+            <a href="https://www.instagram.com/j39bo/" target="_blank" rel="noopener noreferrer"
+               class="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="/instagram-data/media/posts/202510/18051827936321844.jpg"
+                   alt="P.Phenomenal"
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-2">
+                  <p class="text-white font-bold text-xs mb-0.5">P.Phenomenal</p>
+                  <p class="text-white/80 text-[10px]">2025-10-20</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- 4. P.Nukul -->
+            <a href="https://www.instagram.com/j39bo/" target="_blank" rel="noopener noreferrer"
+               class="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="/instagram-data/media/posts/202510/17899616700166204.jpg"
+                   alt="P.Nukul"
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="absolute bottom-0 left-0 right-0 p-2">
+                  <p class="text-white font-bold text-xs mb-0.5">P.Nukul</p>
+                  <p class="text-white/80 text-[10px]">2025-10-19</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- もっと見るボタン -->
+          <div class="text-center">
+            <a href="https://www.instagram.com/j39bo/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-emerald-700 transition-all hover:scale-105 shadow-lg">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagramでもっと見る</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -192,6 +304,16 @@ import Footer from '../components/Footer.astro';
           <!-- 1. こんなに種類がある -->
           <div class="mb-20">
             <div class="flex items-start gap-6 mb-8">
+              <!-- 悪魔の囁きポーズ -->
+              <div class="hidden md:block flex-shrink-0 w-20 lg:w-24 relative group">
+                <img src="/images/bikakin-whisper-01.png" alt="ビカキンちゃん" class="w-full">
+                <!-- 吹き出し -->
+                <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                    買っちゃえビカ？
+                  </div>
+                </div>
+              </div>
               <div class="flex-1">
                 <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                   とにかく種類が多い
@@ -203,82 +325,195 @@ import Footer from '../components/Footer.astro';
                   見てると全部欲しくなって困ります。
                 </p>
               </div>
-              <!-- 悪魔の囁きポーズ -->
-              <div class="hidden md:block flex-shrink-0 w-24 lg:w-32 relative group">
-                <img src="/images/bikakin-whisper-01.png" alt="ビカキンちゃん" class="w-full">
-                <!-- 吹き出し -->
-                <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
-                  <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
-                    買っちゃえビカ？
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+              <!-- カード1: 細い胞子葉の変なやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(-0.8deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 155px 15px 125px 15px/15px 125px 15px 155px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      細い胞子葉の変なやつ
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202510/18051827936321844.jpg" alt="P. Phenomenal" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. Phenomenal</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-              <!-- カード1: Phenomenal -->
-              <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                <div class="aspect-square">
-                  <img src="/instagram-data/media/posts/202510/18051827936321844.jpg" alt="P. Phenomenal" class="w-full h-full object-cover">
+              <!-- カード2: でかくてなんかすごい奴 -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(0.6deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 125px 15px 155px 15px/15px 155px 15px 125px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      でかくてなんかすごい奴
+                    </h4>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900">P. Phenomenal</h4>
-                  <p class="text-sm text-gray-600">細葉でコンパクト</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202505/18069978181738911.jpg" alt="P. willinckii 月光爪哇" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. willinckii 月光爪哇</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- カード2: coronarium waiwai -->
-              <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                <div class="aspect-square">
-                  <img src="/instagram-data/media/posts/202510/18149837926417038.jpg" alt="P. coronarium waiwai" class="w-full h-full object-cover">
+              <!-- カード3: 小さくてなんかすごい奴 -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(-0.5deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 145px 15px 135px 15px/15px 135px 15px 145px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      小さくてなんかすごい奴
+                    </h4>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900">P. coronarium waiwai</h4>
-                  <p class="text-sm text-gray-600">大きな貯水葉</p>
-                </div>
-              </div>
-
-              <!-- カード3: Triceratops -->
-              <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                <div class="aspect-square">
-                  <img src="/instagram-data/media/posts/202510/18062959775437311.jpg" alt="P. Triceratops" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900">P. Triceratops</h4>
-                  <p class="text-sm text-gray-600">分岐が多い</p>
-                </div>
-              </div>
-
-              <!-- カード4: willinckii 伊弉諾 -->
-              <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                <div class="aspect-square">
-                  <img src="/instagram-data/media/posts/202510/18060319199430313.jpg" alt="P. willinckii 伊弉諾" class="w-full h-full object-cover">
-                </div>
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900">P. willinckii 伊弉諾</h4>
-                  <p class="text-sm text-gray-600">ウィリンキ系</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202506/17957482352970325.jpg" alt="P. willinckii OMG" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. willinckii OMG</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- カード5: madagascariense -->
-              <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                <div class="aspect-square">
-                  <img src="/instagram-data/media/posts/202510/17970016541958313.jpg" alt="P. madagascariense" class="w-full h-full object-cover">
+              <!-- カード4: 鹿の角みたいな可愛いやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(0.7deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 135px 15px 145px 15px/15px 145px 15px 135px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      鹿の角みたいな可愛いやつ
+                    </h4>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900">P. madagascariense</h4>
-                  <p class="text-sm text-gray-600">独特な形</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202510/18053622533550505.jpg" alt="P. ridleyi nano" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. ridleyi nano</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- カード6: Nukul -->
-              <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:scale-105">
-                <div class="aspect-square">
-                  <img src="/instagram-data/media/posts/202510/17899616700166204.jpg" alt="P. Nukul" class="w-full h-full object-cover">
+              <!-- カード5: 貯水葉が凸凹なやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(-0.6deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 155px 15px 140px 15px/15px 140px 15px 155px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      貯水葉が凸凹なやつ
+                    </h4>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900">P. Nukul</h4>
-                  <p class="text-sm text-gray-600">小型で可愛い</p>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202510/17970016541958313.jpg" alt="P. madagascariense" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. madagascariense</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- カード6: 胞子葉が分厚くてムチムチで可愛いやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(0.5deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 150px 15px 130px 15px/15px 130px 15px 150px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      胞子葉が分厚くてムチムチで可愛いやつ
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202510/17899616700166204.jpg" alt="P. Nukul" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. Nukul</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- カード7: 胞子葉がレタスみたいな変なやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(-0.7deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 140px 15px 160px 15px/15px 160px 15px 140px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      胞子葉がレタスみたいな変なやつ
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202308/18017386645691219.jpg" alt="P. ridleyi monkey king" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. ridleyi monkey king</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- カード8: 貯水葉がトキントキンで変なやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(0.6deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 160px 15px 140px 15px/15px 140px 15px 160px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      貯水葉がトキントキンで変なやつ
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202502/18086727580511734.jpg" alt="P. veitchii auburn river" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. veitchii auburn river</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- カード9: めっちゃ美しいやつ -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(-0.8deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 148px 15px 152px 15px/15px 152px 15px 148px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      めっちゃ美しいやつ
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="aspect-square relative">
+                    <img src="/instagram-data/media/posts/202408/17877203238124281.jpg" alt="P. wallichii" class="w-full h-full object-cover">
+                    <!-- グラデーション + 品種名 -->
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">P. wallichii</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -286,56 +521,164 @@ import Footer from '../components/Footer.astro';
 
           <!-- 2. 成長が速い・形が変化する -->
           <div class="mb-20">
-            <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              成長が見えるから楽しい
-            </h3>
-            <p class="text-lg md:text-xl text-gray-600 mb-8">
-              2年くらいで大人になります。<br>
-              その間の変化がすごくて、見てて飽きないです。<br>
-              毎日ちょっとずつ変わってる感じ。
-            </p>
+            <div class="flex items-start gap-6 mb-4">
+              <!-- 喜びポーズ -->
+              <div class="hidden md:block flex-shrink-0 w-20 lg:w-24 relative group">
+                <img src="/images/bikakin-happy-01.png" alt="ビカキンちゃん" class="w-full">
+                <!-- 吹き出し -->
+                <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                    成長が嬉しいビカ！
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                  成長が見えるから楽しい
+                </h3>
+                <p class="text-lg md:text-xl text-gray-600">
+                  2年くらいで大人になります。<br>
+                  その間の変化がすごくて、見てて飽きないです。<br>
+                  毎日ちょっとずつ変わってる感じ。
+                </p>
+              </div>
+            </div>
 
             <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 md:p-12">
-              <div class="flex items-center justify-between mb-8">
-                <h4 class="text-2xl md:text-3xl font-bold text-gray-900">
-                  P. Phenomenal の成長記録
-                  <span class="text-lg text-gray-500 font-normal ml-4">（約1年7ヶ月）</span>
-                </h4>
-                <!-- 喜びポーズ -->
-                <div class="hidden lg:block flex-shrink-0 w-24 relative group">
-                  <img src="/images/bikakin-happy-01.png" alt="ビカキンちゃん" class="w-full">
-                  <!-- 吹き出し -->
-                  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
-                    <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
-                      成長が嬉しいビカ！
+              <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                P. Phenomenal の成長記録
+                <span class="text-lg text-gray-500 font-normal ml-4">（約1年7ヶ月）</span>
+              </h4>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- 購入時 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(-0.8deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 155px 15px 125px 15px/15px 125px 15px 155px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        購入時
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202403/18226371928261473.jpg" alt="Phenomenal 2024年3月" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">2024年3月</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 約5ヶ月後 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(0.6deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 125px 15px 155px 15px/15px 155px 15px 125px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        約5ヶ月後
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202408/18106748470410621.jpg" alt="Phenomenal 2024年8月" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">2024年8月</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 現在 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(-0.5deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 145px 15px 135px 15px/15px 135px 15px 145px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        現在（約1年7ヶ月後）
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202510/18051827936321844.jpg" alt="Phenomenal 2025年10月" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">2025年10月</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <!-- 月光爪哇の成長記録 -->
+            <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 md:p-12 mt-8">
+              <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                P. willinckii 月光爪哇 の成長記録
+                <span class="text-lg text-gray-500 font-normal ml-4">（約3年4ヶ月）</span>
+              </h4>
 
               <div class="grid md:grid-cols-3 gap-6">
-                <div>
-                  <div class="aspect-square rounded-2xl overflow-hidden shadow-xl mb-4">
-                    <img src="/instagram-data/media/posts/202403/18226371928261473.jpg" alt="Phenomenal 2024年3月" class="w-full h-full object-cover">
+                <!-- お迎え時 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(-0.7deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 150px 15px 130px 15px/15px 130px 15px 150px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        お迎え時
+                      </h4>
+                    </div>
                   </div>
-                  <p class="text-center text-gray-900 font-bold text-lg">2024年3月</p>
-                  <p class="text-center text-gray-600">購入時</p>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202201/17872115924590698.jpg" alt="月光爪哇 2022年1月" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">2022年1月</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div>
-                  <div class="aspect-square rounded-2xl overflow-hidden shadow-xl mb-4">
-                    <img src="/instagram-data/media/posts/202408/18106748470410621.jpg" alt="Phenomenal 2024年8月" class="w-full h-full object-cover">
+                <!-- 約1年後 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(0.5deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 130px 15px 150px 15px/15px 150px 15px 130px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        約1年後
+                      </h4>
+                    </div>
                   </div>
-                  <p class="text-center text-gray-900 font-bold text-lg">2024年8月</p>
-                  <p class="text-center text-gray-600">約5ヶ月後</p>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202302/17970918760969568.jpg" alt="月光爪哇 2023年2月" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">2023年2月</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div>
-                  <div class="aspect-square rounded-2xl overflow-hidden shadow-xl mb-4">
-                    <img src="/instagram-data/media/posts/202510/18051827936321844.jpg" alt="Phenomenal 2025年10月" class="w-full h-full object-cover">
+                <!-- 現在 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(-0.6deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 140px 15px 160px 15px/15px 160px 15px 140px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        現在（約3年4ヶ月後）
+                      </h4>
+                    </div>
                   </div>
-                  <p class="text-center text-gray-900 font-bold text-lg">2025年10月</p>
-                  <p class="text-center text-gray-600">現在（約1年7ヶ月後）</p>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202505/18069978181738911.jpg" alt="月光爪哇 2025年5月" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">2025年5月</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -343,15 +686,29 @@ import Footer from '../components/Footer.astro';
 
           <!-- 3. 環境で姿が変わる＝ゲーム性 -->
           <div>
-            <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              自分で育て方をコントロールできる
-            </h3>
-            <p class="text-lg md:text-xl text-gray-600 mb-8">
-              光、水、温度で姿が変わります。<br>
-              同じ品種でも、人によって全然違う。
-            </p>
+            <div class="flex items-start gap-6 mb-4">
+              <!-- コントローラー持ちポーズ -->
+              <div class="hidden md:block flex-shrink-0 w-20 lg:w-24 relative group">
+                <img src="/images/bikakin-enjoying-01.png" alt="ビカキンちゃん" class="w-full">
+                <!-- 吹き出し -->
+                <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                    育成ゲームみたいビカ！
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                  自分で育て方をコントロールできる
+                </h3>
+                <p class="text-lg md:text-xl text-gray-600">
+                  光、水、温度で姿が変わります。<br>
+                  同じ品種でも、人によって全然違う。
+                </p>
+              </div>
+            </div>
 
-            <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-emerald-200">
+            <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-emerald-200 mb-12">
               <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
                   <strong class="text-gray-900 text-xl">これが一番面白いところです。</strong>
@@ -367,6 +724,145 @@ import Footer from '../components/Footer.astro';
                   上手くいった時は最高に嬉しいです。<br>
                   失敗も多いですけど、それも含めて楽しんでます。
                 </p>
+              </div>
+            </div>
+
+            <!-- 光の強さによる違いの比較 -->
+            <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 md:p-12">
+              <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                光の強さで姿が変わる
+                <span class="text-lg text-gray-500 font-normal ml-4">（同じP. willinckii moonlight）</span>
+              </h4>
+
+              <div class="grid md:grid-cols-2 gap-8">
+                <!-- 弱い光 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(-0.9deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 160px 15px 140px 15px/15px 140px 15px 160px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        弱い光で育てた場合
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202405/18050651884651067.jpg" alt="弱い光で育てたムーンライト" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">胞子葉が長く伸びて優雅な姿に</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 強い光 -->
+                <div class="group">
+                  <div class="inline-block mb-4" style="transform: rotate(0.7deg);">
+                    <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                         style="border-radius: 140px 15px 160px 15px/15px 160px 15px 140px;">
+                      <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                        強い光で育てた場合
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                    <div class="aspect-square relative">
+                      <img src="/instagram-data/media/posts/202312/17954969591702035.jpg" alt="強い光で育てたムーンライト" class="w-full h-full object-cover">
+                      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                        <p class="text-white text-xs font-medium drop-shadow-lg">コンパクトで葉が密に育つ</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. インテリアとしても鑑賞価値が高い -->
+          <div class="mt-20 mb-20">
+            <div class="flex items-start gap-6 mb-4">
+              <!-- 喜びポーズ -->
+              <div class="hidden md:block flex-shrink-0 w-20 lg:w-24 relative group">
+                <img src="/images/bikakin-excited-01.png" alt="ビカキンちゃん" class="w-full">
+                <!-- 吹き出し -->
+                <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                    お部屋が素敵ビカ！
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                  インテリアとしても鑑賞価値が高い
+                </h3>
+                <p class="text-lg md:text-xl text-gray-600">
+                  壁に掛けるだけで、部屋の雰囲気が一気に変わります。<br>
+                  生きたアートとして空間を彩ってくれる。
+                </p>
+              </div>
+            </div>
+
+            <!-- 説明文 -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-emerald-200 mb-12">
+              <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  <strong class="text-gray-900 text-xl">緑のある暮らしが、こんなに楽しいとは。</strong>
+                </p>
+                <p>
+                  壁に飾れる観葉植物って珍しいですよね。<br>
+                  しかも、個性的な姿がインテリアのアクセントになる。
+                </p>
+                <p>
+                  白い壁に緑が映えるし、<br>
+                  植物の成長とともに、空間の雰囲気も変わっていく。
+                </p>
+                <p>
+                  <strong class="text-gray-900">「部屋に帰るのが楽しみになった」</strong><br>
+                  そんな声をよく聞きます。
+                </p>
+              </div>
+            </div>
+
+            <!-- ビカクウォール写真2枚 -->
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- 昼のビカクウォール -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(-0.8deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 155px 15px 125px 15px/15px 125px 15px 155px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      ビカクウォール
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="relative">
+                    <img src="/instagram-data/media/posts/202509/18358728943081130.jpg" alt="ビカクウォール（昼）" class="w-full h-auto">
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">2025年9月</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ワリチー -->
+              <div class="group">
+                <div class="inline-block mb-4" style="transform: rotate(0.6deg);">
+                  <div class="relative bg-emerald-50 px-4 py-2 border-[2px] border-emerald-600"
+                       style="border-radius: 125px 15px 155px 15px/15px 155px 15px 125px;">
+                    <h4 class="text-lg md:text-xl font-black text-gray-900" style="letter-spacing: 0.02em;">
+                      壁掛けワリチー
+                    </h4>
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group-hover:scale-105 relative">
+                  <div class="relative">
+                    <img src="/instagram-data/media/posts/202207/17916467546450735.jpg" alt="ワリチー最高" class="w-full h-auto">
+                    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-end p-3">
+                      <p class="text-white text-xs font-medium drop-shadow-lg">2022年7月</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -445,16 +941,8 @@ import Footer from '../components/Footer.astro';
       <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
           <div class="flex items-start gap-6 mb-16">
-            <div class="flex-1">
-              <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900">
-                何があるのか
-              </h2>
-              <p class="text-xl md:text-2xl text-gray-600 max-w-3xl">
-                まだ作りかけですけど、こんな感じです。
-              </p>
-            </div>
             <!-- 案内ポーズ -->
-            <div class="hidden md:block flex-shrink-0 w-24 lg:w-32 relative group">
+            <div class="hidden md:block flex-shrink-0 w-20 lg:w-24 relative group">
               <img src="/images/bikakin-pointing-01.png" alt="ビカキンちゃん" class="w-full">
               <!-- 吹き出し -->
               <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
@@ -462,6 +950,14 @@ import Footer from '../components/Footer.astro';
                   こっち見てビカ！
                 </div>
               </div>
+            </div>
+            <div class="flex-1">
+              <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900">
+                何があるのか
+              </h2>
+              <p class="text-xl md:text-2xl text-gray-600 max-w-3xl">
+                まだ作りかけですけど、こんな感じです。
+              </p>
             </div>
           </div>
 
@@ -559,6 +1055,54 @@ import Footer from '../components/Footer.astro';
               @j39bo をフォロー
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. お問い合わせ -->
+    <section id="contact" class="py-24 md:py-32 bg-gradient-to-br from-emerald-50 to-green-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900 text-center">
+            お問い合わせ
+          </h2>
+          <p class="text-xl text-gray-600 text-center mb-12">
+            質問や子株の在庫について、お気軽にどうぞ。
+          </p>
+
+          <!-- Instagram DM -->
+          <a href="https://www.instagram.com/j39bo/" target="_blank" rel="noopener noreferrer" class="group block">
+            <div class="bg-gradient-to-br from-pink-500 via-purple-500 to-purple-600 rounded-3xl p-12 md:p-16 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] flex flex-col justify-center items-center text-center">
+              <div class="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+                <svg class="w-10 h-10 text-white" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="instagram-gradient-contact" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#instagram-gradient-contact)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+              <h3 class="text-3xl md:text-4xl font-black text-white mb-4">
+                Instagram DM でお気軽にどうぞ
+              </h3>
+              <p class="text-lg md:text-xl text-white/90 mb-8 max-w-md">
+                栽培の質問、子株の在庫確認、<br>
+                なんでもお気軽にメッセージください。
+              </p>
+              <div class="inline-flex items-center gap-3 bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg group-hover:gap-5 transition-all shadow-xl">
+                <span>@j39bo にDMを送る</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <p class="text-center text-gray-500 text-sm mt-8">
+            ※ 通常24時間以内に返信しています
+          </p>
         </div>
       </div>
     </section>
