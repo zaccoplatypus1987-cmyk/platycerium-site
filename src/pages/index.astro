@@ -87,17 +87,22 @@ import Footer from '../components/Footer.astro';
             <div class="order-2 md:order-1">
               <img src="/images/bikakin-standing-01.png" alt="ビカキンちゃん" class="w-full max-w-md mx-auto md:ml-auto">
 
-              <!-- ネームカード（吹き出し風） -->
+              <!-- ネームカード（手書き風） -->
               <div class="mt-6 text-center">
-                <div class="relative inline-block">
-                  <!-- 吹き出しの三角（上向き矢印） -->
-                  <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px] border-b-emerald-200"></div>
-                  <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-emerald-50"></div>
+                <div class="inline-block relative" style="transform: rotate(-1deg);">
+                  <!-- 手書き風の枠 -->
+                  <div class="relative bg-white px-8 py-5 border-[3px] border-emerald-600"
+                       style="border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+                              box-shadow: 3px 4px 0px rgba(5, 150, 105, 0.3), 6px 7px 10px rgba(0, 0, 0, 0.1);">
+                    <!-- 下線（手書き風） -->
+                    <div class="absolute left-4 right-4 h-[2px] bg-emerald-500 opacity-40"
+                         style="bottom: 38%; transform: rotate(-0.5deg);"></div>
 
-                  <!-- 吹き出し本体 -->
-                  <div class="bg-gradient-to-br from-emerald-50 to-green-50 px-8 py-4 rounded-2xl border-2 border-emerald-200 shadow-xl">
-                    <p class="text-2xl font-black text-gray-900 mb-1">ビカキンちゃん</p>
-                    <p class="text-sm text-emerald-700 font-semibold">このサイトの案内役だよ！</p>
+                    <p class="text-2xl font-black text-gray-900 mb-2 relative"
+                       style="letter-spacing: 0.05em;">ビカキンちゃん</p>
+                    <p class="text-sm text-emerald-700 font-bold relative">
+                      このサイトの案内役だよ！
+                    </p>
                   </div>
                 </div>
               </div>
