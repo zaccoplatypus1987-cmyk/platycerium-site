@@ -89,42 +89,42 @@ import Footer from '../components/Footer.astro';
               <div class="bikakin-container relative w-full max-w-md mx-auto md:ml-auto group">
                 <img src="/images/bikakin-standing-01.png" alt="ビカキンちゃん" class="w-full cursor-pointer transition-transform group-hover:scale-105">
 
-                <!-- ホバー時の吹き出し -->
-                <div class="bikakin-tooltip absolute left-1/2 -translate-x-1/2 bottom-full mb-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 w-[320px] md:w-[400px]">
+                <!-- ホバー時の吹き出し（右側に表示） -->
+                <div class="bikakin-tooltip hidden md:block absolute left-full ml-6 top-1/2 -translate-y-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 w-[320px]">
                   <!-- 吹き出し本体 -->
-                  <div class="bg-white rounded-3xl p-6 border-4 border-emerald-500 shadow-2xl relative">
-                    <!-- 吹き出しのしっぽ -->
-                    <div class="absolute left-1/2 -translate-x-1/2 -bottom-4 w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[20px] border-t-emerald-500"></div>
-                    <div class="absolute left-1/2 -translate-x-1/2 -bottom-3 w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-t-[16px] border-t-white"></div>
+                  <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-5 border-4 border-emerald-500 shadow-2xl relative">
+                    <!-- 吹き出しのしっぽ（左向き） -->
+                    <div class="absolute right-full -mr-1 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent border-r-[20px] border-r-emerald-500"></div>
+                    <div class="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-r-[16px] border-r-emerald-50"></div>
+
+                    <!-- 「裏設定」タグ -->
+                    <div class="text-center mb-3">
+                      <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">🤫 裏設定</span>
+                    </div>
 
                     <div class="space-y-3 text-sm">
                       <div>
-                        <p class="font-black text-emerald-700 mb-1">性格</p>
-                        <ul class="text-gray-700 space-y-1 text-xs">
-                          <li>• 好奇心旺盛で、新しい品種を見るとワクワク</li>
+                        <p class="font-black text-emerald-700 mb-1 text-xs">本当の性格</p>
+                        <ul class="text-gray-700 space-y-1 text-xs leading-relaxed">
+                          <li>• 好奇心旺盛で新しい品種が大好き</li>
                           <li>• 観察好きでじっくり派</li>
-                          <li>• 悪魔の囁きで散財させる悪い妖怪（でも悪気はない）</li>
+                          <li>• 悪魔の囁きで散財させる悪い妖怪</li>
+                          <li class="text-[10px] text-gray-500">（でも本気で一緒に楽しみたいだけ）</li>
                         </ul>
                       </div>
 
-                      <div>
-                        <p class="font-black text-emerald-700 mb-1">口癖</p>
-                        <p class="text-gray-900 font-bold text-base">「ビカクには愛情と観察が一番大事ビカ」</p>
-                      </div>
-
-                      <div>
-                        <p class="font-black text-emerald-700 mb-1">好きなこと</p>
-                        <ul class="text-gray-700 space-y-1 text-xs">
+                      <div class="border-t-2 border-emerald-200 pt-3">
+                        <p class="font-black text-emerald-700 mb-1 text-xs">密かな楽しみ</p>
+                        <ul class="text-gray-700 space-y-1 text-xs leading-relaxed">
                           <li>• 人が「ポチる」瞬間を見ること</li>
-                          <li>• 毎朝のビカクシダ観察</li>
                           <li>• 「あと1株くらいいけるよ」って囁くこと</li>
+                          <li>• 単眼でじっと成長を観察すること</li>
                         </ul>
                       </div>
 
-                      <div class="pt-2 border-t-2 border-emerald-200">
-                        <p class="text-xs text-gray-600 italic">
-                          このサイトの案内役。親切にビカクシダの魅力を伝えてくれるけど、実はあなたを沼に引き込もうとしている悪い妖怪。でも本人に悪気はない。
-                        </p>
+                      <div class="border-t-2 border-emerald-200 pt-3">
+                        <p class="font-black text-emerald-700 mb-1 text-xs">口癖</p>
+                        <p class="text-gray-900 font-bold text-sm">「ビカクには愛情と観察が一番大事ビカ」</p>
                       </div>
                     </div>
                   </div>
