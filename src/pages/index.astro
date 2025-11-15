@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<BaseLayout title="ジサクボ's ジサクラボ | ビカクシダ栽培研究所">
+<BaseLayout title="ジサクボ's ジサクラボ | ビカクシダ栽培メモ">
   <style>
     @keyframes fadeInUp {
       from {
@@ -50,12 +50,12 @@ import Footer from '../components/Footer.astro';
           </h1>
 
           <p class="text-2xl md:text-3xl text-green-100 mb-4 font-light fade-in-up delay-100">
-            ビカクシダ栽培研究所
+            ビカクシダ栽培メモ
           </p>
 
           <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12 fade-in-up delay-200">
-            2020年から30株。完全室内栽培の、リアルな記録。<br>
-            失敗も成功も、全部見せます。
+            室内栽培5年分くらいの記録。<br>
+            ほぼ自分用ですけど、同じような人がいたらどうぞ。
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-300">
@@ -86,6 +86,14 @@ import Footer from '../components/Footer.astro';
           <div class="grid md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1">
               <img src="/images/bikakin-standing-01.png" alt="ビカキンちゃん" class="w-full max-w-md mx-auto md:ml-auto">
+
+              <!-- ネームカード -->
+              <div class="mt-6 text-center">
+                <div class="inline-block bg-gradient-to-r from-emerald-50 to-green-50 px-8 py-4 rounded-2xl border-2 border-emerald-200 shadow-lg">
+                  <p class="text-2xl font-black text-gray-900 mb-1">ビカキンちゃん</p>
+                  <p class="text-sm text-emerald-700 font-semibold">このサイトの案内役</p>
+                </div>
+              </div>
             </div>
 
             <div class="order-1 md:order-2">
@@ -94,20 +102,18 @@ import Footer from '../components/Footer.astro';
               </h2>
 
               <div class="space-y-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-                <p>
-                  2020年、YouTubeのインテリア系動画でビカクシダを見て、<br>
-                  <strong class="text-gray-900">「なんだこれ、かっこいいな」</strong>と思ったのが始まり。
+                <p class="text-3xl md:text-4xl font-bold text-gray-900">
+                  「なんだこれ、かっこいいな」
                 </p>
 
                 <p>
-                  最初の1株はステマリア。<br>
-                  8000円という値札を見て<strong class="text-gray-900">2時間くらい悩んだ</strong>けど、<br>
-                  やっぱり欲しくて買いました。
+                  2020年、YouTubeでビカクシダを見た時の第一印象です。<br>
+                  それから5年、完全室内で育ててきました。
                 </p>
 
-                <p class="text-2xl md:text-3xl font-bold text-emerald-700 pt-4">
-                  それから約5年。<br>
-                  今では完全室内で30株育ててます。
+                <p class="text-xl">
+                  枯らした株もたくさんあるし、失敗もたくさんしました。<br>
+                  <strong class="text-emerald-700">でもその分、室内で育てるコツは掴めてきたと思います。</strong>
                 </p>
               </div>
             </div>
@@ -121,19 +127,22 @@ import Footer from '../components/Footer.astro';
       <div class="container mx-auto px-4">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900">
-            ビカクシダに、ハマる理由
+            なんでハマってるんだろう
           </h2>
           <p class="text-xl md:text-2xl text-gray-600 mb-16 max-w-3xl">
-            なぜこんなに面白いのか。5年育ててきて感じたこと。
+            我ながら不思議なので、整理してみます。
           </p>
 
           <!-- 1. こんなに種類がある -->
           <div class="mb-20">
             <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              こんなに種類がある
+              とにかく種類が多い
             </h3>
             <p class="text-lg md:text-xl text-gray-600 mb-8">
-              品種によって、形も大きさも雰囲気も全然違う。その多様性が面白い。
+              品種によって本当に違うんです。<br>
+              細い葉っぱや太い葉っぱ、トゲトゲの貯水葉や凸凹の貯水葉。<br>
+              大きいものから小さいものまで。<br>
+              見てると全部欲しくなって困ります。
             </p>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
@@ -208,10 +217,12 @@ import Footer from '../components/Footer.astro';
           <!-- 2. 成長が速い・形が変化する -->
           <div class="mb-20">
             <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              成長が速い、形がどんどん変わる
+              成長が見えるから楽しい
             </h3>
             <p class="text-lg md:text-xl text-gray-600 mb-8">
-              だいたい2年で大人になる。その過程を見るのが楽しい。
+              2年くらいで大人になります。<br>
+              その間の変化がすごくて、見てて飽きないです。<br>
+              毎日ちょっとずつ変わってる感じ。
             </p>
 
             <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 md:p-12">
@@ -251,24 +262,28 @@ import Footer from '../components/Footer.astro';
           <!-- 3. 環境で姿が変わる＝ゲーム性 -->
           <div>
             <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              環境によって姿が変わる
+              自分で育て方をコントロールできる
             </h3>
             <p class="text-lg md:text-xl text-gray-600 mb-8">
-              光、水、温度、風。育て方で全然違う姿になる。<br>
-              「こういう風にしたい」と狙って育てる、そのゲーム性が面白い。
+              光、水、温度で姿が変わります。<br>
+              同じ品種でも、人によって全然違う。
             </p>
 
             <div class="bg-white rounded-2xl p-8 md:p-12 border-2 border-emerald-200">
               <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  <strong class="text-gray-900">同じ品種でも、人によって全然違う。</strong><br>
-                  光が強ければコンパクトになるし、光が弱ければ葉が長く伸びる。<br>
-                  水を多くあげれば成長が早いし、少なめだとゆっくり育つ。
+                  <strong class="text-gray-900 text-xl">これが一番面白いところです。</strong>
                 </p>
                 <p>
-                  <strong class="text-gray-900">それが、面白い。</strong><br>
-                  自分だけのビカクシダを作れる。<br>
-                  その多様性とゲーム性が、5年経っても飽きない理由です。
+                  光を強くすればコンパクトに育つし、弱ければ葉が長く伸びる。<br>
+                  水を多めにすれば早く育つし、少なめだとゆっくり。
+                </p>
+                <p>
+                  つまり、<strong class="text-gray-900">「こういう姿にしたい」って狙って育てられるんです。</strong>
+                </p>
+                <p>
+                  上手くいった時は最高に嬉しいです。<br>
+                  失敗も多いですけど、それも含めて楽しんでます。
                 </p>
               </div>
             </div>
@@ -282,37 +297,47 @@ import Footer from '../components/Footer.astro';
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-4xl md:text-6xl font-black mb-12 text-gray-900">
-            このサイトについて
+            なんでこのサイト作ったのか
           </h2>
 
           <div class="space-y-12">
             <div>
               <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
-                なぜ作ったか
+                きっかけ
               </h3>
               <div class="text-lg md:text-xl text-gray-700 leading-relaxed space-y-4">
                 <p>
-                  Instagramで投稿してたら、質問がたくさん来るようになって。<br>
-                  「水やりってどうやるの？」「この品種って何？」
+                  Instagramで質問がたくさん来るようになって。<br>
+                  「どうやって育ててるの？」「この品種は何？」って。
                 </p>
                 <p>
-                  でもInstagramって、過去の投稿を時系列で追いにくいじゃないですか。
+                  でもInstagramだと過去の投稿を時系列で追いにくくて、<br>
+                  同じ質問に何回も答えてる気がして。
                 </p>
                 <p class="text-2xl font-bold text-emerald-700 pt-4">
-                  だから、自分の備忘録として、<br>
-                  品種ごとに成長記録を整理したかった。
+                  それで、自分の記録として整理しようと思いました。<br>
+                  自分用なんで雑なところもありますけど、役に立てば。
                 </p>
               </div>
             </div>
 
             <div class="border-t-2 border-gray-200 pt-12">
               <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
-                ビジョン
+                正直に言うと
               </h3>
-              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-                ビカクシダブームを、ブームで終わらせたくない。<br>
-                園芸の一つの普遍的なジャンルとして、裾野を広げていきたい。
-              </p>
+              <div class="text-lg md:text-xl text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  ビカクシダブームって、いつまで続くんだろうって思ってます。
+                </p>
+                <p>
+                  ブームが去っても、ずっと育ててる人がいてほしい。<br>
+                  園芸の定番になってほしいんです。
+                </p>
+                <p>
+                  そのために、このサイトが少しでも役に立てば嬉しいです。<br>
+                  自己満足かもしれないですけど。
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -324,10 +349,10 @@ import Footer from '../components/Footer.astro';
       <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900">
-            コンテンツ
+            何があるのか
           </h2>
           <p class="text-xl md:text-2xl text-gray-600 mb-16 max-w-3xl">
-            このサイトで見られるもの
+            まだ作りかけですけど、こんな感じです。
           </p>
 
           <div class="grid md:grid-cols-2 gap-8 mb-12">
@@ -338,8 +363,9 @@ import Footer from '../components/Footer.astro';
                   品種ギャラリー
                 </h3>
                 <p class="text-xl text-white/90 mb-6 leading-relaxed">
-                  各品種の成長過程を写真で記録。<br>
-                  「だいたいこれくらいでこんな感じになる」が分かります。
+                  各品種の成長記録を写真で載せてます。<br>
+                  「だいたいこれくらいでこんな感じになるんだな」って<br>
+                  イメージできると思います。
                 </p>
                 <div class="flex items-center gap-2 text-white font-bold text-lg group-hover:gap-4 transition-all">
                   <span>見る</span>
@@ -357,8 +383,9 @@ import Footer from '../components/Footer.astro';
                   使っている道具
                 </h3>
                 <p class="text-xl text-white/90 mb-6 leading-relaxed">
-                  LED照明、水苔、肥料、板など。<br>
-                  実際に使っているものを詳しく紹介します。
+                  LED照明、水苔、肥料とか。<br>
+                  実際に使ってるものを書いてます。<br>
+                  参考になるかは分からないですけど。
                 </p>
                 <div class="flex items-center gap-2 text-white font-bold text-lg group-hover:gap-4 transition-all">
                   <span>見る</span>
@@ -402,12 +429,13 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <h3 class="text-3xl md:text-4xl font-black mb-4 text-gray-900">
-              Instagramでも日々更新中
+              Instagramもあります
             </h3>
 
             <p class="text-lg md:text-xl text-gray-700 mb-2">
-              日々の成長記録、栽培のコツなど<br>
-              リアルタイムで更新しています
+              日々の成長記録とか載せてます。<br>
+              サイトよりは頻繁に更新してるので、<br>
+              よかったらどうぞ。
             </p>
 
             <p class="text-sm text-gray-500 mb-8">
