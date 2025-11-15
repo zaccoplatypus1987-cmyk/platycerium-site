@@ -87,11 +87,18 @@ import Footer from '../components/Footer.astro';
             <div class="order-2 md:order-1">
               <img src="/images/bikakin-standing-01.png" alt="ビカキンちゃん" class="w-full max-w-md mx-auto md:ml-auto">
 
-              <!-- ネームカード -->
+              <!-- ネームカード（吹き出し風） -->
               <div class="mt-6 text-center">
-                <div class="inline-block bg-gradient-to-r from-emerald-50 to-green-50 px-8 py-4 rounded-2xl border-2 border-emerald-200 shadow-lg">
-                  <p class="text-2xl font-black text-gray-900 mb-1">ビカキンちゃん</p>
-                  <p class="text-sm text-emerald-700 font-semibold">このサイトの案内役</p>
+                <div class="relative inline-block">
+                  <!-- 吹き出しの三角（上向き矢印） -->
+                  <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px] border-b-emerald-200"></div>
+                  <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-emerald-50"></div>
+
+                  <!-- 吹き出し本体 -->
+                  <div class="bg-gradient-to-br from-emerald-50 to-green-50 px-8 py-4 rounded-2xl border-2 border-emerald-200 shadow-xl">
+                    <p class="text-2xl font-black text-gray-900 mb-1">ビカキンちゃん</p>
+                    <p class="text-sm text-emerald-700 font-semibold">このサイトの案内役だよ！</p>
+                  </div>
                 </div>
               </div>
             </div>
