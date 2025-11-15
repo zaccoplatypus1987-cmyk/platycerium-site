@@ -191,15 +191,29 @@ import Footer from '../components/Footer.astro';
 
           <!-- 1. こんなに種類がある -->
           <div class="mb-20">
-            <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              とにかく種類が多い
-            </h3>
-            <p class="text-lg md:text-xl text-gray-600 mb-8">
-              品種によって本当に違うんです。<br>
-              細い葉っぱや太い葉っぱ、トゲトゲの貯水葉や凸凹の貯水葉。<br>
-              大きいものから小さいものまで。<br>
-              見てると全部欲しくなって困ります。
-            </p>
+            <div class="flex items-start gap-6 mb-8">
+              <div class="flex-1">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                  とにかく種類が多い
+                </h3>
+                <p class="text-lg md:text-xl text-gray-600">
+                  品種によって本当に違うんです。<br>
+                  細い葉っぱや太い葉っぱ、トゲトゲの貯水葉や凸凹の貯水葉。<br>
+                  大きいものから小さいものまで。<br>
+                  見てると全部欲しくなって困ります。
+                </p>
+              </div>
+              <!-- 悪魔の囁きポーズ -->
+              <div class="hidden md:block flex-shrink-0 w-24 lg:w-32 relative group">
+                <img src="/images/bikakin-whisper-01.png" alt="ビカキンちゃん" class="w-full">
+                <!-- 吹き出し -->
+                <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                    買っちゃえビカ？
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               <!-- カード1: Phenomenal -->
@@ -282,10 +296,22 @@ import Footer from '../components/Footer.astro';
             </p>
 
             <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 md:p-12">
-              <h4 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-                P. Phenomenal の成長記録
-                <span class="text-lg text-gray-500 font-normal ml-4">（約1年7ヶ月）</span>
-              </h4>
+              <div class="flex items-center justify-between mb-8">
+                <h4 class="text-2xl md:text-3xl font-bold text-gray-900">
+                  P. Phenomenal の成長記録
+                  <span class="text-lg text-gray-500 font-normal ml-4">（約1年7ヶ月）</span>
+                </h4>
+                <!-- 喜びポーズ -->
+                <div class="hidden lg:block flex-shrink-0 w-24 relative group">
+                  <img src="/images/bikakin-happy-01.png" alt="ビカキンちゃん" class="w-full">
+                  <!-- 吹き出し -->
+                  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                    <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                      成長が嬉しいビカ！
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class="grid md:grid-cols-3 gap-6">
                 <div>
@@ -378,21 +404,35 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <div class="border-t-2 border-gray-200 pt-12">
-              <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
-                正直に言うと
-              </h3>
-              <div class="text-lg md:text-xl text-gray-700 leading-relaxed space-y-4">
-                <p>
-                  ビカクシダブームって、いつまで続くんだろうって思ってます。
-                </p>
-                <p>
-                  ブームが去っても、ずっと育ててる人がいてほしい。<br>
-                  園芸の定番になってほしいんです。
-                </p>
-                <p>
-                  そのために、このサイトが少しでも役に立てば嬉しいです。<br>
-                  自己満足かもしれないですけど。
-                </p>
+              <div class="flex items-start gap-6">
+                <!-- 考え中ポーズ -->
+                <div class="hidden md:block flex-shrink-0 w-20 lg:w-24 relative group">
+                  <img src="/images/bikakin-thinking-01.png" alt="ビカキンちゃん" class="w-full">
+                  <!-- 吹き出し -->
+                  <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                    <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                      うーん...ビカ
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
+                    正直に言うと
+                  </h3>
+                  <div class="text-lg md:text-xl text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                      ビカクシダブームって、いつまで続くんだろうって思ってます。
+                    </p>
+                    <p>
+                      ブームが去っても、ずっと育ててる人がいてほしい。<br>
+                      園芸の定番になってほしいんです。
+                    </p>
+                    <p>
+                      そのために、このサイトが少しでも役に立てば嬉しいです。<br>
+                      自己満足かもしれないですけど。
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -404,12 +444,26 @@ import Footer from '../components/Footer.astro';
     <section class="py-24 md:py-32 bg-gradient-to-br from-gray-50 to-emerald-50/30">
       <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900">
-            何があるのか
-          </h2>
-          <p class="text-xl md:text-2xl text-gray-600 mb-16 max-w-3xl">
-            まだ作りかけですけど、こんな感じです。
-          </p>
+          <div class="flex items-start gap-6 mb-16">
+            <div class="flex-1">
+              <h2 class="text-4xl md:text-6xl font-black mb-6 text-gray-900">
+                何があるのか
+              </h2>
+              <p class="text-xl md:text-2xl text-gray-600 max-w-3xl">
+                まだ作りかけですけど、こんな感じです。
+              </p>
+            </div>
+            <!-- 案内ポーズ -->
+            <div class="hidden md:block flex-shrink-0 w-24 lg:w-32 relative group">
+              <img src="/images/bikakin-pointing-01.png" alt="ビカキンちゃん" class="w-full">
+              <!-- 吹き出し -->
+              <div class="absolute left-full ml-2 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                <div class="bg-white border-2 border-emerald-500 rounded-2xl px-4 py-2 shadow-lg whitespace-nowrap text-sm font-bold text-gray-900">
+                  こっち見てビカ！
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="grid md:grid-cols-2 gap-8 mb-12">
             <!-- ギャラリー -->
