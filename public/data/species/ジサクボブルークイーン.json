@@ -4,7 +4,7 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボブルークイーン",
     "displayName": "P.willinckii blue queen",
-    "count": 37,
+    "count": 36,
     "latestPost": {
       "id": "1753763580-0",
       "date": "2025-07-29",
@@ -351,38 +351,6 @@
         "classification": {
           "confidence": "high",
           "reason": "正規化後に高度一致（類似度: 100%）"
-        }
-      }
-    },
-    {
-      "id": "1735095705-0",
-      "date": "2024-12-25",
-      "timestamp": 1735095705,
-      "caption": "上P.willinckii omega\n下P.willinckii bluequeen\nなんか競合している気がする両者。\nですがタイプは全然違いますね。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ板付 \n#ビカクシダウィリンキー \n#ウィリンキー \n#willinckii \n#willinckii党 \n#platyceriumwillinckii \n\n#ジサクボオメガ\n#ジサクボブルークイーン",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ板付",
-        "ビカクシダウィリンキー",
-        "ウィリンキー",
-        "willinckii",
-        "willinckii党",
-        "platyceriumwillinckii",
-        "ジサクボオメガ",
-        "ジサクボブルークイーン"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202412/18115030138428306.jpg",
-          "timestamp": 1735095705
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1735095705-0",
-        "classification": {
-          "confidence": "low",
-          "reason": "正規化後も不一致（キャプ:オメガ vs ハッシュ:ブルークイーン）"
         }
       }
     },

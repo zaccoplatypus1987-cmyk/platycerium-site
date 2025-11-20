@@ -56,10 +56,28 @@ class DetailApp {
                 }
             }
 
+            // ページ読み込み後に画像までスクロール（連続クリック対応）
+            this.scrollToImage();
+
         } catch (error) {
             ErrorHandler.handle(error, 'DetailApp.init');
             this.showError(error.message);
         }
+    }
+
+    /**
+     * ページ上部にスクロール（「次の投稿」連続クリック対応）
+     */
+    scrollToImage() {
+        // ページ読み込み完了後、常にページの上部にスクロール
+        setTimeout(() => {
+            console.log('scrollToImage: scrolling to top (0)');
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'instant' // smoothではなくinstantで即座にスクロール
+            });
+        }, 100);
     }
 
     /**
@@ -272,24 +290,15 @@ class DetailApp {
      * Day 表示とナビゲーションボタンを更新
      */
     updateNavigationUI(navData) {
-        const container = document.getElementById('detail-container');
-        if (!container) return;
+        // ナビゲーションボタンをパンくずリストの下に挿入
+        const breadcrumb = document.getElementById('breadcrumb');
+        if (!breadcrumb) return;
 
-        // Day バッジを挿入（タイトルの上）
-        const dayBadgeHTML = `
-            <div class="mb-4 text-center">
-                <div class="day-badge">
-                    <span class="text-xs opacity-90">Day</span>
-                    <span class="text-lg">${navData.dayNumber}</span>
-                </div>
-            </div>
-        `;
-
-        // ナビゲーションボタンを挿入（ギャラリーに戻るボタンの前）
+        // ナビゲーションボタン（Dayバッジを中央に配置）
         const navigationHTML = `
-            <div class="navigation-buttons">
+            <div class="navigation-buttons mb-6">
                 ${navData.prevPost ? `
-                    <a href="/detail.html?id=${navData.prevPost.id}" class="nav-btn">
+                    <a href="/detail?id=${navData.prevPost.id}" class="nav-btn">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
@@ -297,8 +306,13 @@ class DetailApp {
                     </a>
                 ` : '<div></div>'}
 
+                <div class="day-badge">
+                    <span class="text-xs opacity-90">Day</span>
+                    <span class="text-lg">${navData.dayNumber}</span>
+                </div>
+
                 ${navData.nextPost ? `
-                    <a href="/detail.html?id=${navData.nextPost.id}" class="nav-btn">
+                    <a href="/detail?id=${navData.nextPost.id}" class="nav-btn">
                         次の投稿
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -308,24 +322,8 @@ class DetailApp {
             </div>
         `;
 
-        // 既存のコンテンツに Day バッジを挿入
-        const article = container.querySelector('article');
-        if (article) {
-            const contentDiv = article.querySelector('.p-6, .p-8');
-            if (contentDiv) {
-                // Day バッジをタイトルの前に挿入
-                const titleDiv = contentDiv.querySelector('.mb-6');
-                if (titleDiv) {
-                    titleDiv.insertAdjacentHTML('beforebegin', dayBadgeHTML);
-                }
-
-                // ナビゲーションボタンを「ギャラリーに戻る」ボタンの前に挿入
-                const backButtonContainer = contentDiv.querySelector('.pt-6.border-t');
-                if (backButtonContainer) {
-                    backButtonContainer.insertAdjacentHTML('beforebegin', navigationHTML);
-                }
-            }
-        }
+        // パンくずリストの後にナビゲーションボタンを挿入
+        breadcrumb.insertAdjacentHTML('afterend', navigationHTML);
 
         console.log('Navigation UI updated successfully');
     }
@@ -353,14 +351,14 @@ class DetailApp {
             const breadcrumbSpeciesLink = document.getElementById('breadcrumb-species-link');
             if (breadcrumbSpeciesLink) {
                 breadcrumbSpeciesLink.textContent = speciesName;
-                breadcrumbSpeciesLink.href = `/species/subspecies.html?parent=${speciesKey}`;
+                breadcrumbSpeciesLink.href = `/gallery/#${speciesKey}`;
             }
 
             // 品種名リンク
             const breadcrumbSubspeciesLink = document.getElementById('breadcrumb-subspecies-link');
             if (breadcrumbSubspeciesLink) {
                 breadcrumbSubspeciesLink.textContent = displayName;
-                breadcrumbSubspeciesLink.href = `/species/detail.html?id=${speciesInfo.id}`;
+                breadcrumbSubspeciesLink.href = `/gallery/detail?id=${speciesInfo.id}`;
             }
 
             // 現在のページ（Day 番号）
@@ -433,12 +431,12 @@ class DetailApp {
 
                     <!-- Back Button -->
                     <div class="pt-6 border-t">
-                        <a href="/gallery.html"
-                           class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                        <a href="/gallery/"
+                           class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                             </svg>
-                            ギャラリーに戻る
+                            栽培記録に戻る
                         </a>
                     </div>
                 </div>
@@ -580,7 +578,7 @@ class DetailApp {
     setupBackButton() {
         // Handle browser back button
         window.addEventListener('popstate', () => {
-            window.location.href = '/gallery.html';
+            window.location.href = '/gallery/';
         });
     }
 
@@ -594,7 +592,7 @@ class DetailApp {
             ? `${window.location.origin}/${this.post.media[0].uri.startsWith('/') ? this.post.media[0].uri.slice(1) : this.post.media[0].uri}`
             : '';
 
-        document.title = `${title} - Platycerium Collection`;
+        document.title = `${title} - ジサクボ's ジサクログ`;
 
         // Update meta tags
         this.updateMetaTag('description', description);

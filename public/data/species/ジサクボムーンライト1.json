@@ -4,7 +4,7 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボムーンライト1",
     "displayName": "P.willinckii moonlight",
-    "count": 59,
+    "count": 57,
     "latestPost": {
       "id": "1735013223-0",
       "date": "2024-12-24",
@@ -737,56 +737,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1694599638-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "正規化後に高度一致（類似度: 90%）"
-        }
-      }
-    },
-    {
-      "id": "1693030671-0",
-      "date": "2023-08-26",
-      "timestamp": 1693030671,
-      "caption": "左P.willinckii moonlight#pn\n右P.willinckii moonlight#vp\n成長段階が違うので参考になりませんが、こんな感じ。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#観葉植物 \n#観葉植物のある暮らし \n#観葉植物インテリア\n#platycerium \n#willinckii \n#platyceriumwillinckii \n#糜角羊歯\n#willinckiimoonlight\n\n#ジサクボムーンライト2\n#ジサクボムーンライト1",
-      "hashtags": [
-        "pn",
-        "vp",
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダ好きと繋がりたい",
-        "観葉植物",
-        "観葉植物のある暮らし",
-        "観葉植物インテリア",
-        "platycerium",
-        "willinckii",
-        "platyceriumwillinckii",
-        "糜角羊歯",
-        "willinckiimoonlight",
-        "ジサクボムーンライト2",
-        "ジサクボムーンライト1"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202308/18108380371323900.jpg",
-          "timestamp": 1693030670
-        },
-        {
-          "path": "instagram-data/media/posts/202308/17930274449645104.jpg",
-          "timestamp": 1693030670
-        },
-        {
-          "path": "instagram-data/media/posts/202308/17994151678997978.jpg",
-          "timestamp": 1693030670
-        },
-        {
-          "path": "instagram-data/media/posts/202308/17868160910936153.jpg",
-          "timestamp": 1693030670
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1693030671-0",
         "classification": {
           "confidence": "high",
           "reason": "正規化後に高度一致（類似度: 90%）"
@@ -2455,43 +2405,6 @@
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（willinckii）- 信頼性高い"
-        }
-      }
-    },
-    {
-      "id": "1639391497-0",
-      "date": "2021-12-13",
-      "timestamp": 1639391497,
-      "caption": "月光とムーンライト\n名前似てますが、姿全然違いますねー\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#コウモリラン\n#月光爪哇 \n#willinckiimoonlight\n\n#ジサクボ月光\n\n#ジサクボムーンライト1",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "コウモリラン",
-        "月光爪哇",
-        "willinckiimoonlight",
-        "ジサクボ月光",
-        "ジサクボムーンライト1"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202112/17910623345265913.jpg",
-          "timestamp": 1639391497
-        },
-        {
-          "path": "instagram-data/media/posts/202112/17891593325444282.jpg",
-          "timestamp": 1639391497
-        },
-        {
-          "path": "instagram-data/media/posts/202112/17954739565559957.jpg",
-          "timestamp": 1639391497
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1639391497-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
         }
       }
     }

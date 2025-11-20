@@ -4,7 +4,7 @@
     "mainSpecies": "wallichii",
     "tag": "#ジサクボワリチー",
     "displayName": "P.wallichii",
-    "count": 29,
+    "count": 28,
     "latestPost": {
       "id": "1731499141-0",
       "date": "2024-11-13",
@@ -186,38 +186,6 @@
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（wallichii）- 信頼性高い"
-        }
-      }
-    },
-    {
-      "id": "1691293225-0",
-      "date": "2023-08-06",
-      "timestamp": 1691293225,
-      "caption": "Platycerium ridleyi monkey king \nPlatycerium wallichii\n二つ飾るシリーズ\n一株ずつしか撮ってはいけないというルールはないので…\n両者を引き立てる組み合わせを考えるのも楽しい。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダリドレイ \n#リドレイ \n#platycerium \n#platyceriumridleyi\n\n#ジサクボモンキーキング\n#ジサクボワリチー",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ初心者",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダリドレイ",
-        "リドレイ",
-        "platycerium",
-        "platyceriumridleyi",
-        "ジサクボモンキーキング",
-        "ジサクボワリチー"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202308/18047568694465482.jpg",
-          "timestamp": 1691293225
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1691293225-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
         }
       }
     },

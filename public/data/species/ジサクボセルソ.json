@@ -4,7 +4,7 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボセルソ",
     "displayName": "P. willinckii celsotatsuta",
-    "count": 38,
+    "count": 37,
     "latestPost": {
       "id": "1732747615-0",
       "date": "2024-11-27",
@@ -1284,36 +1284,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1647271062-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"
-        }
-      }
-    },
-    {
-      "id": "1642924243-0",
-      "date": "2022-01-23",
-      "timestamp": 1642924243,
-      "caption": "似た物同士？\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい \n#月光爪哇 \n#celsotatsuta\n\n#ジサクボ月光\n\n#ジサクボセルソ",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ初心者",
-        "ビカクシダ好きな人と繋がりたい",
-        "月光爪哇",
-        "celsotatsuta",
-        "ジサクボ月光",
-        "ジサクボセルソ"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202201/18144951121242459.jpg",
-          "timestamp": 1642924243
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1642924243-0",
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグで交雑種を分類（#ジサクボは自己管理タグ）"

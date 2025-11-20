@@ -4,7 +4,7 @@
     "mainSpecies": null,
     "tag": "#ジサクボギンカ",
     "displayName": "P.Ginka",
-    "count": 27,
+    "count": 26,
     "latestPost": {
       "id": "1725535046-0",
       "date": "2024-09-05",
@@ -252,41 +252,6 @@
         "classification": {
           "confidence": "low",
           "reason": "正規化後も不一致（キャプ:ginka vs ハッシュ:ギンカ）"
-        }
-      }
-    },
-    {
-      "id": "1716680550-0",
-      "date": "2024-05-25",
-      "timestamp": 1716680550,
-      "caption": "Right:P.white gizmo\nLeft:P.ginka \n全然違うよFSQ\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#糜角羊歯 \n#whitegizmo \n#platycerium\n\n#ジサクボギズモ\n#ジサクボギンカ",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダ好きと繋がりたい",
-        "糜角羊歯",
-        "whitegizmo",
-        "platycerium",
-        "ジサクボギズモ",
-        "ジサクボギンカ"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202405/18318164578182531.jpg",
-          "timestamp": 1716680549
-        },
-        {
-          "path": "instagram-data/media/posts/202405/18154999738308357.jpg",
-          "timestamp": 1716680549
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1716680550-0",
-        "classification": {
-          "confidence": "low",
-          "reason": "正規化後も不一致（キャプ:ギズモ vs ハッシュ:ギンカ）"
         }
       }
     },

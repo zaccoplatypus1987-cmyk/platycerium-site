@@ -4,7 +4,7 @@
     "mainSpecies": "ridleyi",
     "tag": "#ジサクボナノ",
     "displayName": "Platycerium ridleyi nano",
-    "count": 44,
+    "count": 41,
     "latestPost": {
       "id": "1759312824-0",
       "date": "2025-10-01",
@@ -68,41 +68,6 @@
       }
     },
     {
-      "id": "1753267543-0",
-      "date": "2025-07-23",
-      "timestamp": 1753267543,
-      "caption": "P.Phenomenal\nP.ridleyi nano\nfrom @katsu_hibino \n個人的には細葉といえば日比野さんのイメージ。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ジサクボフェノメナル\n#ジサクボナノ",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ好きな人と繋がりたい",
-        "ジサクボフェノメナル",
-        "ジサクボナノ"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202507/18274490263273884.jpg",
-          "timestamp": 1753267540
-        },
-        {
-          "path": "instagram-data/media/posts/202507/18055853657372587.jpg",
-          "timestamp": 1753267540
-        },
-        {
-          "path": "instagram-data/media/posts/202507/18076814681308709.jpg",
-          "timestamp": 1753267540
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1753267543-0",
-        "classification": {
-          "confidence": "low",
-          "reason": "正規化後も不一致（キャプ:フェノメナル vs ハッシュ:ナノ）"
-        }
-      }
-    },
-    {
       "id": "1751099216-0",
       "date": "2025-06-28",
       "timestamp": 1751099216,
@@ -123,36 +88,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1751099216-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "正規化後に高度一致（類似度: 100%）"
-        }
-      }
-    },
-    {
-      "id": "1748350142-0",
-      "date": "2025-05-27",
-      "timestamp": 1748350142,
-      "caption": "P.ridleyi nano\nP.coronarium \nfrom @katsu_hibino \n日比野産の緑系は最高だぜ。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダコロナリウム \n#platyceriumcoronarium\n\n#ジサクボコロナ\n#ジサクボナノ",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダ好きと繋がりたい",
-        "ビカクシダコロナリウム",
-        "platyceriumcoronarium",
-        "ジサクボコロナ",
-        "ジサクボナノ"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202505/18091975642720176.jpg",
-          "timestamp": 1748350142
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1748350142-0",
         "classification": {
           "confidence": "high",
           "reason": "正規化後に高度一致（類似度: 100%）"
@@ -913,53 +848,6 @@
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
-        }
-      }
-    },
-    {
-      "id": "1697198788-0",
-      "date": "2023-10-13",
-      "timestamp": 1697198788,
-      "caption": "P.ridleyi Nano\nfrom @katsu_hibino \nP.coronarium waiwai \nfrom @vandaka_plants \n俺はナノとワイワイの二体を生贄にキッチャクードを召喚するぜ。\nみたいな感じ。\n\n#味が濃いビカクが好き\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダコロナリウム \n#platyceriumcoronarium\n\n#ジサクボワイワイ\n#ジサクボナノ",
-      "hashtags": [
-        "味が濃いビカクが好き",
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダ好きと繋がりたい",
-        "ビカクシダコロナリウム",
-        "platyceriumcoronarium",
-        "ジサクボワイワイ",
-        "ジサクボナノ"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202310/17916377921736144.jpg",
-          "timestamp": 1697198787
-        },
-        {
-          "path": "instagram-data/media/posts/202310/17927178737686163.jpg",
-          "timestamp": 1697198787
-        },
-        {
-          "path": "instagram-data/media/posts/202310/17996266706264663.jpg",
-          "timestamp": 1697198787
-        },
-        {
-          "path": "instagram-data/media/posts/202310/18026366278657142.jpg",
-          "timestamp": 1697198787
-        },
-        {
-          "path": "instagram-data/media/posts/202310/17898445442885083.jpg",
-          "timestamp": 1697198787
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1697198788-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "正規化後に高度一致（類似度: 100%）"
         }
       }
     },

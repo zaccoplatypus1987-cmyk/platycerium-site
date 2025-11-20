@@ -4,7 +4,7 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボjgs2",
     "displayName": "P.willinckii jade girl sporeling",
-    "count": 10,
+    "count": 9,
     "latestPost": {
       "id": "1705926730-0",
       "date": "2024-01-22",
@@ -148,50 +148,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1692017030-0",
-        "classification": {
-          "confidence": "low",
-          "reason": "正規化後も不一致（キャプ:ジェイドガール vs ハッシュ:jgs2）"
-        }
-      }
-    },
-    {
-      "id": "1687253274-0",
-      "date": "2023-06-20",
-      "timestamp": 1687253274,
-      "caption": "P.willinckii jade girl sporeling\nどちらのジェイド姫がタイプ？\n\n#ビカクシダ \n#ビカクシダのある暮らし\n#ビカクシダ初心者 \n#ビカクシダ普及委員会 \n#ジェイドガール \n#ジェイドガールスポア \n#jadegirlsporeling\n#ウィリンキー \n#platycerium \n#platyceriumwillinckii \n#platyceriumwillinckiijadegirl\n#ジェイド姫\n#ジサクボjgs\n#ジサクボjgs2",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ初心者",
-        "ビカクシダ普及委員会",
-        "ジェイドガール",
-        "ジェイドガールスポア",
-        "jadegirlsporeling",
-        "ウィリンキー",
-        "platycerium",
-        "platyceriumwillinckii",
-        "platyceriumwillinckiijadegirl",
-        "ジェイド姫",
-        "ジサクボjgs",
-        "ジサクボjgs2"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202306/18253128391087729.jpg",
-          "timestamp": 1687253274
-        },
-        {
-          "path": "instagram-data/media/posts/202306/17962080446592326.jpg",
-          "timestamp": 1687253274
-        },
-        {
-          "path": "instagram-data/media/posts/202306/17849359877980974.jpg",
-          "timestamp": 1687253274
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1687253274-0",
         "classification": {
           "confidence": "low",
           "reason": "正規化後も不一致（キャプ:ジェイドガール vs ハッシュ:jgs2）"

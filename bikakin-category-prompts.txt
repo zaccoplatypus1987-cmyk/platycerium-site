@@ -1,0 +1,271 @@
+====================================
+ビカキンちゃん カテゴリアイコン用プロンプト
+====================================
+
+【共通の基本設定】
+IMPORTANT: Use EXACTLY the character design from the uploaded reference image.
+
+The character is "Bikakin-chan" with these EXACT features:
+- Green creature inspired by Platycerium (staghorn fern)
+- ONE LARGE EYE in the center (cyclops style) - NOT two eyes
+- Eye has white sclera and dark green iris
+- Wide, friendly smile
+- Multiple antler-like fronds growing from head
+- Body is yellow-green to deep green gradient with fuzzy texture
+- Platycerium leaves growing all over the body
+- Bipedal stance with arms and legs
+- Round, cute, friendly appearance
+- Pixar/Disney animation style 3D character
+
+====================================
+1. 用土・資材アイコン
+====================================
+
+SCENE: Bikakin-chan proudly holding sphagnum moss
+
+■ Main Composition:
+- Bikakin-chan in center, facing forward
+- BOTH HANDS: holding a large fluffy clump of golden-brown sphagnum moss
+- Moss is soft, fibrous, natural texture
+- Expression: Happy and proud
+- Simple clean background (white or very light green gradient)
+
+■ Pose Details:
+- Standing upright
+- Arms raised slightly, presenting the moss
+- Moss held at chest level
+- Head tilted slightly with cheerful expression
+
+■ Technical Specifications:
+- Square format (1:1 aspect ratio) for icon use
+- Bikakin-chan occupies 70% of frame
+- Clear, simple composition
+- High contrast for visibility at small sizes
+- Soft lighting, no harsh shadows
+
+■ Art Style:
+- Clean, simple 3D render
+- Suitable for category icon
+- Vibrant but not oversaturated colors
+- Professional product mascot style
+
+====================================
+2. 肥料・活力剤アイコン
+====================================
+
+SCENE: Bikakin-chan holding a fertilizer bottle
+
+■ Main Composition:
+- Bikakin-chan in center, facing forward
+- RIGHT HAND: holding a fertilizer bottle (like HB-101 or liquid fertilizer)
+- LEFT HAND: giving thumbs up gesture
+- Expression: Confident and recommending
+- Simple clean background (white or very light green gradient)
+
+■ Fertilizer Bottle Details:
+- Small bottle with label
+- Generic fertilizer design (not specific brand)
+- Brown or amber colored liquid visible
+- Held prominently but not oversized
+
+■ Pose Details:
+- Standing upright
+- Slight lean forward, friendly posture
+- Energetic, enthusiastic vibe
+- "I recommend this!" feeling
+
+■ Technical Specifications:
+- Square format (1:1 aspect ratio) for icon use
+- Bikakin-chan occupies 70% of frame
+- Clear, simple composition
+- High contrast for visibility at small sizes
+- Soft lighting, no harsh shadows
+
+■ Art Style:
+- Clean, simple 3D render
+- Suitable for category icon
+- Vibrant but not oversaturated colors
+- Professional product mascot style
+
+====================================
+3. 道具アイコン
+====================================
+
+SCENE: Bikakin-chan holding a spray bottle (mister)
+
+■ Main Composition:
+- Bikakin-chan in center, facing forward
+- RIGHT HAND: holding a green/white spray mister bottle
+- LEFT HAND: pointing at the spray bottle
+- Expression: Cheerful and demonstrating
+- Simple clean background (white or very light green gradient)
+
+■ Spray Bottle Details:
+- Hand-pump spray bottle
+- Clear or translucent body with colored trigger
+- Realistic misting bottle for plants
+- Appropriate size relative to Bikakin-chan
+
+■ Pose Details:
+- Standing upright
+- Demonstrating the tool
+- Friendly, helpful posture
+- "This is a useful tool!" feeling
+
+■ Technical Specifications:
+- Square format (1:1 aspect ratio) for icon use
+- Bikakin-chan occupies 70% of frame
+- Clear, simple composition
+- High contrast for visibility at small sizes
+- Soft lighting, no harsh shadows
+
+■ Art Style:
+- Clean, simple 3D render
+- Suitable for category icon
+- Vibrant but not oversaturated colors
+- Professional product mascot style
+
+====================================
+4. 照明アイコン
+====================================
+
+SCENE: Bikakin-chan being illuminated by a grow light
+
+■ Main Composition:
+- Bikakin-chan in center, looking up happily
+- Small Platycerium plant beside Bikakin-chan
+- LED grow light panel above, shining down
+- Light rays visible, warm glow effect
+- Expression: Happy, basking in the light
+- Simple clean background (white or very light gradient)
+
+■ Lighting Details:
+- LED panel light fixture above
+- Warm white/yellow light rays
+- Gentle glow effect around Bikakin-chan and plant
+- Light feels beneficial and nurturing
+
+■ Pose Details:
+- Standing upright
+- Arms slightly raised, embracing the light
+- Looking up at the light source
+- Plant next to Bikakin-chan also bathed in light
+- Peaceful, content feeling
+
+■ Technical Specifications:
+- Square format (1:1 aspect ratio) for icon use
+- Bikakin-chan occupies 60% of frame
+- Clear, simple composition
+- High contrast for visibility at small sizes
+- Dramatic lighting with soft glow
+
+■ Art Style:
+- Clean, simple 3D render
+- Suitable for category icon
+- Vibrant but not oversaturated colors
+- Professional product mascot style
+- Light rays and glow effects
+
+====================================
+5. 設備アイコン
+====================================
+
+SCENE: Bikakin-chan hanging from a metal rack
+
+■ Main Composition:
+- Bikakin-chan hanging from a horizontal bar/rack pole
+- BOTH HANDS: gripping the pole above head
+- Legs dangling playfully
+- Expression: Fun, playful smile
+- Metal rack structure visible (simple, clean lines)
+- Simple clean background (white or very light green gradient)
+
+■ Rack Details:
+- Chrome or silver metal pole/bar
+- Simple industrial design
+- Part of a shelf rack visible
+- Clean, modern look
+
+■ Pose Details:
+- Hanging like on monkey bars
+- Legs bent slightly or dangling straight
+- Playful, energetic feeling
+- "Look at this sturdy equipment!" vibe
+
+■ Technical Specifications:
+- Square format (1:1 aspect ratio) for icon use
+- Bikakin-chan occupies 65% of frame
+- Clear, simple composition
+- High contrast for visibility at small sizes
+- Soft lighting, no harsh shadows
+
+■ Art Style:
+- Clean, simple 3D render
+- Suitable for category icon
+- Vibrant but not oversaturated colors
+- Professional product mascot style
+
+====================================
+6. 薬剤・防虫アイコン
+====================================
+
+SCENE: Bikakin-chan spraying pesticide on a small plant
+
+■ Main Composition:
+- Bikakin-chan in center, facing slightly to the side
+- RIGHT HAND: holding spray bottle (like Benika)
+- LEFT HAND: supporting/steadying the spray bottle
+- Small potted Platycerium in front
+- Spray mist visible between bottle and plant
+- Expression: Focused, caring, protective
+- Simple clean background (white or very light green gradient)
+
+■ Spray Bottle Details:
+- Trigger spray bottle
+- Red/white design (generic pesticide colors)
+- Mist spray effect visible
+- Professional plant care product look
+
+■ Plant Details:
+- Small Platycerium in simple pot
+- Healthy looking
+- Receiving the spray treatment
+- Not too detailed, keep simple
+
+■ Pose Details:
+- Standing upright or slight lean forward
+- Careful, gentle spraying motion
+- Caring, protective demeanor
+- "Taking care of plants" feeling
+
+■ Technical Specifications:
+- Square format (1:1 aspect ratio) for icon use
+- Bikakin-chan occupies 60% of frame
+- Clear, simple composition
+- High contrast for visibility at small sizes
+- Soft lighting with spray mist effect
+
+■ Art Style:
+- Clean, simple 3D render
+- Suitable for category icon
+- Vibrant but not oversaturated colors
+- Professional product mascot style
+- Subtle spray/mist effects
+
+====================================
+使用方法：
+====================================
+
+1. Google AI Studio (Nano Banana) にアクセス
+2. 既存のビカキンちゃん画像をリファレンスとしてアップロード
+3. 上記のプロンプトをコピー＆ペースト
+4. 生成された画像を /public/images/category-icons/ に保存
+5. ファイル名は以下の通り：
+   - category-soil.png (用土・資材)
+   - category-fertilizer.png (肥料・活力剤)
+   - category-tools.png (道具)
+   - category-lighting.png (照明)
+   - category-equipment.png (設備)
+   - category-pesticide.png (薬剤・防虫)
+
+====================================

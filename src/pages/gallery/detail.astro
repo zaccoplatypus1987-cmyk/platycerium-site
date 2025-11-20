@@ -6,6 +6,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <style is:global>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #f3f4f6 100%);
+      min-height: 100vh;
     }
 
     .skeleton {
@@ -28,16 +30,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       to { opacity: 1; }
     }
 
+    /* エメラルドグラデーションタイトル */
+    .gradient-title {
+      background: linear-gradient(135deg, #059669 0%, #10b981 25%, #34d399 50%, #10b981 75%, #059669 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
     .post-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     .post-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(16, 185, 129, 0.15);
     }
 
     .line-clamp-3 {
@@ -57,16 +78,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      padding: 0.375rem 0.75rem;
+      padding: 0.5rem 1rem;
       border-radius: 9999px;
       font-size: 0.75rem;
       font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: white;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .care-tag:hover {
-      transform: scale(1.05);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     /* Day バッジのスタイル */
@@ -74,35 +97,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: linear-gradient(135deg, #4A7C2F 0%, #6FA83F 100%);
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.625rem 1.25rem;
       border-radius: 9999px;
       font-weight: 700;
-      box-shadow: 0 2px 8px rgba(74, 124, 47, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 0.875rem;
+      box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3);
+      transition: all 0.2s ease;
     }
 
     .day-badge:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(74, 124, 47, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
     }
 
-    /* タグごとの色設定（3種類 + 購入タグ） */
+    /* タグごとの色設定（グラデーションで統一） */
     .care-tag-purchase {
-      background-color: #EF4444; /* red-500 */
+      background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
     }
 
     .care-tag-remount {
-      background-color: #10B981; /* green-500 */
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
     }
 
     .care-tag-moss {
-      background-color: #6366F1; /* indigo-500 */
+      background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
     }
 
     .care-tag-fertilize {
-      background-color: #F59E0B; /* amber-500 */
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
     }
 
     /* モバイル対応 */
@@ -121,42 +145,81 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   <main class="container mx-auto px-4 py-8">
     <!-- Breadcrumb -->
-    <nav class="mb-6 text-sm text-gray-600">
-      <a href="/" class="hover:text-forest-mid">ホーム</a>
+    <nav class="mb-6 text-sm text-gray-600 flex items-center flex-wrap">
+      <a href="/" class="hover:text-forest-mid transition-colors">ホーム</a>
       <span class="mx-2">/</span>
-      <a href="/gallery/" class="hover:text-forest-mid">ギャラリー</a>
+      <a href="/gallery/" class="hover:text-forest-mid transition-colors">栽培記録</a>
+      <span id="breadcrumb-species-separator" class="mx-2 hidden">/</span>
+      <a id="breadcrumb-species-link" href="#" class="hover:text-forest-mid transition-colors hidden">...</a>
       <span class="mx-2">/</span>
-      <a id="breadcrumb-species-link" href="#" class="hover:text-forest-mid">...</a>
-      <span class="mx-2">/</span>
-      <span id="breadcrumb-subspecies" class="text-gray-900">...</span>
+      <span id="breadcrumb-subspecies" class="text-forest-dark font-semibold">...</span>
     </nav>
 
     <!-- Species Header -->
-    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-      <div class="flex items-start justify-between mb-4">
-        <div>
-          <h2 id="species-name-ja" class="text-3xl md:text-4xl font-bold text-forest-dark mb-2">
-            <!-- JavaScript で設定 -->
-          </h2>
-          <p id="species-name-en" class="text-lg text-gray-500 italic mb-4">
-            <!-- JavaScript で設定 -->
-          </p>
-          <p id="species-count" class="text-gray-600">
-            <!-- JavaScript で設定 -->
-          </p>
+    <div class="relative backdrop-blur-sm bg-white/95 rounded-2xl shadow-lg border-2 border-emerald-500 p-8 mb-8 overflow-hidden">
+      <!-- 装飾的な背景グラデーション -->
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-transparent to-emerald-50/30 pointer-events-none"></div>
+
+      <div class="relative">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex-1">
+            <h1 id="species-name-ja" class="text-3xl md:text-4xl font-bold gradient-title mb-4">
+              <!-- JavaScript で設定 -->
+            </h1>
+            <div class="flex items-center gap-3 text-gray-600">
+              <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <p id="species-count" class="font-medium">
+                <!-- JavaScript で設定 -->
+              </p>
+            </div>
+          </div>
         </div>
 
-        <a href="/gallery/" class="text-forest-mid hover:text-forest-dark transition-colors flex items-center gap-1">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-          一覧に戻る
-        </a>
-      </div>
+        <!-- 写真とコメント欄 -->
+        <div id="latest-image-container" class="mt-8 hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- 左側：写真 -->
+            <div class="relative rounded-xl overflow-hidden shadow-md border-2 border-emerald-200 flex items-center justify-center bg-white">
+              <img id="latest-image" src="" alt="品種の写真" class="w-full h-auto">
+            </div>
 
-      <!-- 品種説明（Notion連携時に使用） -->
-      <div id="species-description" class="mt-4 text-gray-700 leading-relaxed hidden">
-        <!-- JavaScript で設定 -->
+            <!-- 右側：コメント欄 -->
+            <div class="flex flex-col h-full">
+              <div class="mb-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
+                  <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                  </svg>
+                  栽培メモ
+                </h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  この品種の特徴や育て方のポイント、観察したことなどを記録できます
+                </p>
+              </div>
+
+              <div class="flex-1 flex flex-col">
+                <textarea
+                  id="species-comment"
+                  class="w-full flex-1 p-5 bg-white rounded-xl border-2 border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition-all resize-none text-gray-700 text-base leading-relaxed min-h-[250px]"
+                  placeholder="例：&#10;・葉が大きく成長が早い&#10;・水やりは週2回程度&#10;・胞子葉の形が美しい&#10;・夏場は遮光が必要"
+                  disabled
+                ></textarea>
+                <div class="mt-3 flex items-center justify-between">
+                  <p class="text-xs text-gray-500">
+                    <span class="inline-flex items-center gap-1">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                      準備中の機能です
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -173,20 +236,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     <!-- Error Message -->
     <div id="error" class="hidden text-center py-12">
-      <p class="text-xl text-red-600 mb-4"></p>
-      <div class="space-x-4">
-        <button onclick="location.reload()" class="bg-forest-mid hover:bg-forest-dark text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-          再読み込み
-        </button>
-        <a href="/gallery/" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-6 rounded-lg transition-colors">
-          一覧に戻る
-        </a>
+      <div class="inline-block p-8 bg-white rounded-2xl shadow-lg border-2 border-red-200">
+        <svg class="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <p class="text-xl text-red-600 mb-6 font-semibold"></p>
+        <div class="flex gap-4 justify-center">
+          <button onclick="location.reload()" class="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-semibold py-3 px-8 rounded-xl transition-all shadow-md hover:shadow-lg">
+            再読み込み
+          </button>
+          <a href="/gallery/" class="inline-block bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-8 rounded-xl transition-all shadow-md hover:shadow-lg border-2 border-gray-300">
+            栽培記録トップに戻る
+          </a>
+        </div>
       </div>
     </div>
 
     <!-- Posts Grid -->
     <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
       <!-- Posts will be rendered here -->
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="mt-12 mb-8 text-center">
+      <a id="back-to-gallery" href="/gallery/" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-semibold py-4 px-10 rounded-xl transition-all shadow-lg hover:shadow-xl">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        栽培記録トップに戻る
+      </a>
     </div>
   </main>
 
@@ -330,7 +408,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     // DOM要素
     const speciesNameJa = document.getElementById('species-name-ja');
-    const speciesNameEn = document.getElementById('species-name-en');
     const speciesCount = document.getElementById('species-count');
     const speciesDescription = document.getElementById('species-description');
     const breadcrumbSpeciesLink = document.getElementById('breadcrumb-species-link');
@@ -595,15 +672,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       const displayName = species.displayName || species.id;
 
       // DOM要素の存在確認
-      if (!speciesNameJa || !speciesNameEn) {
+      if (!speciesNameJa) {
         console.error('必要なDOM要素が見つかりません');
         console.error('speciesNameJa:', speciesNameJa);
-        console.error('speciesNameEn:', speciesNameEn);
         throw new Error('ページのHTML構造が不正です');
       }
 
       speciesNameJa.textContent = displayName;
-      speciesNameEn.textContent = displayName;
 
       // 種名を抽出（例: "P.willinckii 月光爪哇" から "P.willinckii" を抽出）
       // または "Platycerium ridleyi nano" から "P. ridleyi" を抽出
@@ -616,19 +691,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       if (speciesNameMatch) {
         const speciesKey = speciesNameMatch[1]; // 例: "willinckii" または "ridleyi"
-        const speciesName = `P. ${speciesKey}`; // 例: "P. willinckii"（ドット+スペース）
+        const speciesNameEn = `P. ${speciesKey}`; // 英語表記（例: "P. willinckii"）
 
-        // パンくずリストに種名リンクを設定
-        breadcrumbSpeciesLink.textContent = speciesName;
-        breadcrumbSpeciesLink.href = `/gallery/subspecies?parent=${speciesKey}`;
+        // パンくずリストに種名リンクを設定（栽培記録トップに戻る）
+        const breadcrumbSeparator = document.getElementById('breadcrumb-species-separator');
+        breadcrumbSpeciesLink.textContent = speciesNameEn;
+        breadcrumbSpeciesLink.href = `/gallery/#${speciesKey}`;
+        breadcrumbSpeciesLink.classList.remove('hidden');
+        breadcrumbSeparator.classList.remove('hidden');
 
-        // 亜種名を設定（原種名も含めて表示）
+        // 品種名を設定
         breadcrumbSubspecies.textContent = displayName;
+
+        // ページ下部の「戻る」ボタンにも原種IDのハッシュを設定
+        const backToGalleryBtn = document.getElementById('back-to-gallery');
+        if (backToGalleryBtn) {
+          backToGalleryBtn.href = `/gallery/#${speciesKey}`;
+        }
       } else {
-        // 種名が抽出できない場合は従来通り
-        breadcrumbSpeciesLink.textContent = displayName;
-        breadcrumbSpeciesLink.href = '#';
-        breadcrumbSubspecies.textContent = '';
+        // 種名が抽出できない場合（交配種など）
+        breadcrumbSubspecies.textContent = displayName;
+
+        // 交配種の場合は hybrid セクションに戻る
+        const backToGalleryBtn = document.getElementById('back-to-gallery');
+        if (backToGalleryBtn) {
+          backToGalleryBtn.href = `/gallery/#hybrid`;
+        }
       }
 
       // 成長期間を表示（古い順にソート済み）
@@ -642,6 +730,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         const totalDays = calculateDaysSince(sortedPosts[0].timestamp, sortedPosts[sortedPosts.length - 1].timestamp);
 
         speciesCount.textContent = `${count}件の投稿 / ${firstDate} 〜 ${lastDate}（${totalDays}日間）`;
+
+        // 表示する投稿画像を決定
+        let displayPost;
+
+        // 月光爪哇の場合は2025年3月29日の投稿を使用
+        if (species.id === 'ジサクボ月光') {
+          displayPost = posts.find(post => post.date === '2025-03-29');
+          // 見つからない場合は最新の投稿にフォールバック
+          if (!displayPost) {
+            displayPost = sortedPosts[sortedPosts.length - 1];
+          }
+        } else {
+          // その他の品種は最新の投稿を使用
+          displayPost = sortedPosts[sortedPosts.length - 1];
+        }
+
+        const latestImageContainer = document.getElementById('latest-image-container');
+        const latestImageElement = document.getElementById('latest-image');
+
+        if (displayPost && displayPost.images && displayPost.images.length > 0) {
+          const firstImage = displayPost.images[0];
+          latestImageElement.src = `/${firstImage.path}`;
+          latestImageElement.alt = `${displayName}の写真`;
+          latestImageContainer.classList.remove('hidden');
+
+          // 画像読み込みエラー対応
+          latestImageElement.onerror = () => {
+            latestImageElement.src = '/images/placeholder.jpg';
+          };
+        }
       } else {
         speciesCount.textContent = `${count}件の投稿`;
       }

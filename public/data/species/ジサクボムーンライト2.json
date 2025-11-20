@@ -4,7 +4,7 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボムーンライト2",
     "displayName": "P.willinckii moonlight#vp",
-    "count": 54,
+    "count": 53,
     "latestPost": {
       "id": "1757825887-0",
       "date": "2025-09-14",
@@ -889,43 +889,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1708514944-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "正規化後に高度一致（類似度: 90%）"
-        }
-      }
-    },
-    {
-      "id": "1707027060-0",
-      "date": "2024-02-04",
-      "timestamp": 1707027060,
-      "caption": "R P.willinckii moonlight#PN\nL P.willinckii moonlight#VP\nどっちがタイプ？\n\n#ビカクシダ\n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#観葉植物 \n#観葉植物のある暮らし \n#観葉植物インテリア\n#platycerium \n#willinckii \n#platyceriumwillinckii \n#糜角羊歯\n#ジサクボムーンライト1\n#ジサクボムーンライト2",
-      "hashtags": [
-        "PN",
-        "VP",
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダ好きと繋がりたい",
-        "観葉植物",
-        "観葉植物のある暮らし",
-        "観葉植物インテリア",
-        "platycerium",
-        "willinckii",
-        "platyceriumwillinckii",
-        "糜角羊歯",
-        "ジサクボムーンライト1",
-        "ジサクボムーンライト2"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202402/18048078229595757.jpg",
-          "timestamp": 1707027060
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1707027060-0",
         "classification": {
           "confidence": "high",
           "reason": "正規化後に高度一致（類似度: 90%）"

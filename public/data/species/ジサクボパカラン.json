@@ -4,7 +4,7 @@
     "mainSpecies": "ridleyi",
     "tag": "#ジサクボパカラン",
     "displayName": "Platycerium ridleyi pakarang",
-    "count": 9,
+    "count": 7,
     "latestPost": {
       "id": "1741058107-0",
       "date": "2025-03-04",
@@ -50,42 +50,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1741058107-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
-        }
-      }
-    },
-    {
-      "id": "1738584456-0",
-      "date": "2025-02-03",
-      "timestamp": 1738584456,
-      "caption": "Platycerium ridleyi pakalang & nano\nfrom @katsu_hibino \n(どっちがナノでどっちがパカランか)これもうわかんねぇな\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダリドレイ \n#リドレイ \n#platycerium \n#platyceriumridleyi\n#ジサクボナノ\n#ジサクボパカラン",
-      "hashtags": [
-        "ビカクシダ",
-        "ビカクシダのある暮らし",
-        "ビカクシダ初心者",
-        "ビカクシダ好きな人と繋がりたい",
-        "ビカクシダリドレイ",
-        "リドレイ",
-        "platycerium",
-        "platyceriumridleyi",
-        "ジサクボナノ",
-        "ジサクボパカラン"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202502/18045438041336337.jpg",
-          "timestamp": 1738584455
-        },
-        {
-          "path": "instagram-data/media/posts/202502/18489454558034086.jpg",
-          "timestamp": 1738584455
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1738584456-0",
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
@@ -234,36 +198,6 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1719317155-0",
-        "classification": {
-          "confidence": "high",
-          "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
-        }
-      }
-    },
-    {
-      "id": "1717066797-0",
-      "date": "2024-05-30",
-      "timestamp": 1717066797,
-      "caption": "Platycerium ridleyi nano\nPlatycerium ridleyi pakalang \nfrom @katsu_hibino \nリドレイは別腹とはよく言ったもの\n\n#0のつく日はリドレイの日 \n#水曜日は貯水葉の日 \n#ビカクシダ \n#ビカクシダリドレイ \n#platycerium \n#platyceriumridleyi\n#ジサクボナノ\n#ジサクボパカラン",
-      "hashtags": [
-        "0のつく日はリドレイの日",
-        "水曜日は貯水葉の日",
-        "ビカクシダ",
-        "ビカクシダリドレイ",
-        "platycerium",
-        "platyceriumridleyi",
-        "ジサクボナノ",
-        "ジサクボパカラン"
-      ],
-      "images": [
-        {
-          "path": "instagram-data/media/posts/202405/18107257027387188.jpg",
-          "timestamp": 1717066797
-        }
-      ],
-      "metadata": {
-        "source": "instagram",
-        "originalId": "1717066797-0",
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
