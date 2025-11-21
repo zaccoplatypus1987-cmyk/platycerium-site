@@ -315,6 +315,19 @@ node public/scripts/generate-hierarchical-species-data-v7-FIXED.js
 - 77種の品種JSONファイルを生成
 - `species-hierarchy-index.json`を生成
 
+#### ステップ3.5: 月別ファイルを再生成（重要！）
+
+```bash
+node public/scripts/regenerate-monthly-posts.cjs
+```
+
+**このスクリプトが実行すること：**
+- `instagram-posts.json`から月別ファイル（`posts-YYYY-MM.json`）を再生成
+- `/detail?id=XXX` ページで使用される月別データを更新
+- `posts-index.json` を更新
+
+**⚠️ 重要：** このステップを忘れると `/detail?id=XXX` ページで新しい投稿が表示されません
+
 #### ステップ4: Gitコミット＆デプロイ
 
 ```bash
@@ -329,11 +342,16 @@ git push origin main
 1. Instagram posts_1.json
    ↓ (add-new-instagram-posts.cjs)
 2. instagram-posts.json (2013件、全投稿)
-   ↓ (generate-hierarchical-species-data-v7-FIXED.js)
-3. species-hierarchy-index.json (77種)
-   + species/ジサクボイザナギ.json (各品種)
    ↓
-4. ギャラリーページに表示
+   ├─ (generate-hierarchical-species-data-v7-FIXED.js)
+   │  └→ species-hierarchy-index.json (77種)
+   │     + species/ジサクボイザナギ.json (各品種)
+   │     └→ /gallery/ ページに表示
+   │
+   └─ (regenerate-monthly-posts.cjs) ⚠️ 忘れずに！
+      └→ posts-YYYY-MM.json (月別ファイル60個)
+         + posts-index.json
+         └→ /detail?id=XXX ページに表示
 ```
 
 ### 🔗 品種名の決定方法
