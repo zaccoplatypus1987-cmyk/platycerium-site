@@ -51,7 +51,7 @@ const toolCategories = [
         name: 'フローラ HB-101 原液 100ml',
         description: '植物活力剤。植物の生育を活発にし、健康に育てる。',
         image: 'https://m.media-amazon.com/images/I/71bbm1l63DL._AC_SY879_.jpg',
-        rakutenUrl: 'https://hb.afl.rakuten.co.jp/ichiba/4e62085b.7fee8a9c.4e62085c.8368a80e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhanaururu%2Fhiryo-hb101-100ml%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9',
+        rakutenUrl: 'https://px.a8.net/svt/ejp?a8mat=45IED6+94NBH6+32O6+5YJRM',
         amazonUrl: 'https://www.amazon.co.jp/%E3%83%95%E3%83%AD%E3%83%BC%E3%83%A9-%E6%A4%8D%E7%89%A9%E6%B4%BB%E5%8A%9B%E5%89%A4-HB-101-%E5%8E%9F%E6%B6%B2-100ml/dp/B0017S6G9S',
         priceRange: '1,500円〜2,500円',
       },
@@ -791,7 +791,7 @@ const toolCategories = [
                       rel="noopener noreferrer"
                       class="tool-btn tool-btn-rakuten"
                     >
-                      🛒 楽天で見る
+                      {item.id === 'hb101' ? '🌿 公式サイトで見る' : '🛒 楽天で見る'}
                     </a>
                   ) : (
                     <span class="tool-btn tool-btn-rakuten disabled" title="リンク未設定">
