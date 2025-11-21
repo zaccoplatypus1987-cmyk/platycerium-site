@@ -4,15 +4,60 @@
     "mainSpecies": null,
     "tag": "#ジサクボトリケラ",
     "displayName": "P.Triceratops",
-    "count": 4,
+    "count": 5,
     "latestPost": {
-      "id": "1760627392-0",
-      "date": "2025-10-16",
-      "image": "instagram-data/media/posts/202510/18062959775437311.jpg",
+      "id": "1762702280-11",
+      "date": "2025-11-09",
+      "image": "instagram-data/media/posts/202511/18243624268288969.jpg",
       "caption": "P.Triceratops "
     }
   },
   "posts": [
+    {
+      "id": "1762702280-11",
+      "date": "2025-11-09",
+      "timestamp": 1762702280,
+      "caption": "P.Triceratops \nfrom @botanical_mafia \n根が板に到達したらピン留め板替えするらしいです。\n\n私が言う「根が板に到達」とは、写真3のように外すときに根の先っちょ見える状態です。\n\n苔増しは出来るだけ薄くつけます。\n\n経験則ですが、横幅が狭い板で、このトケットを初めに付けておくと緩んだことがないです(オマレイ除く)\n皆様はどうでしょうかー?\n\n#ジサクボトリケラ\n#ビカクシダ\n#コウモリラン",
+      "hashtags": [
+        "ジサクボトリケラ",
+        "ビカクシダ",
+        "コウモリラン"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202511/18243624268288969.jpg",
+          "timestamp": 1762702280
+        },
+        {
+          "path": "instagram-data/media/posts/202511/17985384521751015.jpg",
+          "timestamp": 1762702280
+        },
+        {
+          "path": "instagram-data/media/posts/202511/17871680610455738.jpg",
+          "timestamp": 1762702280
+        },
+        {
+          "path": "instagram-data/media/posts/202511/18543822616051153.jpg",
+          "timestamp": 1762702280
+        },
+        {
+          "path": "instagram-data/media/posts/202511/18106049317717366.jpg",
+          "timestamp": 1762702280
+        },
+        {
+          "path": "instagram-data/media/posts/202511/18110565970593909.jpg",
+          "timestamp": 1762702280
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1762702280-11",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 90%）"
+        }
+      }
+    },
     {
       "id": "1760627392-0",
       "date": "2025-10-16",

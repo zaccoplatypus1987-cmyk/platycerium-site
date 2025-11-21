@@ -4,15 +4,51 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボomg",
     "displayName": "Platycerium willinckii OMG",
-    "count": 32,
+    "count": 33,
     "latestPost": {
-      "id": "1760145341-0",
-      "date": "2025-10-11",
-      "image": "instagram-data/media/posts/202510/17979792548762991.jpg",
+      "id": "1763134045-7",
+      "date": "2025-11-14",
+      "image": "instagram-data/media/posts/202511/17905243464276221.jpg",
       "caption": "Platycerium willinckii OMG "
     }
   },
   "posts": [
+    {
+      "id": "1763134045-7",
+      "date": "2025-11-14",
+      "timestamp": 1763134045,
+      "caption": "Platycerium willinckii OMG \n苔増しするらしいです。\nどう考えても水苔カスカスなのにワラジ虫は未だ居ると思うのですが、どうでしょうか\n\n#ビカクシダ\n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダの輪 \n#platycerium\n#石角美歯 \n#コウモリラン\n\n#ジサクボomg\n#willinckiiomg",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダの輪",
+        "platycerium",
+        "石角美歯",
+        "コウモリラン",
+        "ジサクボomg",
+        "willinckiiomg"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202511/17905243464276221.jpg",
+          "timestamp": 1763134045
+        },
+        {
+          "path": "instagram-data/media/posts/202511/18107806267540792.jpg",
+          "timestamp": 1763134045
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763134045-7",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（willinckii）- 信頼性高い"
+        }
+      }
+    },
     {
       "id": "1760145341-0",
       "date": "2025-10-11",

@@ -4,15 +4,49 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボジェニー",
     "displayName": "P.willinckii ‘Jenny’",
-    "count": 19,
+    "count": 20,
     "latestPost": {
-      "id": "1758454213-0",
-      "date": "2025-09-21",
-      "image": "instagram-data/media/posts/202509/18161181025337209.jpg",
-      "caption": "P.willinckii ‘Jenny’"
+      "id": "1762943932-10",
+      "date": "2025-11-12",
+      "image": "instagram-data/media/posts/202511/17939921802088441.jpg",
+      "caption": "P.willinckii \"Jenny\""
     }
   },
   "posts": [
+    {
+      "id": "1762943932-10",
+      "date": "2025-11-12",
+      "timestamp": 1762943932,
+      "caption": "P.willinckii \"Jenny\"\nfrom @bikakumafia \n貯水葉裏側に水苔詰めました。\n\n#ビカクシダ\n#ビカクシダウィリンキー \n#ジサクボジェニー\n#トイレの神様",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダウィリンキー",
+        "ジサクボジェニー",
+        "トイレの神様"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202511/17939921802088441.jpg",
+          "timestamp": 1762943932
+        },
+        {
+          "path": "instagram-data/media/posts/202511/18075502835237763.jpg",
+          "timestamp": 1762943932
+        },
+        {
+          "path": "instagram-data/media/posts/202511/18156822805398308.jpg",
+          "timestamp": 1762943932
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1762943932-10",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1758454213-0",
       "date": "2025-09-21",

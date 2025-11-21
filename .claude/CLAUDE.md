@@ -376,7 +376,88 @@ git push origin main
 
 ---
 
-**最終更新**: 2025-11-21
-**バージョン**: 2.1.0
+## 🐛 トラブルシューティング（2025-11-22追記）
+
+### 問題: Facebookクロスポスト投稿のキャプションがnullになる
+
+**発生日時**: 2025-11-22
+
+**症状**:
+- 11月の4件の投稿（11/9, 11/12, 11/14, 11/18）のキャプションが `null` として保存される
+- これらは実際にはヌクル、トリケラトプス、ジェニー、OMGの投稿だった
+- サイトで「null」と表示され、品種分類もされない
+
+**原因**:
+Instagramのデータエクスポート形式には2種類ある：
+
+1. **通常の投稿**（Instagram直接投稿）:
+   ```json
+   {
+     "media": [
+       {
+         "uri": "media/posts/202511/xxx.jpg",
+         "creation_timestamp": 1762702280,
+         "title": "P.Triceratops ..."  ← ここにキャプション
+       }
+     ]
+   }
+   ```
+
+2. **Facebookクロスポスト**:
+   ```json
+   {
+     "media": [
+       {
+         "uri": "media/posts/202511/xxx.jpg",
+         "creation_timestamp": 1762702280,
+         "title": "",  ← 空！
+         "cross_post_source": {
+           "source_app": "FB"
+         }
+       }
+     ],
+     "title": "P.Triceratops ..."  ← ルートレベルにキャプション
+   }
+   ```
+
+**問題のスクリプト**: `add-new-instagram-posts.cjs` が `media[0].title` しか見ていなかった
+
+**修正内容**:
+
+`public/scripts/add-new-instagram-posts.cjs` の `convertNewPost()` 関数を修正：
+
+```javascript
+// 修正前（間違い）
+let caption = '';
+if (firstMedia.title) {
+    caption = decodeInstagramString(firstMedia.title);
+}
+
+// 修正後（正しい）
+let caption = '';
+// まずルートレベルのtitleを確認（Facebookクロスポスト用）
+if (post.title) {
+    caption = decodeInstagramString(post.title);
+} else if (firstMedia.title) {
+    // なければmedia[0].titleを使用
+    caption = decodeInstagramString(firstMedia.title);
+}
+```
+
+**今後の対応**:
+- このスクリプト修正により、今後のFacebookクロスポストでもキャプションが正しく取得される
+- 既存のnull投稿は手動修正済み（4件）
+- 新しいデータ更新時は自動的に正しく処理される
+
+**確認方法**:
+```bash
+# null投稿がないか確認
+jq '.posts[] | select(.caption == null) | {id, date}' public/data/instagram-posts.json
+```
+
+---
+
+**最終更新**: 2025-11-22
+**バージョン**: 2.2.0
 **プロジェクト**: Platycerium Collection - Astro Site
 **目標**: Instagram 2万フォロワーへの情報発信 + 月1〜3万円の副収入

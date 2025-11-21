@@ -89,7 +89,11 @@ function convertNewPost(post, index) {
     }
 
     let caption = '';
-    if (firstMedia.title) {
+    // まずルートレベルのtitleを確認（Facebookクロスポスト用）
+    if (post.title) {
+        caption = decodeInstagramString(post.title);
+    } else if (firstMedia.title) {
+        // なければmedia[0].titleを使用
         caption = decodeInstagramString(firstMedia.title);
     }
 

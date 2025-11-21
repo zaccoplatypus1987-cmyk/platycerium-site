@@ -1,24 +1,24 @@
 {
   "meta": {
-    "generated": "2025-11-21T15:25:42.603Z",
+    "generated": "2025-11-21T16:22:53.168Z",
     "version": "7.0-FIXED-P0-v2",
     "description": "品質検査官による修正版（交配種誤分類修正、画像データ追加、P0修正v2）",
     "totalSpecies": 77,
     "totalPosts": 2013,
-    "totalClassifications": 1404,
+    "totalClassifications": 1408,
     "classificationStats": {
-      "high": 1060,
+      "high": 1064,
       "medium": 0,
       "low": 344,
       "none": 0
     },
-    "accuracy": 75.5,
+    "accuracy": 75.6,
     "improvements": {
       "v3": "27.2%",
       "v4": "45.0%",
       "v5": "51.1%",
       "v6": "76.5%",
-      "v7": "75.5% (交配種誤分類修正 + P0修正v2)",
+      "v7": "75.6% (交配種誤分類修正 + P0修正v2)",
       "target": "80%+"
     },
     "qualityMetrics": {
@@ -160,6 +160,16 @@
       "latestPostDate": "2025-11-20"
     },
     {
+      "id": "ジサクボomg",
+      "tag": "#ジサクボomg",
+      "mainSpecies": "willinckii",
+      "displayName": "Platycerium willinckii OMG",
+      "count": 33,
+      "file": "ジサクボomg.json",
+      "latestImage": "instagram-data/media/posts/202511/17905243464276221.jpg",
+      "latestPostDate": "2025-11-14"
+    },
+    {
       "id": "ジサクボスコタツ",
       "tag": "#ジサクボスコタツ",
       "mainSpecies": "willinckii",
@@ -188,16 +198,6 @@
       "file": "ジサクボコロナ.json",
       "latestImage": "instagram-data/media/other/18347569156202054.jpg",
       "latestPostDate": "2025-11-17"
-    },
-    {
-      "id": "ジサクボomg",
-      "tag": "#ジサクボomg",
-      "mainSpecies": "willinckii",
-      "displayName": "Platycerium willinckii OMG",
-      "count": 32,
-      "file": "ジサクボomg.json",
-      "latestImage": "instagram-data/media/posts/202510/17979792548762991.jpg",
-      "latestPostDate": "2025-10-11"
     },
     {
       "id": "ジサクボマジュスポ",
@@ -270,6 +270,16 @@
       "latestPostDate": "2025-11-16"
     },
     {
+      "id": "ジサクボジェニー",
+      "tag": "#ジサクボジェニー",
+      "mainSpecies": "willinckii",
+      "displayName": "P.willinckii ‘Jenny’",
+      "count": 20,
+      "file": "ジサクボジェニー.json",
+      "latestImage": "instagram-data/media/posts/202511/17939921802088441.jpg",
+      "latestPostDate": "2025-11-12"
+    },
+    {
       "id": "ジサクボアン",
       "tag": "#ジサクボアン",
       "mainSpecies": "willinckii",
@@ -278,16 +288,6 @@
       "file": "ジサクボアン.json",
       "latestImage": "instagram-data/media/other/18071891084585930.jpg",
       "latestPostDate": "2025-11-08"
-    },
-    {
-      "id": "ジサクボジェニー",
-      "tag": "#ジサクボジェニー",
-      "mainSpecies": "willinckii",
-      "displayName": "P.willinckii ‘Jenny’",
-      "count": 19,
-      "file": "ジサクボジェニー.json",
-      "latestImage": "instagram-data/media/posts/202509/18161181025337209.jpg",
-      "latestPostDate": "2025-09-21"
     },
     {
       "id": "ジサクボフェノメナル",
@@ -470,6 +470,16 @@
       "latestPostDate": "2024-01-22"
     },
     {
+      "id": "ジサクボヌクル",
+      "tag": "#ジサクボヌクル",
+      "mainSpecies": null,
+      "displayName": "P.Nukul",
+      "count": 9,
+      "file": "ジサクボヌクル.json",
+      "latestImage": "instagram-data/media/posts/202511/18011673869638610.jpg",
+      "latestPostDate": "2025-11-18"
+    },
+    {
       "id": "ジサクボキンググループエム",
       "tag": "#ジサクボキンググループエム",
       "mainSpecies": "hillii",
@@ -518,16 +528,6 @@
       "file": "ジサクボワイルドウィリンキー.json",
       "latestImage": "instagram-data/media/posts/202307/18298457872117358.jpg",
       "latestPostDate": "2023-07-31"
-    },
-    {
-      "id": "ジサクボヌクル",
-      "tag": "#ジサクボヌクル",
-      "mainSpecies": null,
-      "displayName": "P.Nukul",
-      "count": 8,
-      "file": "ジサクボヌクル.json",
-      "latestImage": "instagram-data/media/posts/202510/17899616700166204.jpg",
-      "latestPostDate": "2025-10-19"
     },
     {
       "id": "ジサクボベイチコロナ",
@@ -580,6 +580,16 @@
       "latestPostDate": "2025-09-11"
     },
     {
+      "id": "ジサクボトリケラ",
+      "tag": "#ジサクボトリケラ",
+      "mainSpecies": null,
+      "displayName": "P.Triceratops",
+      "count": 5,
+      "file": "ジサクボトリケラ.json",
+      "latestImage": "instagram-data/media/posts/202511/18243624268288969.jpg",
+      "latestPostDate": "2025-11-09"
+    },
+    {
       "id": "ジサクボスパローズ",
       "tag": "#ジサクボスパローズ",
       "mainSpecies": "willinckii",
@@ -628,16 +638,6 @@
       "file": "ジサクボナダレ.json",
       "latestImage": "instagram-data/media/other/18082564583022993.jpg",
       "latestPostDate": "2025-11-03"
-    },
-    {
-      "id": "ジサクボトリケラ",
-      "tag": "#ジサクボトリケラ",
-      "mainSpecies": null,
-      "displayName": "P.Triceratops",
-      "count": 4,
-      "file": "ジサクボトリケラ.json",
-      "latestImage": "instagram-data/media/posts/202510/18062959775437311.jpg",
-      "latestPostDate": "2025-10-16"
     },
     {
       "id": "ジサクボリドドワ2",
@@ -806,7 +806,7 @@
       "name": "willinckii",
       "nameJa": "ウィリンキー",
       "type": "pure",
-      "totalPosts": 725,
+      "totalPosts": 727,
       "subSpeciesCount": 38,
       "subSpecies": [
         {
@@ -866,20 +866,20 @@
           "latestImage": "instagram-data/media/other/18046393973442873.jpg"
         },
         {
+          "id": "ジサクボomg",
+          "tag": "#ジサクボomg",
+          "displayName": "Platycerium willinckii OMG",
+          "count": 33,
+          "file": "ジサクボomg.json",
+          "latestImage": "instagram-data/media/posts/202511/17905243464276221.jpg"
+        },
+        {
           "id": "ジサクボスコタツ",
           "tag": "#ジサクボスコタツ",
           "displayName": "P willinckii scofieldtatsuta spore",
           "count": 33,
           "file": "ジサクボスコタツ.json",
           "latestImage": "instagram-data/media/posts/202407/18040450510786578.jpg"
-        },
-        {
-          "id": "ジサクボomg",
-          "tag": "#ジサクボomg",
-          "displayName": "Platycerium willinckii OMG",
-          "count": 32,
-          "file": "ジサクボomg.json",
-          "latestImage": "instagram-data/media/posts/202510/17979792548762991.jpg"
         },
         {
           "id": "ジサクボスーダン",
@@ -906,20 +906,20 @@
           "latestImage": "instagram-data/media/other/18034825769707838.jpg"
         },
         {
+          "id": "ジサクボジェニー",
+          "tag": "#ジサクボジェニー",
+          "displayName": "P.willinckii ‘Jenny’",
+          "count": 20,
+          "file": "ジサクボジェニー.json",
+          "latestImage": "instagram-data/media/posts/202511/17939921802088441.jpg"
+        },
+        {
           "id": "ジサクボアン",
           "tag": "#ジサクボアン",
           "displayName": "P.willinckii anne",
           "count": 19,
           "file": "ジサクボアン.json",
           "latestImage": "instagram-data/media/other/18071891084585930.jpg"
-        },
-        {
-          "id": "ジサクボジェニー",
-          "tag": "#ジサクボジェニー",
-          "displayName": "P.willinckii ‘Jenny’",
-          "count": 19,
-          "file": "ジサクボジェニー.json",
-          "latestImage": "instagram-data/media/posts/202509/18161181025337209.jpg"
         },
         {
           "id": "ジサクボイエロームーン",
@@ -1448,6 +1448,17 @@
       "latestImage": "instagram-data/media/posts/202405/18060437047572848.jpg"
     },
     {
+      "id": "ジサクボヌクル",
+      "tag": "#ジサクボヌクル",
+      "name": "P.Nukul",
+      "nameJa": "P.Nukul",
+      "type": "hybrid",
+      "totalPosts": 9,
+      "subSpeciesCount": 0,
+      "file": "ジサクボヌクル.json",
+      "latestImage": "instagram-data/media/posts/202511/18011673869638610.jpg"
+    },
+    {
       "id": "ジサクボライディーン",
       "tag": "#ジサクボライディーン",
       "name": "P.Rydeen",
@@ -1470,26 +1481,15 @@
       "latestImage": "instagram-data/media/posts/202309/18055597849458448.jpg"
     },
     {
-      "id": "ジサクボヌクル",
-      "tag": "#ジサクボヌクル",
-      "name": "P.Nukul",
-      "nameJa": "P.Nukul",
-      "type": "hybrid",
-      "totalPosts": 8,
-      "subSpeciesCount": 0,
-      "file": "ジサクボヌクル.json",
-      "latestImage": "instagram-data/media/posts/202510/17899616700166204.jpg"
-    },
-    {
       "id": "ジサクボトリケラ",
       "tag": "#ジサクボトリケラ",
       "name": "P.Triceratops",
       "nameJa": "P.Triceratops",
       "type": "hybrid",
-      "totalPosts": 4,
+      "totalPosts": 5,
       "subSpeciesCount": 0,
       "file": "ジサクボトリケラ.json",
-      "latestImage": "instagram-data/media/posts/202510/18062959775437311.jpg"
+      "latestImage": "instagram-data/media/posts/202511/18243624268288969.jpg"
     },
     {
       "id": "ジサクボまっしろ",
