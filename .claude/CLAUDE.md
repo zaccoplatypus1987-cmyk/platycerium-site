@@ -267,7 +267,59 @@ Instagram投稿200件とMarkdown記事を活用した、Astro+Tailwind CSSによ
 
 ---
 
-**最終更新**: 2025-11-05
-**バージョン**: 2.0.0
+---
+
+## 🔄 Instagram データ更新プロセス（自動化）
+
+### ⚡ トリガーフレーズ（Claude必須実行）
+
+ユーザーが以下のフレーズを使った場合、**必ず** `scripts/update-instagram-data.ts` を自動実行すること：
+
+- 「新しいInstagramデータで更新して」
+- 「Instagramの投稿データを更新」
+- 「Instagram JSONを更新」
+- 「栽培記録を更新」
+
+### 📝 実行手順
+
+1. **新しいJSONファイルのパスを確認**
+   - 通常: `~/Downloads/instagram-j39bo-YYYY-MM-DD-*/your_instagram_activity/media/posts_1.json`
+   - ユーザーに確認する必要はない（自動で探す）
+
+2. **スクリプトを実行**
+   ```bash
+   npx ts-node scripts/update-instagram-data.ts <path-to-posts_1.json>
+   ```
+
+3. **Species データを再生成**
+   ```bash
+   node public/scripts/generate-hierarchical-species-data-v7-FIXED.js
+   ```
+
+4. **変更をコミット＆プッシュ**
+   ```bash
+   git add public/data/ scripts/
+   git commit -m "feat: update Instagram cultivation records with X new posts"
+   git push origin main
+   ```
+
+### ✅ スクリプトの機能
+
+- **自動重複削除**: タイムスタンプで重複投稿を検出して削除
+- **フォーマット変換**: Instagram JSONを内部形式に自動変換
+- **バックアップ作成**: 更新前にバックアップファイルを自動生成
+- **ハッシュタグ処理**: キャプションからハッシュタグを分離
+
+### 📊 期待される結果
+
+- 新しい投稿がギャラリーページに反映される
+- 種別ごとの投稿数が自動更新される
+- 重複投稿は自動的に除外される
+- Vercel自動デプロイで約30秒後に本番反映
+
+---
+
+**最終更新**: 2025-11-21
+**バージョン**: 2.1.0
 **プロジェクト**: Platycerium Collection - Astro Site
 **目標**: Instagram 2万フォロワーへの情報発信 + 月1〜3万円の副収入
