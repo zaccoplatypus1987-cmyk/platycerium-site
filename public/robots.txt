@@ -1,0 +1,8 @@
+# ジサクボ's ジサクログ - ビカクシダ栽培サイト
+# https://platycerium-site.vercel.app
+
+User-agent: *
+Allow: /
+
+# サイトマップ
+Sitemap: https://platycerium-site.vercel.app/sitemap-index.xml
