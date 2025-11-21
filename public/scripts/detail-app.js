@@ -90,8 +90,70 @@ class DetailApp {
 
     /**
      * Load post data by searching through monthly files
+     * Optimized: Extract year/month from post ID timestamp for direct lookup
      */
     async loadPost() {
+        try {
+            // 最適化：投稿IDからタイムスタンプを抽出して年月を特定
+            const post = await this.loadPostOptimized();
+            if (post) {
+                this.post = post;
+                console.log('Post found (optimized):', this.post);
+                return;
+            }
+
+            // フォールバック：見つからなかった場合は全月を探す
+            console.log('Post not found with optimized method, falling back to full search...');
+            await this.loadPostFallback();
+
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    /**
+     * 最適化された投稿読み込み（タイムスタンプから年月を特定）
+     */
+    async loadPostOptimized() {
+        try {
+            // 投稿IDからタイムスタンプを抽出（形式: "1763466433-3"）
+            const timestampMatch = this.postId.match(/^(\d+)-/);
+            if (!timestampMatch) {
+                console.log('Cannot extract timestamp from post ID:', this.postId);
+                return null;
+            }
+
+            const timestamp = parseInt(timestampMatch[1]);
+            const date = new Date(timestamp * 1000);
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+
+            console.log(`Optimized lookup: post ID ${this.postId} → ${year}-${month}`);
+
+            // 該当する月のファイルを直接読み込む
+            const result = await this.dataLoader.loadMonth(year, month);
+
+            if (result.ok) {
+                const foundPost = result.value.posts.find(p => p.id === this.postId);
+
+                if (foundPost) {
+                    const decodedPost = foundPost;
+                    return this.normalizePostData(decodedPost);
+                }
+            }
+
+            return null;
+
+        } catch (error) {
+            console.log('Error in optimized lookup:', error);
+            return null;
+        }
+    }
+
+    /**
+     * フォールバック：全月を探す（従来の方法）
+     */
+    async loadPostFallback() {
         try {
             // Load posts index
             const indexResponse = await fetch('/data/posts-index.json');
@@ -100,7 +162,6 @@ class DetailApp {
             }
 
             const index = await indexResponse.json();
-            // monthsが文字列配列の場合とオブジェクト配列の場合の両方に対応
             const months = Array.isArray(index.months)
                 ? (typeof index.months[0] === 'string'
                     ? index.months.sort((a, b) => b.localeCompare(a))
@@ -109,7 +170,6 @@ class DetailApp {
 
             // Search through months to find the post
             for (const monthData of months) {
-                // monthDataが文字列の場合とオブジェクトの場合の両方に対応
                 const monthString = typeof monthData === 'string' ? monthData : monthData.month;
                 const [year, month] = monthString.split('-').map(Number);
                 const result = await this.dataLoader.loadMonth(year, month);
@@ -118,16 +178,10 @@ class DetailApp {
                     const foundPost = result.value.posts.find(p => p.id === this.postId);
 
                     if (foundPost) {
-                        // 文字列をデコード（共通ユーティリティを使用）
-                        // NOTE: Instagram JSONは既にUTF-8で正しくエンコードされているため、
-                        // デコーダーを使用すると逆に文字化けが発生する。
-                        // const decodedPost = decodeObject(foundPost);
-                        const decodedPost = foundPost; // デコーダーを無効化（P0修正）
-
-                        // データ構造を正規化（images → media, caption → title など）
+                        const decodedPost = foundPost;
                         this.post = this.normalizePostData(decodedPost);
 
-                        console.log('Post found and normalized:', this.post);
+                        console.log('Post found (fallback):', this.post);
                         return;
                     }
                 }
