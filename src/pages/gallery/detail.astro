@@ -712,6 +712,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         }
       } else {
         // 種名が抽出できない場合（交配種など）
+        // パンくずリストに「交雑種」リンクを設定
+        const breadcrumbSeparator = document.getElementById('breadcrumb-species-separator');
+        breadcrumbSpeciesLink.textContent = '交雑種';
+        breadcrumbSpeciesLink.href = '/gallery/#hybrid';
+        breadcrumbSpeciesLink.classList.remove('hidden');
+        breadcrumbSeparator.classList.remove('hidden');
+
+        // 品種名を設定
         breadcrumbSubspecies.textContent = displayName;
 
         // 交配種の場合は hybrid セクションに戻る
