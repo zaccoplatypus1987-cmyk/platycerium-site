@@ -192,8 +192,8 @@ const toolCategories = [
         name: 'NLH1218-3 ラック',
         description: 'ビカクシダの展示・栽培に最適なラック。安定感のある3段式。',
         image: 'https://tshop.r10s.jp/luminous-club/cabinet/item-img/lumi_re/nlh1218-3.jpg',
-        rakutenUrl: 'https://px.a8.net/svt/ejp?a8mat=45IED6+AG9ZVE+5A14+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.luminous-club.com%2Fc%2Fsteelrack%2FNLH1218%3F__fw_token%3DChQKEAoOCO6SyMaSgpEDFehQBgoQAQ',
-        amazonUrl: '',
+        rakutenUrl: 'https://hb.afl.rakuten.co.jp/ichiba/4e62039b.932205fe.4e62039c.ec068be4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fluminous-club%2Flh1218-3%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9',
+        amazonUrl: 'https://px.a8.net/svt/ejp?a8mat=45IED6+AG9ZVE+5A14+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.luminous-club.com%2Fc%2Fsteelrack%2FNLH1218%3F__fw_token%3DChQKEAoOCO6SyMaSgpEDFehQBgoQAQ',
         priceRange: '19,000円〜22,000円',
       },
       {
@@ -791,7 +791,7 @@ const toolCategories = [
                       rel="noopener noreferrer"
                       class="tool-btn tool-btn-rakuten"
                     >
-                      {(item.id === 'hb101' || item.id === 'luminous-rack') ? '🌿 公式サイトで見る' : '🛒 楽天で見る'}
+                      {item.id === 'hb101' ? '🌿 公式サイトで見る' : '🛒 楽天で見る'}
                     </a>
                   ) : (
                     <span class="tool-btn tool-btn-rakuten disabled" title="リンク未設定">
@@ -806,7 +806,7 @@ const toolCategories = [
                       rel="noopener noreferrer"
                       class="tool-btn tool-btn-amazon"
                     >
-                      📦 Amazonで見る
+                      {item.id === 'luminous-rack' ? '🌿 公式サイトで見る' : '📦 Amazonで見る'}
                     </a>
                   ) : (
                     <span class="tool-btn tool-btn-amazon disabled" title="リンク未設定">
