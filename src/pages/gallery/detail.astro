@@ -682,23 +682,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       speciesNameJa.textContent = displayName;
 
-      // 種名を抽出（例: "P.willinckii 月光爪哇" から "P.willinckii" を抽出）
-      // または "Platycerium ridleyi nano" から "P. ridleyi" を抽出
-      let speciesNameMatch = displayName.match(/^P\.(\w+)/);
+      // mainSpecies で原種の亜種か交雑種かを判定
+      const mainSpecies = speciesData.species.mainSpecies;
 
-      // "P." で始まらない場合は "Platycerium" を試す
-      if (!speciesNameMatch) {
-        speciesNameMatch = displayName.match(/^Platycerium\s+(\w+)/);
-      }
+      if (mainSpecies) {
+        // 原種の亜種の場合
+        const speciesNameEn = `P. ${mainSpecies}`; // 英語表記（例: "P. willinckii"）
 
-      if (speciesNameMatch) {
-        const speciesKey = speciesNameMatch[1]; // 例: "willinckii" または "ridleyi"
-        const speciesNameEn = `P. ${speciesKey}`; // 英語表記（例: "P. willinckii"）
-
-        // パンくずリストに種名リンクを設定（栽培記録トップに戻る）
+        // パンくずリストに種名リンクを設定
         const breadcrumbSeparator = document.getElementById('breadcrumb-species-separator');
         breadcrumbSpeciesLink.textContent = speciesNameEn;
-        breadcrumbSpeciesLink.href = `/gallery/#${speciesKey}`;
+        breadcrumbSpeciesLink.href = `/gallery/#${mainSpecies}`;
         breadcrumbSpeciesLink.classList.remove('hidden');
         breadcrumbSeparator.classList.remove('hidden');
 
@@ -708,10 +702,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         // ページ下部の「戻る」ボタンにも原種IDのハッシュを設定
         const backToGalleryBtn = document.getElementById('back-to-gallery');
         if (backToGalleryBtn) {
-          backToGalleryBtn.href = `/gallery/#${speciesKey}`;
+          backToGalleryBtn.href = `/gallery/#${mainSpecies}`;
         }
       } else {
-        // 種名が抽出できない場合（交配種など）
+        // 交雑種の場合（mainSpecies が null）
         // パンくずリストに「交雑種」リンクを設定
         const breadcrumbSeparator = document.getElementById('breadcrumb-species-separator');
         breadcrumbSpeciesLink.textContent = '交雑種';
@@ -722,7 +716,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         // 品種名を設定
         breadcrumbSubspecies.textContent = displayName;
 
-        // 交配種の場合は hybrid セクションに戻る
+        // 交雑種の場合は hybrid セクションに戻る
         const backToGalleryBtn = document.getElementById('back-to-gallery');
         if (backToGalleryBtn) {
           backToGalleryBtn.href = `/gallery/#hybrid`;
