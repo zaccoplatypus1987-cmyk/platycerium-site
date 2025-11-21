@@ -331,10 +331,12 @@ node public/scripts/regenerate-monthly-posts.cjs
 #### ステップ4: Gitコミット＆デプロイ
 
 ```bash
-git add public/data/ public/scripts/
+git add public/data/ public/scripts/ public/instagram-data/media/posts/
 git commit -m "feat: add X new Instagram posts (YYYY-MM-DD)"
 git push origin main
 ```
+
+**⚠️ 重要：** `public/instagram-data/media/posts/` を必ずgit addすること。画像ファイルを忘れると本番環境で画像が表示されません。
 
 ### ✅ データの流れ（理解必須）
 
