@@ -432,7 +432,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
      */
     async function loadSpeciesData(speciesId) {
       try {
-        const url = `/data/species/${speciesId}.json`;
+        // 日本語ファイル名を正しくエンコード
+        const encodedId = encodeURIComponent(speciesId);
+        const url = `/data/species/${encodedId}.json`;
         const response = await fetch(url);
 
         if (!response.ok) {
