@@ -47,6 +47,20 @@ const PURE_SPECIES = [
 ];
 
 /**
+ * 交雑種の固有名詞リスト
+ * これらの名前が検出された場合、mainSpecies = null（交雑種）として扱う
+ */
+const HYBRID_NAMES = [
+    'elsa', 'gizmo', 'white gizmo', 'whitegizmo', 'phenomenal',
+    'majus mix', 'majusmix', 'monkey north', 'monkeynorth',
+    'peawchan', 'pewchan', 'white dorian', 'whitedorian',
+    'little will', 'littlewill', 'durval nunes', 'durvalnunes',
+    'silver wing', 'silverwing', 'triceratops', 'tricera',
+    'pegasus', 'neptune', 'nukul', 'merapi', 'mt.lewis', 'mt lewis',
+    'mtlewis', 'lewisi', 'white hawk', 'whitehawk', 'hawk'
+];
+
+/**
  * 英語↔日本語 品種名マッピングテーブル
  */
 const VARIETY_NAME_MAPPING = {
@@ -352,9 +366,14 @@ function detectMainSpecies(caption, hashtags = []) {
 
     // パターン1: "P.species", "P species", "P. species" 形式（最優先）
     // 【P0修正】^P[.\s] → ^P[\.\s]+ に変更（ドット+スペースも許容）
-    const pDotMatch = firstLine.match(/^P[\.\s]+([a-zA-Z]+)/i);
+    const pDotMatch = firstLine.match(/^P[\.\s]+([a-zA-Z\s]+)/i);
     if (pDotMatch && pDotMatch[1]) {
-        const speciesCandidate = pDotMatch[1].toLowerCase();
+        const speciesCandidate = pDotMatch[1].toLowerCase().trim();
+
+        // 交雑種の固有名詞チェック（例: "P.Elsa" → "elsa"）
+        if (HYBRID_NAMES.includes(speciesCandidate)) {
+            return null;  // 交雑種
+        }
 
         // 原種18種に該当するかチェック
         if (PURE_SPECIES.includes(speciesCandidate)) {
