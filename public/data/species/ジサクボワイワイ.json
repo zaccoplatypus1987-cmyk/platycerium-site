@@ -4,15 +4,44 @@
     "mainSpecies": "coronarium",
     "tag": "#ジサクボワイワイ",
     "displayName": "P.coronarium waiwai",
-    "count": 35,
+    "count": 36,
     "latestPost": {
-      "id": "1761047478-0",
-      "date": "2025-10-21",
-      "image": "instagram-data/media/posts/202510/18149837926417038.jpg",
+      "id": "1763545979-1",
+      "date": "2025-11-19",
+      "image": "instagram-data/media/other/18036581639713715.jpg",
       "caption": "P.coronarium waiwai "
     }
   },
   "posts": [
+    {
+      "id": "1763545979-1",
+      "date": "2025-11-19",
+      "timestamp": 1763545979,
+      "caption": "P.coronarium waiwai \nfrom @vandaka_plants \nたまらん！\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダコロナリウム \n#platyceriumcoronarium\n\n#ジサクボワイワイ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダコロナリウム",
+        "platyceriumcoronarium",
+        "ジサクボワイワイ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18036581639713715.jpg",
+          "timestamp": 1763545979
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763545979-1",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1761047478-0",
       "date": "2025-10-21",

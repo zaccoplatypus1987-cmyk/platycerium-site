@@ -4,15 +4,46 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボイザナギ",
     "displayName": "P.willinckii 伊弉諾",
-    "count": 33,
+    "count": 34,
     "latestPost": {
-      "id": "1761132870-0",
-      "date": "2025-10-22",
-      "image": "instagram-data/media/posts/202510/18060319199430313.jpg",
+      "id": "1763629662-0",
+      "date": "2025-11-20",
+      "image": "instagram-data/media/other/18046393973442873.jpg",
       "caption": "P.willinckii 伊弉諾"
     }
   },
   "posts": [
+    {
+      "id": "1763629662-0",
+      "date": "2025-11-20",
+      "timestamp": 1763629662,
+      "caption": "P.willinckii 伊弉諾\nfrom @big_bell.plants_aqua \nええですわな\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#ウィリンキー \n#ビカクシダウィリンキー \n#willinckii\n\n#ジサクボイザナギ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "ウィリンキー",
+        "ビカクシダウィリンキー",
+        "willinckii",
+        "ジサクボイザナギ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18046393973442873.jpg",
+          "timestamp": 1763629662
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763629662-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1761132870-0",
       "date": "2025-10-22",

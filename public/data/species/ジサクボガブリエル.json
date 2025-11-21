@@ -4,15 +4,46 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボガブリエル",
     "displayName": "P.willinckii gabriel",
-    "count": 16,
+    "count": 17,
     "latestPost": {
-      "id": "1759745399-0",
-      "date": "2025-10-06",
-      "image": "instagram-data/media/posts/202510/18373533232196278.jpg",
+      "id": "1763044329-9",
+      "date": "2025-11-13",
+      "image": "instagram-data/media/other/18541028422027355.jpg",
       "caption": "P.willinckii gabriel "
     }
   },
   "posts": [
+    {
+      "id": "1763044329-9",
+      "date": "2025-11-13",
+      "timestamp": 1763044329,
+      "caption": "P.willinckii gabriel \nfrom @iggy421 \nちょっとトレンドを意識して仕立ててみました。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きな人と繋がりたい \n#platycerium \n#platyceriumwillinckii \n#willinckii\n\n#ジサクボガブリエル",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きな人と繋がりたい",
+        "platycerium",
+        "platyceriumwillinckii",
+        "willinckii",
+        "ジサクボガブリエル"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18541028422027355.jpg",
+          "timestamp": 1763044329
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763044329-9",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1759745399-0",
       "date": "2025-10-06",

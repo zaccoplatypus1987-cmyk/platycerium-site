@@ -4,15 +4,44 @@
     "mainSpecies": "coronarium",
     "tag": "#ジサクボコロナ2",
     "displayName": "P.coronarium",
-    "count": 10,
+    "count": 11,
     "latestPost": {
-      "id": "1756630356-0",
-      "date": "2025-08-31",
-      "image": "instagram-data/media/posts/202508/18316474204245831.jpg",
+      "id": "1763474183-2",
+      "date": "2025-11-18",
+      "image": "instagram-data/media/other/18084981127985552.jpg",
       "caption": "P.coronarium "
     }
   },
   "posts": [
+    {
+      "id": "1763474183-2",
+      "date": "2025-11-18",
+      "timestamp": 1763474183,
+      "caption": "P.coronarium \nfrom @katsu_hibino \nワリチー「転生したらコロナリウムだった件について」\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダコロナリウム \n#platyceriumcoronarium\n#ジサクボコロナ2",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダコロナリウム",
+        "platyceriumcoronarium",
+        "ジサクボコロナ2"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18084981127985552.jpg",
+          "timestamp": 1763474183
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763474183-2",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（coronarium）- 信頼性高い"
+        }
+      }
+    },
     {
       "id": "1756630356-0",
       "date": "2025-08-31",

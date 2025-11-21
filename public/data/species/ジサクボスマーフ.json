@@ -4,15 +4,46 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボスマーフ",
     "displayName": "P.willinckii smurf",
-    "count": 61,
+    "count": 62,
     "latestPost": {
-      "id": "1748652552-0",
-      "date": "2025-05-31",
-      "image": "instagram-data/media/posts/202505/18164737681356226.jpg",
+      "id": "1762228667-14",
+      "date": "2025-11-04",
+      "image": "instagram-data/media/other/18044173562474084.jpg",
       "caption": "P.willinckii smurf"
     }
   },
   "posts": [
+    {
+      "id": "1762228667-14",
+      "date": "2025-11-04",
+      "timestamp": 1762228667,
+      "caption": "P.willinckii smurf\nfrom @katsu_hibino \nだいぶ葉っぱのボリュームが減ったがこれもヨシ\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ普及委員会 \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい\n#ウィリンキー \n#ビカクシダウィリンキー \n#willinckii\n\n#ジサクボスマーフ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ普及委員会",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "ウィリンキー",
+        "ビカクシダウィリンキー",
+        "willinckii",
+        "ジサクボスマーフ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18044173562474084.jpg",
+          "timestamp": 1762228667
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1762228667-14",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1748652552-0",
       "date": "2025-05-31",

@@ -4,15 +4,50 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボシザーハンズ",
     "displayName": "P.willinckii scissor hands",
-    "count": 9,
+    "count": 10,
     "latestPost": {
-      "id": "1757463207-0",
-      "date": "2025-09-10",
-      "image": "instagram-data/media/posts/202509/18055336643170324.jpg",
+      "id": "1763044594-8",
+      "date": "2025-11-13",
+      "image": "instagram-data/media/other/18183318346344021.jpg",
       "caption": "P.willinckii scissor hands"
     }
   },
   "posts": [
+    {
+      "id": "1763044594-8",
+      "date": "2025-11-13",
+      "timestamp": 1763044594,
+      "caption": "P.willinckii scissor hands\nfrom @katsu_hibino \n葉先がセクシー・・・エロいッ！\n\n#樹祭2023spring \n#ビカクシダ\n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#観葉植物 \n#観葉植物のある暮らし \n#観葉植物インテリア\n#platycerium \n#willinckii \n#platyceriumwillinckii \n#糜角羊歯\n\n#ジサクボシザーハンズ",
+      "hashtags": [
+        "樹祭2023spring",
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "観葉植物",
+        "観葉植物のある暮らし",
+        "観葉植物インテリア",
+        "platycerium",
+        "willinckii",
+        "platyceriumwillinckii",
+        "糜角羊歯",
+        "ジサクボシザーハンズ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18183318346344021.jpg",
+          "timestamp": 1763044594
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763044594-8",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1757463207-0",
       "date": "2025-09-10",

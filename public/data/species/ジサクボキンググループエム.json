@@ -4,15 +4,39 @@
     "mainSpecies": "hillii",
     "tag": "#ジサクボキンググループエム",
     "displayName": "P.hillii mutant sporeling “Group M”",
-    "count": 8,
+    "count": 9,
     "latestPost": {
-      "id": "1760755538-0",
-      "date": "2025-10-18",
-      "image": "instagram-data/media/posts/202510/18045750005413549.jpg",
+      "id": "1763377600-5",
+      "date": "2025-11-17",
+      "image": "instagram-data/media/other/18107896156623004.jpg",
       "caption": "P.hillii mutant sporeling “Group M”"
     }
   },
   "posts": [
+    {
+      "id": "1763377600-5",
+      "date": "2025-11-17",
+      "timestamp": 1763377600,
+      "caption": "P.hillii mutant sporeling “Group M”\nFrom @ukiyo_beat \n胞子葉ターンです\n\n#ジサクボキンググループエム\n#ビカクシダ",
+      "hashtags": [
+        "ジサクボキンググループエム",
+        "ビカクシダ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18107896156623004.jpg",
+          "timestamp": 1763377600
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763377600-5",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:ミュータント vs ハッシュ:キンググループエム）"
+        }
+      }
+    },
     {
       "id": "1760755538-0",
       "date": "2025-10-18",

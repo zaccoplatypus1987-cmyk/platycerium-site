@@ -4,15 +4,49 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボアン",
     "displayName": "P.willinckii anne",
-    "count": 18,
+    "count": 19,
     "latestPost": {
-      "id": "1757669504-0",
-      "date": "2025-09-12",
-      "image": "instagram-data/media/posts/202509/18094550566676704.jpg",
+      "id": "1762600733-12",
+      "date": "2025-11-08",
+      "image": "instagram-data/media/other/18071891084585930.jpg",
       "caption": "P.willinckii anne"
     }
   },
   "posts": [
+    {
+      "id": "1762600733-12",
+      "date": "2025-11-08",
+      "timestamp": 1762600733,
+      "caption": "P.willinckii anne\nfrom @tmk_plants \n貯水葉の展開に勢いがない時は、貯水葉裏側とコンポストとの間に隙間が発生してないかチェックや！\n\n#ビカクシダ\n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#観葉植物 \n#観葉植物のある暮らし \n#観葉植物インテリア\n#platycerium \n#willinckii \n#platyceriumwillinckii \n#糜角羊歯\n\n#ジサクボアン",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "観葉植物",
+        "観葉植物のある暮らし",
+        "観葉植物インテリア",
+        "platycerium",
+        "willinckii",
+        "platyceriumwillinckii",
+        "糜角羊歯",
+        "ジサクボアン"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18071891084585930.jpg",
+          "timestamp": 1762600733
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1762600733-12",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1757669504-0",
       "date": "2025-09-12",

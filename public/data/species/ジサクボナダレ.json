@@ -4,15 +4,43 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボナダレ",
     "displayName": "P.willinckii nadare",
-    "count": 3,
+    "count": 4,
     "latestPost": {
-      "id": "1756994143-0",
-      "date": "2025-09-04",
-      "image": "instagram-data/media/posts/202509/17945649483035959.jpg",
+      "id": "1762182296-15",
+      "date": "2025-11-03",
+      "image": "instagram-data/media/other/18082564583022993.jpg",
       "caption": "P.willinckii nadare "
     }
   },
   "posts": [
+    {
+      "id": "1762182296-15",
+      "date": "2025-11-03",
+      "timestamp": 1762182296,
+      "caption": "P.willinckii nadare \nfrom @190cm_botanical \nこいつは貯水葉デカめ、胞子葉チョロチョロ系にしたいなと思ってます。\n#ビカクシダ\n#ビカクシダウィリンキー \n#ウィリンキー \n#platycerium \n#platyceriumwallichii \n#ジサクボナダレ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダウィリンキー",
+        "ウィリンキー",
+        "platycerium",
+        "platyceriumwallichii",
+        "ジサクボナダレ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18082564583022993.jpg",
+          "timestamp": 1762182296
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1762182296-15",
+        "classification": {
+          "confidence": "high",
+          "reason": "正規化後に高度一致（類似度: 100%）"
+        }
+      }
+    },
     {
       "id": "1756994143-0",
       "date": "2025-09-04",

@@ -1,24 +1,24 @@
 {
   "meta": {
-    "generated": "2025-11-21T14:57:46.562Z",
+    "generated": "2025-11-21T15:25:42.603Z",
     "version": "7.0-FIXED-P0-v2",
     "description": "品質検査官による修正版（交配種誤分類修正、画像データ追加、P0修正v2）",
-    "totalSpecies": 76,
+    "totalSpecies": 77,
     "totalPosts": 2013,
-    "totalClassifications": 1401,
+    "totalClassifications": 1404,
     "classificationStats": {
-      "high": 1050,
+      "high": 1060,
       "medium": 0,
-      "low": 351,
+      "low": 344,
       "none": 0
     },
-    "accuracy": 74.9,
+    "accuracy": 75.5,
     "improvements": {
       "v3": "27.2%",
       "v4": "45.0%",
       "v5": "51.1%",
       "v6": "76.5%",
-      "v7": "74.9% (交配種誤分類修正 + P0修正v2)",
+      "v7": "75.5% (交配種誤分類修正 + P0修正v2)",
       "target": "80%+"
     },
     "qualityMetrics": {
@@ -44,10 +44,10 @@
       "tag": "#ジサクボスマーフ",
       "mainSpecies": "willinckii",
       "displayName": "P.willinckii smurf",
-      "count": 61,
+      "count": 62,
       "file": "ジサクボスマーフ.json",
-      "latestImage": "instagram-data/media/posts/202505/18164737681356226.jpg",
-      "latestPostDate": "2025-05-31"
+      "latestImage": "instagram-data/media/other/18044173562474084.jpg",
+      "latestPostDate": "2025-11-04"
     },
     {
       "id": "ジサクボエルサ",
@@ -130,6 +130,16 @@
       "latestPostDate": "2025-07-29"
     },
     {
+      "id": "ジサクボワイワイ",
+      "tag": "#ジサクボワイワイ",
+      "mainSpecies": "coronarium",
+      "displayName": "P.coronarium waiwai",
+      "count": 36,
+      "file": "ジサクボワイワイ.json",
+      "latestImage": "instagram-data/media/other/18036581639713715.jpg",
+      "latestPostDate": "2025-11-19"
+    },
+    {
       "id": "ジサクボモンキーキング",
       "tag": "#ジサクボモンキーキング",
       "mainSpecies": "ridleyi",
@@ -140,24 +150,14 @@
       "latestPostDate": "2024-07-06"
     },
     {
-      "id": "ジサクボワイワイ",
-      "tag": "#ジサクボワイワイ",
-      "mainSpecies": "coronarium",
-      "displayName": "P.coronarium waiwai",
-      "count": 35,
-      "file": "ジサクボワイワイ.json",
-      "latestImage": "instagram-data/media/posts/202510/18149837926417038.jpg",
-      "latestPostDate": "2025-10-21"
-    },
-    {
       "id": "ジサクボイザナギ",
       "tag": "#ジサクボイザナギ",
       "mainSpecies": "willinckii",
       "displayName": "P.willinckii 伊弉諾",
-      "count": 33,
+      "count": 34,
       "file": "ジサクボイザナギ.json",
-      "latestImage": "instagram-data/media/posts/202510/18060319199430313.jpg",
-      "latestPostDate": "2025-10-22"
+      "latestImage": "instagram-data/media/other/18046393973442873.jpg",
+      "latestPostDate": "2025-11-20"
     },
     {
       "id": "ジサクボスコタツ",
@@ -178,6 +178,16 @@
       "file": "ジサクボvp16.json",
       "latestImage": "instagram-data/media/posts/202404/18054474895590695.jpg",
       "latestPostDate": "2024-04-11"
+    },
+    {
+      "id": "ジサクボコロナ",
+      "tag": "#ジサクボコロナ",
+      "mainSpecies": "coronarium",
+      "displayName": "P.coronarium",
+      "count": 32,
+      "file": "ジサクボコロナ.json",
+      "latestImage": "instagram-data/media/other/18347569156202054.jpg",
+      "latestPostDate": "2025-11-17"
     },
     {
       "id": "ジサクボomg",
@@ -208,16 +218,6 @@
       "file": "ジサクボスーダン.json",
       "latestImage": "instagram-data/media/posts/202402/17984730317466460.jpg",
       "latestPostDate": "2024-02-14"
-    },
-    {
-      "id": "ジサクボコロナ",
-      "tag": "#ジサクボコロナ",
-      "mainSpecies": "coronarium",
-      "displayName": "P.coronarium",
-      "count": 30,
-      "file": "ジサクボコロナ.json",
-      "latestImage": "instagram-data/media/posts/202509/18529426930033971.jpg",
-      "latestPostDate": "2025-09-22"
     },
     {
       "id": "ジサクボワリチー",
@@ -264,10 +264,20 @@
       "tag": "#ジサクボbqds",
       "mainSpecies": "willinckii",
       "displayName": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
-      "count": 22,
+      "count": 24,
       "file": "ジサクボbqds.json",
-      "latestImage": "instagram-data/media/posts/202510/18110156278576315.jpg",
-      "latestPostDate": "2025-10-18"
+      "latestImage": "instagram-data/media/other/18034825769707838.jpg",
+      "latestPostDate": "2025-11-16"
+    },
+    {
+      "id": "ジサクボアン",
+      "tag": "#ジサクボアン",
+      "mainSpecies": "willinckii",
+      "displayName": "P.willinckii anne",
+      "count": 19,
+      "file": "ジサクボアン.json",
+      "latestImage": "instagram-data/media/other/18071891084585930.jpg",
+      "latestPostDate": "2025-11-08"
     },
     {
       "id": "ジサクボジェニー",
@@ -288,16 +298,6 @@
       "file": "ジサクボフェノメナル.json",
       "latestImage": "instagram-data/media/posts/202510/18051827936321844.jpg",
       "latestPostDate": "2025-10-20"
-    },
-    {
-      "id": "ジサクボアン",
-      "tag": "#ジサクボアン",
-      "mainSpecies": "willinckii",
-      "displayName": "P.willinckii anne",
-      "count": 18,
-      "file": "ジサクボアン.json",
-      "latestImage": "instagram-data/media/posts/202509/18094550566676704.jpg",
-      "latestPostDate": "2025-09-12"
     },
     {
       "id": "ジサクボスパドワ",
@@ -324,10 +324,10 @@
       "tag": "#ジサクボガブリエル",
       "mainSpecies": "willinckii",
       "displayName": "P.willinckii gabriel",
-      "count": 16,
+      "count": 17,
       "file": "ジサクボガブリエル.json",
-      "latestImage": "instagram-data/media/posts/202510/18373533232196278.jpg",
-      "latestPostDate": "2025-10-06"
+      "latestImage": "instagram-data/media/other/18541028422027355.jpg",
+      "latestPostDate": "2025-11-13"
     },
     {
       "id": "ジサクボオメガ",
@@ -434,10 +434,20 @@
       "tag": "#ジサクボコロナ2",
       "mainSpecies": "coronarium",
       "displayName": "P.coronarium",
-      "count": 10,
+      "count": 11,
       "file": "ジサクボコロナ2.json",
-      "latestImage": "instagram-data/media/posts/202508/18316474204245831.jpg",
-      "latestPostDate": "2025-08-31"
+      "latestImage": "instagram-data/media/other/18084981127985552.jpg",
+      "latestPostDate": "2025-11-18"
+    },
+    {
+      "id": "ジサクボシザーハンズ",
+      "tag": "#ジサクボシザーハンズ",
+      "mainSpecies": "willinckii",
+      "displayName": "P.willinckii scissor hands",
+      "count": 10,
+      "file": "ジサクボシザーハンズ.json",
+      "latestImage": "instagram-data/media/other/18183318346344021.jpg",
+      "latestPostDate": "2025-11-13"
     },
     {
       "id": "ジサクボジクジク",
@@ -460,14 +470,14 @@
       "latestPostDate": "2024-01-22"
     },
     {
-      "id": "ジサクボシザーハンズ",
-      "tag": "#ジサクボシザーハンズ",
-      "mainSpecies": "willinckii",
-      "displayName": "P.willinckii scissor hands",
+      "id": "ジサクボキンググループエム",
+      "tag": "#ジサクボキンググループエム",
+      "mainSpecies": "hillii",
+      "displayName": "P.hillii mutant sporeling “Group M”",
       "count": 9,
-      "file": "ジサクボシザーハンズ.json",
-      "latestImage": "instagram-data/media/posts/202509/18055336643170324.jpg",
-      "latestPostDate": "2025-09-10"
+      "file": "ジサクボキンググループエム.json",
+      "latestImage": "instagram-data/media/other/18107896156623004.jpg",
+      "latestPostDate": "2025-11-17"
     },
     {
       "id": "ジサクボパカラン",
@@ -518,16 +528,6 @@
       "file": "ジサクボヌクル.json",
       "latestImage": "instagram-data/media/posts/202510/17899616700166204.jpg",
       "latestPostDate": "2025-10-19"
-    },
-    {
-      "id": "ジサクボキンググループエム",
-      "tag": "#ジサクボキンググループエム",
-      "mainSpecies": "hillii",
-      "displayName": "P.hillii mutant sporeling “Group M”",
-      "count": 8,
-      "file": "ジサクボキンググループエム.json",
-      "latestImage": "instagram-data/media/posts/202510/18045750005413549.jpg",
-      "latestPostDate": "2025-10-18"
     },
     {
       "id": "ジサクボベイチコロナ",
@@ -620,6 +620,16 @@
       "latestPostDate": "2023-06-04"
     },
     {
+      "id": "ジサクボナダレ",
+      "tag": "#ジサクボナダレ",
+      "mainSpecies": "willinckii",
+      "displayName": "P.willinckii nadare",
+      "count": 4,
+      "file": "ジサクボナダレ.json",
+      "latestImage": "instagram-data/media/other/18082564583022993.jpg",
+      "latestPostDate": "2025-11-03"
+    },
+    {
       "id": "ジサクボトリケラ",
       "tag": "#ジサクボトリケラ",
       "mainSpecies": null,
@@ -668,16 +678,6 @@
       "file": "ジサクボ79.json",
       "latestImage": "instagram-data/media/posts/202306/17977104113175005.jpg",
       "latestPostDate": "2023-06-29"
-    },
-    {
-      "id": "ジサクボナダレ",
-      "tag": "#ジサクボナダレ",
-      "mainSpecies": "willinckii",
-      "displayName": "P.willinckii nadare",
-      "count": 3,
-      "file": "ジサクボナダレ.json",
-      "latestImage": "instagram-data/media/posts/202509/17945649483035959.jpg",
-      "latestPostDate": "2025-09-04"
     },
     {
       "id": "ジサクボomgスポ",
@@ -740,6 +740,16 @@
       "latestPostDate": "2023-03-05"
     },
     {
+      "id": "ジサクボポラリス(所有権移転外)",
+      "tag": "#ジサクボポラリス(所有権移転外)",
+      "mainSpecies": "willinckii",
+      "displayName": "P.willinckii Polaris",
+      "count": 1,
+      "file": "ジサクボポラリス(所有権移転外).json",
+      "latestImage": "instagram-data/media/other/17998681010828986.jpg",
+      "latestPostDate": "2025-11-08"
+    },
+    {
       "id": "ジサクボマダ",
       "tag": "#ジサクボマダ",
       "mainSpecies": "madagascariense",
@@ -796,8 +806,8 @@
       "name": "willinckii",
       "nameJa": "ウィリンキー",
       "type": "pure",
-      "totalPosts": 716,
-      "subSpeciesCount": 37,
+      "totalPosts": 725,
+      "subSpeciesCount": 38,
       "subSpecies": [
         {
           "id": "ジサクボ月光",
@@ -811,9 +821,9 @@
           "id": "ジサクボスマーフ",
           "tag": "#ジサクボスマーフ",
           "displayName": "P.willinckii smurf",
-          "count": 61,
+          "count": 62,
           "file": "ジサクボスマーフ.json",
-          "latestImage": "instagram-data/media/posts/202505/18164737681356226.jpg"
+          "latestImage": "instagram-data/media/other/18044173562474084.jpg"
         },
         {
           "id": "ジサクボムーンライト1",
@@ -851,9 +861,9 @@
           "id": "ジサクボイザナギ",
           "tag": "#ジサクボイザナギ",
           "displayName": "P.willinckii 伊弉諾",
-          "count": 33,
+          "count": 34,
           "file": "ジサクボイザナギ.json",
-          "latestImage": "instagram-data/media/posts/202510/18060319199430313.jpg"
+          "latestImage": "instagram-data/media/other/18046393973442873.jpg"
         },
         {
           "id": "ジサクボスコタツ",
@@ -891,9 +901,17 @@
           "id": "ジサクボbqds",
           "tag": "#ジサクボbqds",
           "displayName": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
-          "count": 22,
+          "count": 24,
           "file": "ジサクボbqds.json",
-          "latestImage": "instagram-data/media/posts/202510/18110156278576315.jpg"
+          "latestImage": "instagram-data/media/other/18034825769707838.jpg"
+        },
+        {
+          "id": "ジサクボアン",
+          "tag": "#ジサクボアン",
+          "displayName": "P.willinckii anne",
+          "count": 19,
+          "file": "ジサクボアン.json",
+          "latestImage": "instagram-data/media/other/18071891084585930.jpg"
         },
         {
           "id": "ジサクボジェニー",
@@ -902,14 +920,6 @@
           "count": 19,
           "file": "ジサクボジェニー.json",
           "latestImage": "instagram-data/media/posts/202509/18161181025337209.jpg"
-        },
-        {
-          "id": "ジサクボアン",
-          "tag": "#ジサクボアン",
-          "displayName": "P.willinckii anne",
-          "count": 18,
-          "file": "ジサクボアン.json",
-          "latestImage": "instagram-data/media/posts/202509/18094550566676704.jpg"
         },
         {
           "id": "ジサクボイエロームーン",
@@ -923,9 +933,9 @@
           "id": "ジサクボガブリエル",
           "tag": "#ジサクボガブリエル",
           "displayName": "P.willinckii gabriel",
-          "count": 16,
+          "count": 17,
           "file": "ジサクボガブリエル.json",
-          "latestImage": "instagram-data/media/posts/202510/18373533232196278.jpg"
+          "latestImage": "instagram-data/media/other/18541028422027355.jpg"
         },
         {
           "id": "ジサクボオメガ",
@@ -960,20 +970,20 @@
           "latestImage": "instagram-data/media/posts/202306/18253128391087729.jpg"
         },
         {
+          "id": "ジサクボシザーハンズ",
+          "tag": "#ジサクボシザーハンズ",
+          "displayName": "P.willinckii scissor hands",
+          "count": 10,
+          "file": "ジサクボシザーハンズ.json",
+          "latestImage": "instagram-data/media/other/18183318346344021.jpg"
+        },
+        {
           "id": "ジサクボjgs2",
           "tag": "#ジサクボjgs2",
           "displayName": "P.willinckii jade girl sporeling",
           "count": 10,
           "file": "ジサクボjgs2.json",
           "latestImage": "instagram-data/media/posts/202401/18011173556486932.jpg"
-        },
-        {
-          "id": "ジサクボシザーハンズ",
-          "tag": "#ジサクボシザーハンズ",
-          "displayName": "P.willinckii scissor hands",
-          "count": 9,
-          "file": "ジサクボシザーハンズ.json",
-          "latestImage": "instagram-data/media/posts/202509/18055336643170324.jpg"
         },
         {
           "id": "ジサクボワイルドウィリンキー",
@@ -1024,6 +1034,14 @@
           "latestImage": "instagram-data/media/posts/202306/17977179152104325.jpg"
         },
         {
+          "id": "ジサクボナダレ",
+          "tag": "#ジサクボナダレ",
+          "displayName": "P.willinckii nadare",
+          "count": 4,
+          "file": "ジサクボナダレ.json",
+          "latestImage": "instagram-data/media/other/18082564583022993.jpg"
+        },
+        {
           "id": "ジサクボjgs4",
           "tag": "#ジサクボjgs4",
           "displayName": "P.willinckii jade girl sporeling",
@@ -1046,14 +1064,6 @@
           "count": 4,
           "file": "ジサクボ79.json",
           "latestImage": "instagram-data/media/posts/202306/17977104113175005.jpg"
-        },
-        {
-          "id": "ジサクボナダレ",
-          "tag": "#ジサクボナダレ",
-          "displayName": "P.willinckii nadare",
-          "count": 3,
-          "file": "ジサクボナダレ.json",
-          "latestImage": "instagram-data/media/posts/202509/17945649483035959.jpg"
         },
         {
           "id": "ジサクボomgスポ",
@@ -1086,6 +1096,14 @@
           "count": 2,
           "file": "ジサクボjgs5.json",
           "latestImage": "instagram-data/media/posts/202306/17988939695119625.jpg"
+        },
+        {
+          "id": "ジサクボポラリス(所有権移転外)",
+          "tag": "#ジサクボポラリス(所有権移転外)",
+          "displayName": "P.willinckii Polaris",
+          "count": 1,
+          "file": "ジサクボポラリス(所有権移転外).json",
+          "latestImage": "instagram-data/media/other/17998681010828986.jpg"
         },
         {
           "id": "ジサクボ4クイーン",
@@ -1250,32 +1268,32 @@
       "name": "coronarium",
       "nameJa": "コロナリウム",
       "type": "pure",
-      "totalPosts": 75,
+      "totalPosts": 79,
       "subSpeciesCount": 3,
       "subSpecies": [
         {
           "id": "ジサクボワイワイ",
           "tag": "#ジサクボワイワイ",
           "displayName": "P.coronarium waiwai",
-          "count": 35,
+          "count": 36,
           "file": "ジサクボワイワイ.json",
-          "latestImage": "instagram-data/media/posts/202510/18149837926417038.jpg"
+          "latestImage": "instagram-data/media/other/18036581639713715.jpg"
         },
         {
           "id": "ジサクボコロナ",
           "tag": "#ジサクボコロナ",
           "displayName": "P.coronarium",
-          "count": 30,
+          "count": 32,
           "file": "ジサクボコロナ.json",
-          "latestImage": "instagram-data/media/posts/202509/18529426930033971.jpg"
+          "latestImage": "instagram-data/media/other/18347569156202054.jpg"
         },
         {
           "id": "ジサクボコロナ2",
           "tag": "#ジサクボコロナ2",
           "displayName": "P.coronarium",
-          "count": 10,
+          "count": 11,
           "file": "ジサクボコロナ2.json",
-          "latestImage": "instagram-data/media/posts/202508/18316474204245831.jpg"
+          "latestImage": "instagram-data/media/other/18084981127985552.jpg"
         }
       ]
     },
@@ -1335,7 +1353,7 @@
       "name": "hillii",
       "nameJa": "ヒリー",
       "type": "pure",
-      "totalPosts": 23,
+      "totalPosts": 24,
       "subSpeciesCount": 2,
       "subSpecies": [
         {
@@ -1350,9 +1368,9 @@
           "id": "ジサクボキンググループエム",
           "tag": "#ジサクボキンググループエム",
           "displayName": "P.hillii mutant sporeling “Group M”",
-          "count": 8,
+          "count": 9,
           "file": "ジサクボキンググループエム.json",
-          "latestImage": "instagram-data/media/posts/202510/18045750005413549.jpg"
+          "latestImage": "instagram-data/media/other/18107896156623004.jpg"
         }
       ]
     },

@@ -4,15 +4,77 @@
     "mainSpecies": "willinckii",
     "tag": "#ジサクボbqds",
     "displayName": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
-    "count": 22,
+    "count": 24,
     "latestPost": {
-      "id": "1760785632-0",
-      "date": "2025-10-18",
-      "image": "instagram-data/media/posts/202510/18110156278576315.jpg",
+      "id": "1763308500-6",
+      "date": "2025-11-16",
+      "image": "instagram-data/media/other/18034825769707838.jpg",
       "caption": "Platycerium willinckii 'Blue Queen' spore dwarf"
     }
   },
   "posts": [
+    {
+      "id": "1763308500-6",
+      "date": "2025-11-16",
+      "timestamp": 1763308500,
+      "caption": "Platycerium willinckii 'Blue Queen' spore dwarf\nfrom @baby_face_1107 \n苔増し。マグァンプ。\n今のところ順調に育っております。\n葉っぱがとても硬い。\n\n#ビカクシダ\n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダギンカ \n#platycerium\n#糜角羊歯 \n#コウモリラン\n\n#ジサクボbqds",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダギンカ",
+        "platycerium",
+        "糜角羊歯",
+        "コウモリラン",
+        "ジサクボbqds"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18034825769707838.jpg",
+          "timestamp": 1763308500
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763308500-6",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:ブルークイーン vs ハッシュ:bqds）"
+        }
+      }
+    },
+    {
+      "id": "1762182139-16",
+      "date": "2025-11-03",
+      "timestamp": 1762182139,
+      "caption": "Platycerium willinckii 'Blue Queen' spore dwarf\nfrom @baby_face_1107 \n将来がとても気になりますな。\n\n#ビカクシダ\n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダギンカ \n#platycerium\n#糜角羊歯 \n#コウモリラン\n\n#ジサクボbqds",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダギンカ",
+        "platycerium",
+        "糜角羊歯",
+        "コウモリラン",
+        "ジサクボbqds"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18072711080005853.jpg",
+          "timestamp": 1762182139
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1762182139-16",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:ブルークイーン vs ハッシュ:bqds）"
+        }
+      }
+    },
     {
       "id": "1760785632-0",
       "date": "2025-10-18",

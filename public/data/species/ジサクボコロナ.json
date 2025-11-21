@@ -4,15 +4,73 @@
     "mainSpecies": "coronarium",
     "tag": "#ジサクボコロナ",
     "displayName": "P.coronarium",
-    "count": 30,
+    "count": 32,
     "latestPost": {
-      "id": "1758533211-0",
-      "date": "2025-09-22",
-      "image": "instagram-data/media/posts/202509/18529426930033971.jpg",
+      "id": "1763378024-4",
+      "date": "2025-11-17",
+      "image": "instagram-data/media/other/18347569156202054.jpg",
       "caption": "P.coronarium "
     }
   },
   "posts": [
+    {
+      "id": "1763378024-4",
+      "date": "2025-11-17",
+      "timestamp": 1763378024,
+      "caption": "P.coronarium \nfrom @katsu_hibino \nええビカク\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダコロナリウム \n#platyceriumcoronarium\n\n#ジサクボコロナ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダコロナリウム",
+        "platyceriumcoronarium",
+        "ジサクボコロナ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/18347569156202054.jpg",
+          "timestamp": 1763378024
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1763378024-4",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（coronarium）- 信頼性高い"
+        }
+      }
+    },
+    {
+      "id": "1761828969-17",
+      "date": "2025-10-30",
+      "timestamp": 1761828969,
+      "caption": "P.coronarium \nfrom @katsu_hibino \n道ゆく草花がみんなコロナリウムだったらいいのにと思う程度にはコロナリウムはいいぞ。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#ビカクシダコロナリウム \n#platyceriumcoronarium\n\n#ジサクボコロナ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "ビカクシダコロナリウム",
+        "platyceriumcoronarium",
+        "ジサクボコロナ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/other/17952843384030969.jpg",
+          "timestamp": 1761828969
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1761828969-17",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（coronarium）- 信頼性高い"
+        }
+      }
+    },
     {
       "id": "1758533211-0",
       "date": "2025-09-22",
