@@ -4,7 +4,7 @@
     "mainSpecies": "veitchii",
     "tag": "#ジサクボvp16",
     "displayName": "ベイチーワイルドvp16",
-    "count": 32,
+    "count": 33,
     "latestPost": {
       "id": "1712833353-0",
       "date": "2024-04-11",
@@ -455,6 +455,50 @@
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（veitchii）- 信頼性高い"
+        }
+      }
+    },
+    {
+      "id": "1691807595-0",
+      "date": "2023-08-12",
+      "timestamp": 1691807595,
+      "caption": "P.Elsa\nP.veitchii king fisher\nP.veitchii vp#16\n\nアッパー三銃士を連れてきたよ。\nやっぱりベイチー系はコンパクト。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ好きと繋がりたい \n#platycerium \n#platyceriumveitchii\n#ジサクボキングフィッシャー\n#ジサクボエルサ\n#ジサクボvp16",
+      "hashtags": [
+        "16",
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ好きと繋がりたい",
+        "platycerium",
+        "platyceriumveitchii",
+        "ジサクボキングフィッシャー",
+        "ジサクボエルサ",
+        "ジサクボvp16"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202308/18256691857160324.jpg",
+          "timestamp": 1691807594
+        },
+        {
+          "path": "instagram-data/media/posts/202308/18152289082292808.jpg",
+          "timestamp": 1691807594
+        },
+        {
+          "path": "instagram-data/media/posts/202308/18011418340838708.jpg",
+          "timestamp": 1691807594
+        },
+        {
+          "path": "instagram-data/media/posts/202308/17982037139169010.jpg",
+          "timestamp": 1691807594
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1691807595-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:エルサ vs ハッシュ:vp16）"
         }
       }
     },

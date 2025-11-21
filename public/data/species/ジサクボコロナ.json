@@ -4,7 +4,7 @@
     "mainSpecies": "coronarium",
     "tag": "#ジサクボコロナ",
     "displayName": "P.coronarium",
-    "count": 29,
+    "count": 30,
     "latestPost": {
       "id": "1758533211-0",
       "date": "2025-09-22",
@@ -545,6 +545,38 @@
         "classification": {
           "confidence": "high",
           "reason": "ハッシュタグ+大分類一致（coronarium）- 信頼性高い"
+        }
+      }
+    },
+    {
+      "id": "1703556069-0",
+      "date": "2023-12-26",
+      "timestamp": 1703556069,
+      "caption": "どんどん撮影機材が増えてくどん。\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ初心者 \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダリドレイ \n#リドレイ \n#platycerium \n#platyceriumridleyi\n\n#ジサクボモンキーキング\n#ジサクボコロナ",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ初心者",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダリドレイ",
+        "リドレイ",
+        "platycerium",
+        "platyceriumridleyi",
+        "ジサクボモンキーキング",
+        "ジサクボコロナ"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202312/17999079242462490.jpg",
+          "timestamp": 1703556069
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1703556069-0",
+        "classification": {
+          "confidence": "high",
+          "reason": "ハッシュタグ+大分類一致（ridleyi）- 信頼性高い"
         }
       }
     },

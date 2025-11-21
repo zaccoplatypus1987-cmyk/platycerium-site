@@ -4,7 +4,7 @@
     "mainSpecies": "veitchii",
     "tag": "#ジサクボars3",
     "displayName": "P.veitchii auburn river胞子培養＃3",
-    "count": 25,
+    "count": 26,
     "latestPost": {
       "id": "1739794336-0",
       "date": "2025-02-17",
@@ -392,6 +392,37 @@
       "metadata": {
         "source": "instagram",
         "originalId": "1715262380-0",
+        "classification": {
+          "confidence": "low",
+          "reason": "正規化後も不一致（キャプ:オーバンリバー vs ハッシュ:ars3）"
+        }
+      }
+    },
+    {
+      "id": "1714480355-0",
+      "date": "2024-04-30",
+      "timestamp": 1714480355,
+      "caption": "右P.veitchii auburn river胞子培養＃3\n左P.veitchii sporeling (Group-VR)\n下P.veitchii auburn river胞子培養＃1\n\n少年漫画とかでよくある謎の敵キャラぽく撮ろうと思ったら初夏の匂いがする写真になってしまった��\n\n#ビカクシダ \n#ビカクシダのある暮らし \n#ビカクシダ好きな人と繋がりたい \n#ビカクシダ胞子培養 \n#ベイチーアーバンリバー\n\n#ジサクボars1 \n#ジサクボars3\n#ジサクボベイチースポア \n#水曜日は貯水葉の日",
+      "hashtags": [
+        "ビカクシダ",
+        "ビカクシダのある暮らし",
+        "ビカクシダ好きな人と繋がりたい",
+        "ビカクシダ胞子培養",
+        "ベイチーアーバンリバー",
+        "ジサクボars1",
+        "ジサクボars3",
+        "ジサクボベイチースポア",
+        "水曜日は貯水葉の日"
+      ],
+      "images": [
+        {
+          "path": "instagram-data/media/posts/202404/18127941418338286.jpg",
+          "timestamp": 1714480355
+        }
+      ],
+      "metadata": {
+        "source": "instagram",
+        "originalId": "1714480355-0",
         "classification": {
           "confidence": "low",
           "reason": "正規化後も不一致（キャプ:オーバンリバー vs ハッシュ:ars3）"
