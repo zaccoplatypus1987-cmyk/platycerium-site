@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2025-11-22T12:46:10.029Z",
+    "generated": "2025-11-22T13:15:33.006Z",
     "version": "7.0-FIXED-P0-v2",
     "description": "品質検査官による修正版（交配種誤分類修正、画像データ追加、P0修正v2）",
     "totalSpecies": 77,
@@ -82,7 +82,7 @@
     {
       "id": "ジサクボナノ",
       "tag": "#ジサクボナノ",
-      "mainSpecies": null,
+      "mainSpecies": "ridleyi",
       "displayName": "Platycerium ridleyi nano",
       "count": 44,
       "file": "ジサクボナノ.json",
@@ -142,7 +142,7 @@
     {
       "id": "ジサクボモンキーキング",
       "tag": "#ジサクボモンキーキング",
-      "mainSpecies": null,
+      "mainSpecies": "ridleyi",
       "displayName": "Platycerium ridleyi monkey king",
       "count": 36,
       "file": "ジサクボモンキーキング.json",
@@ -162,7 +162,7 @@
     {
       "id": "ジサクボomg",
       "tag": "#ジサクボomg",
-      "mainSpecies": null,
+      "mainSpecies": "willinckii",
       "displayName": "Platycerium willinckii OMG",
       "count": 33,
       "file": "ジサクボomg.json",
@@ -262,7 +262,7 @@
     {
       "id": "ジサクボbqds",
       "tag": "#ジサクボbqds",
-      "mainSpecies": null,
+      "mainSpecies": "willinckii",
       "displayName": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
       "count": 24,
       "file": "ジサクボbqds.json",
@@ -492,7 +492,7 @@
     {
       "id": "ジサクボパカラン",
       "tag": "#ジサクボパカラン",
-      "mainSpecies": null,
+      "mainSpecies": "ridleyi",
       "displayName": "Platycerium ridleyi pakarang",
       "count": 9,
       "file": "ジサクボパカラン.json",
@@ -782,7 +782,7 @@
     {
       "id": "ジサクボリドドワ1",
       "tag": "#ジサクボリドドワ1",
-      "mainSpecies": null,
+      "mainSpecies": "ridleyi",
       "displayName": "Platycerium ridleyi dwarf",
       "count": 1,
       "file": "ジサクボリドドワ1.json",
@@ -806,8 +806,8 @@
       "name": "willinckii",
       "nameJa": "ウィリンキー",
       "type": "pure",
-      "totalPosts": 670,
-      "subSpeciesCount": 36,
+      "totalPosts": 727,
+      "subSpeciesCount": 38,
       "subSpecies": [
         {
           "id": "ジサクボ月光",
@@ -866,6 +866,14 @@
           "latestImage": "instagram-data/media/other/18046393973442873.jpg"
         },
         {
+          "id": "ジサクボomg",
+          "tag": "#ジサクボomg",
+          "displayName": "Platycerium willinckii OMG",
+          "count": 33,
+          "file": "ジサクボomg.json",
+          "latestImage": "instagram-data/media/posts/202511/17905243464276221.jpg"
+        },
+        {
           "id": "ジサクボスコタツ",
           "tag": "#ジサクボスコタツ",
           "displayName": "P.willinckii scofieldtatsuta spore",
@@ -888,6 +896,14 @@
           "count": 25,
           "file": "ジサクボバノン.json",
           "latestImage": "instagram-data/media/posts/202508/17978655353747119.jpg"
+        },
+        {
+          "id": "ジサクボbqds",
+          "tag": "#ジサクボbqds",
+          "displayName": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
+          "count": 24,
+          "file": "ジサクボbqds.json",
+          "latestImage": "instagram-data/media/other/18034825769707838.jpg"
         },
         {
           "id": "ジサクボジェニー",
@@ -1190,6 +1206,56 @@
       ]
     },
     {
+      "id": "ridleyi",
+      "name": "ridleyi",
+      "nameJa": "リドレイ",
+      "type": "pure",
+      "totalPosts": 94,
+      "subSpeciesCount": 5,
+      "subSpecies": [
+        {
+          "id": "ジサクボナノ",
+          "tag": "#ジサクボナノ",
+          "displayName": "Platycerium ridleyi nano",
+          "count": 44,
+          "file": "ジサクボナノ.json",
+          "latestImage": "instagram-data/media/posts/202510/18053622533550505.jpg"
+        },
+        {
+          "id": "ジサクボモンキーキング",
+          "tag": "#ジサクボモンキーキング",
+          "displayName": "Platycerium ridleyi monkey king",
+          "count": 36,
+          "file": "ジサクボモンキーキング.json",
+          "latestImage": "instagram-data/media/posts/202407/18007591880322605.jpg"
+        },
+        {
+          "id": "ジサクボパカラン",
+          "tag": "#ジサクボパカラン",
+          "displayName": "Platycerium ridleyi pakarang",
+          "count": 9,
+          "file": "ジサクボパカラン.json",
+          "latestImage": "instagram-data/media/posts/202503/17970836234836694.jpg"
+        },
+        {
+          "id": "ジサクボリドドワ2",
+          "tag": "#ジサクボリドドワ2",
+          "displayName": "P.ridleyi dwarf",
+          "count": 4,
+          "file": "ジサクボリドドワ2.json",
+          "latestImage": "instagram-data/media/posts/202411/18384550570102289.jpg"
+        },
+        {
+          "id": "ジサクボリドドワ1",
+          "tag": "#ジサクボリドドワ1",
+          "displayName": "Platycerium ridleyi dwarf",
+          "count": 1,
+          "file": "ジサクボリドドワ1.json",
+          "latestImage": "instagram-data/media/posts/202310/17974042994416357.jpg"
+        }
+      ]
+    },
+    {
       "id": "coronarium",
       "name": "coronarium",
       "nameJa": "コロナリウム",
@@ -1235,17 +1301,6 @@
       "latestImage": "instagram-data/media/posts/202406/18024959714223660.jpg"
     },
     {
-      "id": "ジサクボナノ",
-      "tag": "#ジサクボナノ",
-      "name": "Platycerium ridleyi nano",
-      "nameJa": "Platycerium ridleyi nano",
-      "type": "hybrid",
-      "totalPosts": 44,
-      "subSpeciesCount": 0,
-      "file": "ジサクボナノ.json",
-      "latestImage": "instagram-data/media/posts/202510/18053622533550505.jpg"
-    },
-    {
       "id": "ジサクボギズモ",
       "tag": "#ジサクボギズモ",
       "name": "P.White gizmo",
@@ -1255,28 +1310,6 @@
       "subSpeciesCount": 0,
       "file": "ジサクボギズモ.json",
       "latestImage": "instagram-data/media/posts/202507/17913945537037267.jpg"
-    },
-    {
-      "id": "ジサクボモンキーキング",
-      "tag": "#ジサクボモンキーキング",
-      "name": "Platycerium ridleyi monkey king",
-      "nameJa": "Platycerium ridleyi monkey king",
-      "type": "hybrid",
-      "totalPosts": 36,
-      "subSpeciesCount": 0,
-      "file": "ジサクボモンキーキング.json",
-      "latestImage": "instagram-data/media/posts/202407/18007591880322605.jpg"
-    },
-    {
-      "id": "ジサクボomg",
-      "tag": "#ジサクボomg",
-      "name": "Platycerium willinckii OMG",
-      "nameJa": "Platycerium willinckii OMG",
-      "type": "hybrid",
-      "totalPosts": 33,
-      "subSpeciesCount": 0,
-      "file": "ジサクボomg.json",
-      "latestImage": "instagram-data/media/posts/202511/17905243464276221.jpg"
     },
     {
       "id": "ジサクボマジュスポ",
@@ -1343,17 +1376,6 @@
           "latestImage": "instagram-data/media/other/18107896156623004.jpg"
         }
       ]
-    },
-    {
-      "id": "ジサクボbqds",
-      "tag": "#ジサクボbqds",
-      "name": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
-      "nameJa": "Platycerium willinckii “Blue Queen Dwarf Sporeling”",
-      "type": "hybrid",
-      "totalPosts": 24,
-      "subSpeciesCount": 0,
-      "file": "ジサクボbqds.json",
-      "latestImage": "instagram-data/media/other/18034825769707838.jpg"
     },
     {
       "id": "ジサクボフェノメナル",
@@ -1440,17 +1462,6 @@
       "latestImage": "instagram-data/media/posts/202511/18011673869638610.jpg"
     },
     {
-      "id": "ジサクボパカラン",
-      "tag": "#ジサクボパカラン",
-      "name": "Platycerium ridleyi pakarang",
-      "nameJa": "Platycerium ridleyi pakarang",
-      "type": "hybrid",
-      "totalPosts": 9,
-      "subSpeciesCount": 0,
-      "file": "ジサクボパカラン.json",
-      "latestImage": "instagram-data/media/posts/202503/17970836234836694.jpg"
-    },
-    {
       "id": "ジサクボライディーン",
       "tag": "#ジサクボライディーン",
       "name": "P.Rydeen",
@@ -1482,24 +1493,6 @@
       "subSpeciesCount": 0,
       "file": "ジサクボトリケラ.json",
       "latestImage": "instagram-data/media/posts/202511/18243624268288969.jpg"
-    },
-    {
-      "id": "ridleyi",
-      "name": "ridleyi",
-      "nameJa": "リドレイ",
-      "type": "pure",
-      "totalPosts": 4,
-      "subSpeciesCount": 1,
-      "subSpecies": [
-        {
-          "id": "ジサクボリドドワ2",
-          "tag": "#ジサクボリドドワ2",
-          "displayName": "P.ridleyi dwarf",
-          "count": 4,
-          "file": "ジサクボリドドワ2.json",
-          "latestImage": "instagram-data/media/posts/202411/18384550570102289.jpg"
-        }
-      ]
     },
     {
       "id": "ジサクボまっしろ",
@@ -1540,17 +1533,6 @@
       "subSpeciesCount": 0,
       "file": "ジサクボpedrotc.json",
       "latestImage": "instagram-data/media/posts/202411/17993220536576376.jpg"
-    },
-    {
-      "id": "ジサクボリドドワ1",
-      "tag": "#ジサクボリドドワ1",
-      "name": "Platycerium ridleyi dwarf",
-      "nameJa": "Platycerium ridleyi dwarf",
-      "type": "hybrid",
-      "totalPosts": 1,
-      "subSpeciesCount": 0,
-      "file": "ジサクボリドドワ1.json",
-      "latestImage": "instagram-data/media/posts/202310/17974042994416357.jpg"
     },
     {
       "id": "quadridichotomum",

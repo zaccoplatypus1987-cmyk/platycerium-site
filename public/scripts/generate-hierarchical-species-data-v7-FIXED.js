@@ -427,9 +427,11 @@ function detectMainSpecies(caption, hashtags = []) {
 function detectMainSpeciesFromDisplayName(displayName) {
     if (!displayName) return null;
 
-    // P.の後に原種名が来るパターンをチェック
+    // P. または Platycerium の後に原種名が来るパターンをチェック
+    // 例: "P.willinckii omg" → willinckii（原種）
+    // 例: "Platycerium Ridleyi Nano" → ridleyi（原種）
     const pureSpeciesPattern = new RegExp(
-        `P[\\.\\s]+(${PURE_SPECIES.join('|')})\\b`,
+        `(?:P[\\.\\s]+|Platycerium\\s+)(${PURE_SPECIES.join('|')})\\b`,
         'i'
     );
 

@@ -1,7 +1,7 @@
 {
   "species": {
     "id": "ジサクボモンキーキング",
-    "mainSpecies": null,
+    "mainSpecies": "ridleyi",
     "tag": "#ジサクボモンキーキング",
     "displayName": "Platycerium ridleyi monkey king",
     "count": 36,
