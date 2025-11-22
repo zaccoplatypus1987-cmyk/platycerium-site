@@ -49,7 +49,7 @@ class DetailApp {
             if (species) {
                 const navData = this.calculateNavigationData(species.data);
                 if (navData) {
-                    this.updateNavigationUI(navData);
+                    this.updateNavigationUI(navData, species.id);
 
                     // パンくずリストを更新
                     this.updateBreadcrumb(species.data, navData);
@@ -86,6 +86,14 @@ class DetailApp {
     getPostIdFromURL() {
         const params = new URLSearchParams(window.location.search);
         return params.get('id');
+    }
+
+    /**
+     * Get species ID from URL query parameter
+     */
+    getSpeciesIdFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('species');
     }
 
     /**
@@ -230,18 +238,28 @@ class DetailApp {
      */
     async findSpeciesForPost() {
         try {
-            // ハッシュタグから品種IDを特定
-            const jisakuboTags = this.post.hashtags?.filter(tag =>
-                tag.startsWith('ジサクボ') || tag.startsWith('#ジサクボ')
-            ) || [];
+            let speciesId;
 
-            if (jisakuboTags.length === 0) {
-                console.log('No species hashtags found in post');
-                return null;
+            // URLに品種パラメータがあればそれを優先的に使用
+            const urlSpeciesId = this.getSpeciesIdFromURL();
+            if (urlSpeciesId) {
+                speciesId = urlSpeciesId;
+                console.log('Using species ID from URL:', speciesId);
+            } else {
+                // URLに品種パラメータがない場合はハッシュタグから特定
+                const jisakuboTags = this.post.hashtags?.filter(tag =>
+                    tag.startsWith('ジサクボ') || tag.startsWith('#ジサクボ')
+                ) || [];
+
+                if (jisakuboTags.length === 0) {
+                    console.log('No species hashtags found in post');
+                    return null;
+                }
+
+                // 最初の #ジサクボ タグを品種IDとして使用（#を削除）
+                speciesId = jisakuboTags[0].replace('#', '');
+                console.log('Using species ID from hashtags:', speciesId);
             }
-
-            // 最初の #ジサクボ タグを品種IDとして使用（#を削除）
-            const speciesId = jisakuboTags[0].replace('#', '');
 
             console.log('Found species ID:', speciesId);
 
@@ -343,16 +361,19 @@ class DetailApp {
     /**
      * Day 表示とナビゲーションボタンを更新
      */
-    updateNavigationUI(navData) {
+    updateNavigationUI(navData, speciesId) {
         // ナビゲーションボタンをパンくずリストの下に挿入
         const breadcrumb = document.getElementById('breadcrumb');
         if (!breadcrumb) return;
+
+        // 品種パラメータをURLに含める
+        const speciesParam = speciesId ? `&species=${encodeURIComponent(speciesId)}` : '';
 
         // ナビゲーションボタン（Dayバッジを中央に配置）
         const navigationHTML = `
             <div class="navigation-buttons mb-6">
                 ${navData.prevPost ? `
-                    <a href="/detail?id=${navData.prevPost.id}" class="nav-btn">
+                    <a href="/detail?id=${navData.prevPost.id}${speciesParam}" class="nav-btn">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
@@ -366,7 +387,7 @@ class DetailApp {
                 </div>
 
                 ${navData.nextPost ? `
-                    <a href="/detail?id=${navData.nextPost.id}" class="nav-btn">
+                    <a href="/detail?id=${navData.nextPost.id}${speciesParam}" class="nav-btn">
                         次の投稿
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -379,7 +400,7 @@ class DetailApp {
         // パンくずリストの後にナビゲーションボタンを挿入
         breadcrumb.insertAdjacentHTML('afterend', navigationHTML);
 
-        console.log('Navigation UI updated successfully');
+        console.log('Navigation UI updated successfully with species:', speciesId);
     }
 
     /**

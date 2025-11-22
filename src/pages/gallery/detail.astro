@@ -579,9 +579,9 @@ import Footer from '../../components/Footer.astro';
     /**
      * 投稿カードを生成（成長タイムライン統合版）
      */
-    function createPostCard(post, isFirstPost, baseTimestamp) {
+    function createPostCard(post, isFirstPost, baseTimestamp, speciesId) {
       const card = document.createElement('a');
-      card.href = `/detail?id=${post.id}`;
+      card.href = `/detail?id=${post.id}&species=${encodeURIComponent(speciesId)}`;
       card.className = 'post-card bg-white rounded-lg shadow-md overflow-hidden block hover:shadow-xl transition-shadow';
 
       // キャプションを整形（絵文字とハッシュタグを削除）
@@ -704,7 +704,7 @@ import Footer from '../../components/Footer.astro';
     /**
      * 投稿グリッドをレンダリング（古い順）
      */
-    function renderPosts(posts) {
+    function renderPosts(posts, speciesId) {
       postsContainer.innerHTML = '';
 
       if (posts.length === 0) {
@@ -720,7 +720,7 @@ import Footer from '../../components/Footer.astro';
 
       sortedPosts.forEach((post, index) => {
         const isFirstPost = index === 0; // 最初の投稿のみ購入タグを表示
-        const card = createPostCard(post, isFirstPost, baseTimestamp);
+        const card = createPostCard(post, isFirstPost, baseTimestamp, speciesId);
         postsContainer.appendChild(card);
       });
 
@@ -897,7 +897,7 @@ import Footer from '../../components/Footer.astro';
         updateMetadata();
 
         // 投稿レンダリング（古い順）
-        renderPosts(speciesData.posts);
+        renderPosts(speciesData.posts, speciesId);
 
         // ローディング非表示
         loadingElement.classList.add('hidden');
