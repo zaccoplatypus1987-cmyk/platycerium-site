@@ -1,0 +1,25 @@
+{
+  "participants": [
+    {
+      "name": "\u00ef\u00bd\u00bb\u00ef\u00bd\u00b1\u00ef\u00be\u0094"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00ef\u00bd\u00bb\u00ef\u00bd\u00b1\u00ef\u00be\u0094",
+      "timestamp_ms": 1728305740355,
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00ef\u00bd\u00bb\u00ef\u00bd\u00b1\u00ef\u00be\u0094",
+  "is_still_participant": true,
+  "thread_path": "message_requests/saaya_18041336747286661",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

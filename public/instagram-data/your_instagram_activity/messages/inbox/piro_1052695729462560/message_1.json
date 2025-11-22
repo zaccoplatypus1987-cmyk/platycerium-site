@@ -1,0 +1,38 @@
+{
+  "participants": [
+    {
+      "name": "piro"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "piro",
+      "timestamp_ms": 1741695448751,
+      "content": "Reacted \u00f0\u009f\u0098\u0086 to your message ",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1741693494077,
+      "content": "\u00e6\u00ad\u00a3\u00e8\u00a7\u00a3\u00e3\u0081\u00af\u00e5\u00be\u008c\u00e3\u0081\u00bb\u00e3\u0081\u00a9\u00f0\u009f\u0091\u008d",
+      "reactions": [
+        {
+          "reaction": "\u00f0\u009f\u0098\u0086",
+          "actor": "piro"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "piro",
+  "is_still_participant": true,
+  "thread_path": "inbox/piro_1052695729462560",
+  "magic_words": [
+    
+  ]
+}

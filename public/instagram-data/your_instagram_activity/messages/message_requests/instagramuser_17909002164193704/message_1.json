@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "Instagram User"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Instagram User",
+      "timestamp_ms": 1753732513413,
+      "content": "Hey hey!\r\n\r\nWe\u00e2\u0080\u0099re Clay & Whisk \u00e2\u0080\u0094 a fresh brand curating artistic, unique essentials for your home, kitchen, and garden! @ClayWhisk.official \u00f0\u009f\u008c\u00bf We came across your content and truly admire your aesthetic \u00e2\u0080\u0094 you\u00e2\u0080\u0099d be a perfect fit to represent our vision. \u00f0\u009f\u008c\u009f\r\n\r\nWe\u00e2\u0080\u0099d love to gift you a few of our exclusive pieces for free! All we ask is that you share a photo featuring them so we can showcase it on our growing page of home aesthetes and design lovers! \u00f0\u009f\u0093\u00b8\u00e2\u009c\u00a8\r\n\r\nMessage us at @ClayWhisk.official to claim your spot and join our circle of Founding Creators! \u00f0\u009f\u008f\u00a1\u00f0\u009f\u0092\u00ab\r\n\r\nLet\u00e2\u0080\u0099s bring more beauty into the world, together! \u00f0\u009f\u0092\u0096",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Instagram User",
+  "is_still_participant": true,
+  "thread_path": "message_requests/instagramuser_17909002164193704",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

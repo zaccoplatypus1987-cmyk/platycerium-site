@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "Instagram User"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Instagram User",
+      "timestamp_ms": 1746457559021,
+      "content": "Hi. More engagement, more reach, more followers! Try our safe and effective service with a free test!",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Instagram User",
+  "is_still_participant": true,
+  "thread_path": "message_requests/instagramuser_17878471083301302",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

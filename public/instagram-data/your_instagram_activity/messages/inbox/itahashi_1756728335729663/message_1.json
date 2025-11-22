@@ -1,0 +1,57 @@
+{
+  "participants": [
+    {
+      "name": "itahashi"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1758715544916,
+      "content": "\u00e5\u0088\u009d\u00e3\u0082\u0081\u00e3\u0081\u00be\u00e3\u0081\u0097\u00e3\u0081\u00a6\u00ef\u00bc\u0081\n\u00e3\u0081\u0093\u00e3\u0081\u00a1\u00e3\u0082\u0089\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00f0\u009f\u0092\u0081",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1758715535859,
+      "content": "https://amzn.asia/d/2WNWK9o",
+      "share": {
+        "link": "https://amzn.asia/d/2WNWK9o",
+        "share_text": "https://amzn.asia/d/2WNWK9o"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1758715483649,
+      "content": "https://amzn.asia/d/eoDD69G",
+      "share": {
+        "link": "https://amzn.asia/d/eoDD69G",
+        "share_text": "https://amzn.asia/d/eoDD69G"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "itahashi",
+      "timestamp_ms": 1758709720291,
+      "content": "\u00e3\u0081\u00af\u00e3\u0081\u0098\u00e3\u0082\u0081\u00e3\u0081\u00be\u00e3\u0081\u0097\u00e3\u0081\u00a6\u00e3\u0080\u0082\u00e3\u0081\u0084\u00e3\u0081\u00a4\u00e3\u0082\u0082\u00e7\u00b4\u00a0\u00e6\u0095\u00b5\u00e3\u0081\u00aa\u00e3\u0083\u0093\u00e3\u0082\u00ab\u00e3\u0082\u00af\u00e6\u008b\u009d\u00e8\u00a6\u008b\u00e3\u0081\u0097\u00e3\u0081\u00a6\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0080\u0082\n\u00e3\u0081\u0093\u00e3\u0081\u00ae\u00e3\u0082\u00ab\u00e3\u0082\u00af\u00e3\u0082\u00ab\u00e3\u0082\u00af\u00e3\u0081\u00a8\u00e3\u0081\u0097\u00e3\u0081\u009f\u00e3\u0082\u00a2\u00e3\u0083\u00bc\u00e3\u0083\u00a0\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u0088\u00ef\u00bc\u009f\u00e3\u0081\u00af\u00e3\u0081\u00a9\u00e3\u0081\u00a1\u00e3\u0082\u0089\u00e3\u0081\u00ae\u00e5\u0095\u0086\u00e5\u0093\u0081\u00e3\u0081\u00a7\u00e3\u0081\u0097\u00e3\u0082\u0087\u00e3\u0081\u0086\u00e3\u0081\u008b\u00ef\u00bc\u009f\u00e3\u0082\u00af\u00e3\u0083\u008d\u00e3\u0082\u00af\u00e3\u0083\u008d\u00e3\u0081\u0097\u00e3\u0081\u009f\u00e3\u0081\u00bb\u00e3\u0081\u0086\u00e3\u0082\u0082\u00e6\u0095\u0099\u00e3\u0081\u0088\u00e3\u0081\u00a6\u00e3\u0081\u0084\u00e3\u0081\u009f\u00e3\u0081\u00a0\u00e3\u0081\u0091\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0081\u00a8\u00e5\u00b9\u00b8\u00e3\u0081\u0084\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0080\u0082",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3727977572752542077"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "itahashi",
+  "is_still_participant": true,
+  "thread_path": "inbox/itahashi_1756728335729663",
+  "magic_words": [
+    
+  ]
+}

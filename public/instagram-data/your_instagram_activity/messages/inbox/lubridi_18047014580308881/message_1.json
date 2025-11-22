@@ -1,0 +1,51 @@
+{
+  "participants": [
+    {
+      "name": "lu  bridi"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "lu  bridi",
+      "timestamp_ms": 1728046646451,
+      "content": "???",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1728044998616,
+      "content": "\u00e3\u0081\u0093\u00e3\u0082\u0093\u00e3\u0081\u00ab\u00e3\u0081\u00a1\u00e3\u0081\u00af\u00ef\u00bc\u0081",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "lu  bridi",
+      "timestamp_ms": 1728042241483,
+      "photos": [
+        {
+          "uri": "your_instagram_activity/messages/inbox/lubridi_18047014580308881/photos/1688313095285623.jpg",
+          "creation_timestamp": 1728042240
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "lu  bridi",
+      "timestamp_ms": 1728042236218,
+      "content": "Ola! Saudacoes do Brasil\u00f0\u009f\u00a4\u0097",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "lu  bridi",
+  "is_still_participant": true,
+  "thread_path": "inbox/lubridi_18047014580308881",
+  "magic_words": [
+    
+  ]
+}

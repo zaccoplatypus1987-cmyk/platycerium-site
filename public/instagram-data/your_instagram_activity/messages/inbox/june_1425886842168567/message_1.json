@@ -1,0 +1,56 @@
+{
+  "participants": [
+    {
+      "name": "June"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "June",
+      "timestamp_ms": 1748008919886,
+      "content": "Oh ! Which one :)",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1748008357581,
+      "content": "not WaiWai\u00f0\u009f\u00a5\u00b2",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "June",
+      "timestamp_ms": 1748007303266,
+      "content": "C. Wai wai ?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1748007291163,
+      "content": "\u00f0\u009f\u0091\u008d",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "June",
+      "timestamp_ms": 1747929350299,
+      "content": "Woooow !",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3638176664645483889"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "June",
+  "is_still_participant": true,
+  "thread_path": "inbox/june_1425886842168567",
+  "magic_words": [
+    
+  ]
+}

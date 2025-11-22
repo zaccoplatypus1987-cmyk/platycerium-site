@@ -1,0 +1,28 @@
+{
+  "participants": [
+    {
+      "name": "Mits22"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Mits22",
+      "timestamp_ms": 1750857692851,
+      "content": "\u00f0\u009f\u0098\u008d",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3662763335986525391"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Mits22",
+  "is_still_participant": true,
+  "thread_path": "inbox/mits22_819871556083750",
+  "magic_words": [
+    
+  ]
+}

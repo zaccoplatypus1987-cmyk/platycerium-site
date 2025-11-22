@@ -1,0 +1,34 @@
+{
+  "participants": [
+    {
+      "name": "michacomachi"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "michacomachi",
+      "timestamp_ms": 1748133435904,
+      "content": "\u00f0\u009f\u0098\u0082",
+      "reactions": [
+        {
+          "reaction": "\u00f0\u009f\u00a5\u00b0",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3639221730205953024"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "michacomachi",
+  "is_still_participant": true,
+  "thread_path": "inbox/michacomachi_17864288067393759",
+  "magic_words": [
+    
+  ]
+}

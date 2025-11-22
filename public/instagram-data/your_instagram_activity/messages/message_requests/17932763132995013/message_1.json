@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "\u00f0\u009f\u0098\u0081"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00f0\u009f\u0098\u0081",
+      "timestamp_ms": 1738094360413,
+      "content": "Hey there!\r\n\r\nWe\u00e2\u0080\u0099re thrilled to invite you to the Virdis Farms Ambassador Program\u00e2\u0080\u0094a vibrant community that embraces the beauty of plants and green living! \u00f0\u009f\u008c\u00b1\u00e2\u009c\u00a8\r\n\r\nAs an ambassador, you\u00e2\u0080\u0099ll receive (3) free plants from our exclusive collection to showcase \u00f0\u009f\u00aa\u00b4, along with access to a passionate community of fellow plant lovers.\r\n\r\nJoining is easy! Just send a message to our main page @virdis.farms with the word \"ambassador\", and our team will send you all the details.\r\n\r\nWe can't wait to welcome you to the Virdis Farms family and grow together! \u00f0\u009f\u008c\u00bf\u00f0\u009f\u0092\u009a",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00f0\u009f\u0098\u0081",
+  "is_still_participant": true,
+  "thread_path": "message_requests/17932763132995013",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

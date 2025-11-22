@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "Bungsu Plants"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Bungsu Plants",
+      "timestamp_ms": 1733242561086,
+      "content": "Hello, I am the owner of a\nNursery located in Bogor ,\nIndonesia. \n\nWh have many beautiful plants which you would like to adopt\u00f0\u009f\u0099\u0082\n\nNomor WhatsAp +6282210051141\nThank you \u00f0\u009f\u00a5\u00b0",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Bungsu Plants",
+  "is_still_participant": true,
+  "thread_path": "message_requests/bungsuplants_17858091936315014",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

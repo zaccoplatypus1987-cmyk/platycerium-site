@@ -1,0 +1,34 @@
+{
+  "participants": [
+    {
+      "name": "P L A T Y C E R I U M"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "P L A T Y C E R I U M",
+      "timestamp_ms": 1763631037730,
+      "content": "\u00f0\u009f\u0098\u008d",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3769919933099101135"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "P L A T Y C E R I U M",
+  "is_still_participant": true,
+  "thread_path": "inbox/platycerium_1047746986621660",
+  "magic_words": [
+    
+  ]
+}

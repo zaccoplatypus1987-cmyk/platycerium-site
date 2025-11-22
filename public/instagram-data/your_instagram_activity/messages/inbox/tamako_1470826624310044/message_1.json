@@ -1,0 +1,25 @@
+{
+  "participants": [
+    {
+      "name": "\u00e3\u0081\u009f\u00e3\u0081\u00be\u00e3\u0081\u0093"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1732191793363,
+      "content": "\u00f0\u009f\u0091\u008f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e3\u0081\u009f\u00e3\u0081\u00be\u00e3\u0081\u0093",
+  "is_still_participant": true,
+  "thread_path": "inbox/tamako_1470826624310044",
+  "magic_words": [
+    
+  ]
+}

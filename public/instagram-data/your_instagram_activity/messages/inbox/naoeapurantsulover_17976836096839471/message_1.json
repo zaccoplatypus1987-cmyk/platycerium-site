@@ -1,0 +1,38 @@
+{
+  "participants": [
+    {
+      "name": "Nao.@\u00e3\u0082\u00a8\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0083\u00b3\u00e3\u0083\u0084Lover"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Nao.@\u00e3\u0082\u00a8\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0083\u00b3\u00e3\u0083\u0084Lover",
+      "timestamp_ms": 1745910666226,
+      "content": "Reacted \u00e2\u0098\u0080\u00ef\u00b8\u008f to your message ",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1745909973083,
+      "content": "\u00f0\u009f\u0091\u008f",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u0098\u0080\u00ef\u00b8\u008f",
+          "actor": "Nao.@\u00e3\u0082\u00a8\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0083\u00b3\u00e3\u0083\u0084Lover"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Nao.@\u00e3\u0082\u00a8\u00e3\u0082\u00a2\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0083\u00b3\u00e3\u0083\u0084Lover",
+  "is_still_participant": true,
+  "thread_path": "inbox/naoeapurantsulover_17976836096839471",
+  "magic_words": [
+    
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "participants": [
+    {
+      "name": "ksuzukik11"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "ksuzukik11",
+      "timestamp_ms": 1763382476308,
+      "content": "\u00f0\u009f\u00a6\u008f\u00e3\u0082\u00ae\u00e3\u0083\u00a3\u00e3\u0082\u00aa",
+      "reactions": [
+        {
+          "reaction": "\u00f0\u009f\u00a6\u0096",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3767840999050151406"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "ksuzukik11",
+  "is_still_participant": true,
+  "thread_path": "inbox/ksuzukik11_1823953559003063",
+  "magic_words": [
+    
+  ]
+}

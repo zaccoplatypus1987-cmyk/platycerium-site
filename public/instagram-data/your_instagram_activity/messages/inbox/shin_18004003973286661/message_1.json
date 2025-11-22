@@ -1,0 +1,35 @@
+{
+  "participants": [
+    {
+      "name": "Shin"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Shin",
+      "timestamp_ms": 1736374145321,
+      "content": "\u00f0\u009f\u0098\u00ae",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1736376094
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3541063617494243312"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Shin",
+  "is_still_participant": true,
+  "thread_path": "inbox/shin_18004003973286661",
+  "magic_words": [
+    
+  ]
+}

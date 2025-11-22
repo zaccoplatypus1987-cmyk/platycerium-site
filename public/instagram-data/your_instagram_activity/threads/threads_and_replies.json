@@ -1,0 +1,67 @@
+{
+  "text_post_app_text_posts": [
+    {
+      "media": [
+        {
+          "uri": "",
+          "creation_timestamp": 1760142532,
+          "media_metadata": {
+            "camera_metadata": {
+              "has_camera_metadata": false
+            }
+          },
+          "title": "\u00e3\u0081\u00aa\u00e3\u0082\u008b\u00e3\u0081\u00bb\u00e3\u0081\u00a9\u00ef\u00bc\u0081\u00e3\u0081\u009d\u00e3\u0081\u0086\u00e3\u0081\u00aa\u00e3\u0082\u0093\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u00ad\u00f0\u009f\u00a4\u0094\n\u00e3\u0081\u0093\u00e3\u0081\u00a3\u00e3\u0081\u00a1\u00e3\u0081\u00a7\u00e3\u0082\u0082\u00e6\u008a\u0095\u00e7\u00a8\u00bf\u00e3\u0081\u0097\u00e3\u0082\u0088\u00e3\u0081\u0086\u00e3\u0081\u008b\u00e3\u0081\u00aa\u00f0\u009f\u0098\u0086",
+          "cross_post_source": {
+            "source_app": "FB"
+          },
+          "text_app_post": {
+            "reply_control": "everyone",
+            "geo_gated_country_list": ""
+          }
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "uri": "",
+          "creation_timestamp": 1760142483,
+          "media_metadata": {
+            "camera_metadata": {
+              "has_camera_metadata": false
+            }
+          },
+          "title": "\u00e3\u0081\u0084\u00e3\u0081\u0088\u00e3\u0081\u0084\u00e3\u0081\u0088\u00f0\u009f\u0098\u0086\n\u00e3\u0081\u00a7\u00e3\u0082\u0082\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086\u00e3\u0081\u0094\u00e3\u0081\u0096\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0080\u009c\u00f0\u009f\u0098\u0086",
+          "cross_post_source": {
+            "source_app": "FB"
+          },
+          "text_app_post": {
+            "reply_control": "everyone",
+            "geo_gated_country_list": ""
+          }
+        }
+      ]
+    },
+    {
+      "media": [
+        {
+          "uri": "",
+          "creation_timestamp": 1759370460,
+          "media_metadata": {
+            "camera_metadata": {
+              "has_camera_metadata": false
+            }
+          },
+          "title": "\u00e3\u0081\u00aa\u00e3\u0082\u0093\u00e3\u0081\u00a74000\u00e4\u00ba\u00ba\u00e3\u0082\u0082\u00e3\u0083\u0095\u00e3\u0082\u00a9\u00e3\u0083\u00ad\u00e3\u0083\u00af\u00e3\u0083\u00bc\u00e3\u0081\u008c\u00e3\u0081\u0084\u00e3\u0082\u008b\u00e3\u0081\u00ae\u00e3\u0081\u008b\u00e2\u0080\u00a6\u00ef\u00bc\u009f",
+          "cross_post_source": {
+            "source_app": "FB"
+          },
+          "text_app_post": {
+            "reply_control": "everyone",
+            "geo_gated_country_list": ""
+          }
+        }
+      ]
+    }
+  ]
+}

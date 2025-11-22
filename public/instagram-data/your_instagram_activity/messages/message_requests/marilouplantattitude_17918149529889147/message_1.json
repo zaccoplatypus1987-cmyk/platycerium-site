@@ -1,0 +1,25 @@
+{
+  "participants": [
+    {
+      "name": "Marilou - Plantattitude \u00f0\u009f\u008c\u009e"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Marilou - Plantattitude \u00f0\u009f\u008c\u009e",
+      "timestamp_ms": 1740144855266,
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Marilou - Plantattitude \u00f0\u009f\u008c\u009e",
+  "is_still_participant": true,
+  "thread_path": "message_requests/marilouplantattitude_17918149529889147",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

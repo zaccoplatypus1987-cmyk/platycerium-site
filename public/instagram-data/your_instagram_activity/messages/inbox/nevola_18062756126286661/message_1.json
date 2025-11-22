@@ -1,0 +1,93 @@
+{
+  "participants": [
+    {
+      "name": "nevola"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746818346539,
+      "content": "I poured soap and water on it to eliminate the pest.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746818346156,
+      "photos": [
+        {
+          "uri": "your_instagram_activity/messages/inbox/nevola_18062756126286661/photos/938646888259584.jpg",
+          "creation_timestamp": 1746818345
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1746359983911,
+      "content": "\u00e3\u0081\u00a9\u00e3\u0081\u00ae\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0083\u0086\u00e3\u0082\u00a3\u00e3\u0082\u00bb\u00e3\u0083\u00aa\u00e3\u0082\u00a6\u00e3\u0083\u00a0\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u008b\u00ef\u00bc\u009f\n\u00e9\u009d\u0092\u00e6\u00a3\u00ae\u00e3\u0081\u00ab\u00e4\u00bd\u008f\u00e3\u0082\u0093\u00e3\u0081\u00a7\u00e3\u0081\u0084\u00e3\u0082\u008b\u00e3\u0081\u00ae\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u008b\u00ef\u00bc\u009f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746295331413,
+      "content": "\u00e3\u0081\u0084\u00e3\u0081\u008f\u00e3\u0082\u0089 \u00ef\u00bc\u009f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746295327347,
+      "content": "\u00e3\u0081\u00af\u00e3\u0081\u0084\u00e3\u0080\u0081\u00e7\u00a7\u0081\u00e3\u0081\u00af\u00e9\u009d\u0092\u00e6\u00a3\u00ae\u00e5\u0087\u00ba\u00e8\u00ba\u00ab\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0080\u0082",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1746254361887,
+      "content": "\u00e5\u00a3\u00b2\u00e3\u0081\u00a3\u00e3\u0081\u00a6\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0081\u008c\u00e3\u0080\u0081\u00e6\u0097\u00a5\u00e6\u009c\u00ac\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0080\u0082",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1746250077060,
+      "content": "\u00e3\u0081\u00a9\u00e3\u0081\u0086\u00e3\u0081\u0097\u00e3\u0081\u00be\u00e3\u0081\u0097\u00e3\u0081\u009f\u00ef\u00bc\u009f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746236792069,
+      "content": "I'm sorry pleas",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746236773238,
+      "content": "Hi!",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "nevola",
+      "timestamp_ms": 1746236769793,
+      "content": "Ji",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "nevola",
+  "is_still_participant": true,
+  "thread_path": "inbox/nevola_18062756126286661",
+  "magic_words": [
+    
+  ]
+}

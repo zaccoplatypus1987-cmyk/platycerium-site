@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "\u00e7\u0091\u00be\u00e7\u0091\u009c\u00e8\u008d\u0089\u00e5\u00a0\u0082"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e7\u0091\u00be\u00e7\u0091\u009c\u00e8\u008d\u0089\u00e5\u00a0\u0082",
+      "timestamp_ms": 1730332262312,
+      "content": "\u00e4\u00bd\u00a0\u00e5\u00a5\u00bd\u00e5\u00a4\u00a7\u00e4\u00bd\u00ac\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0097\u00ae\u00e4\u00bd\u00a0\u00e6\u009c\u0089\u00e9\u00b9\u00bf\u00e8\u00a7\u0092\u00e8\u0095\u00a8\u00e5\u0087\u00ba\u00e5\u0094\u00ae\u00e5\u0090\u0097",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e7\u0091\u00be\u00e7\u0091\u009c\u00e8\u008d\u0089\u00e5\u00a0\u0082",
+  "is_still_participant": true,
+  "thread_path": "message_requests/jinyucaotang_1475823160487177",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

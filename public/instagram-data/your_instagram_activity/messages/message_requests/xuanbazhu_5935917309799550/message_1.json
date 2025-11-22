@@ -1,0 +1,120 @@
+{
+  "participants": [
+    {
+      "name": "yumi"
+    },
+    {
+      "name": "sarara"
+    },
+    {
+      "name": "hiro"
+    },
+    {
+      "name": "Kaori"
+    },
+    {
+      "name": "\u00e7\u0095\u00b6\u00e9\u008a\u0098\u00e3\u0080\u0080\u00e9\u0087\u008c\u00e9\u00a6\u0099"
+    },
+    {
+      "name": "chiko**"
+    },
+    {
+      "name": "\u00e3\u0083\u008f\u00e3\u0082\u0099\u00e3\u0083\u008f\u00e3\u0082\u0099 \u00e3\u0082\u00a2\u00e3\u0082\u00ab\u00e3\u0083\u008d\u00f0\u009f\u008d\u0092"
+    },
+    {
+      "name": "soi"
+    },
+    {
+      "name": "mo-fu"
+    },
+    {
+      "name": "Mama"
+    },
+    {
+      "name": "\u00e2\u0089\u009b"
+    },
+    {
+      "name": "t.t2175"
+    },
+    {
+      "name": "pira.pira.0911"
+    },
+    {
+      "name": "\u00e3\u0081\u0082\u00e3\u0082\u0084\u00e3\u0081\u00aa"
+    },
+    {
+      "name": "cavi"
+    },
+    {
+      "name": "\u00e3\u0081\u0082\u00e3\u0081\u0099\u00e3\u0081\u008b"
+    },
+    {
+      "name": "akipy"
+    },
+    {
+      "name": "kana abe"
+    },
+    {
+      "name": "\u00e3\u0081\u00a8\u00e3\u0081\u00be"
+    },
+    {
+      "name": "\u00e3\u0082\u008c\u00e3\u0081\u0084"
+    },
+    {
+      "name": "\u00e3\u0081\u008d\u00e3\u0081\u0084\u00e2\u0098\u00bb"
+    },
+    {
+      "name": "Takashi Andou"
+    },
+    {
+      "name": "Norika 65"
+    },
+    {
+      "name": "miyako.o"
+    },
+    {
+      "name": "\u00e3\u0081\u00bf\u00e3\u0082\u0084\u00e3\u0081\u0091\u00e3\u0081\u00aa\u00e3\u0081\u00aa"
+    },
+    {
+      "name": "\u00e4\u00bb\u00ae\u00e8\u00b0\u00b7 \u00e5\u0081\u00a5\u00e4\u00ba\u008c"
+    },
+    {
+      "name": "solto"
+    },
+    {
+      "name": "invincible0710"
+    },
+    {
+      "name": "iseehisa"
+    },
+    {
+      "name": "nanako_no_na"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    },
+    {
+      "name": "willa"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Naoko",
+      "timestamp_ms": 1757482782998,
+      "content": "Naoko left the group.",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e9\u0081\u00b8\u00e6\u008a\u009c\u00e6\u00a0\u00aa",
+  "is_still_participant": true,
+  "thread_path": "message_requests/xuanbazhu_5935917309799550",
+  "magic_words": [
+    
+  ],
+  "joinable_mode": {
+    "mode": 1,
+    "link": ""
+  },
+  "is_pending": true
+}

@@ -1,0 +1,139 @@
+{
+  "participants": [
+    {
+      "name": "Taka"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1741576587948,
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3584519804646389144"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1741567916129,
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3584518575488857296"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1741526892225,
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3584127878101219143"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1741004381899,
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3579849036520152672"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1738327743637,
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3557250673597665803"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1738015798313,
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1738016355
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3554797903489786816"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1737888744070,
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1737889301
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3553927538324286266"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1737851434458,
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1737889308
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3553214537833325609"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Taka",
+      "timestamp_ms": 1737848620674,
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1737889309
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3553157010034723238"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Taka",
+  "is_still_participant": true,
+  "thread_path": "inbox/taka_1600776484645566",
+  "magic_words": [
+    
+  ]
+}

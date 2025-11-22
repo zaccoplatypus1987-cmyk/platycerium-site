@@ -1,0 +1,35 @@
+{
+  "participants": [
+    {
+      "name": "Platy Asmara"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1752673280237,
+      "content": "\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086\u00f0\u009f\u0098\u008a",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Platy Asmara",
+      "timestamp_ms": 1752642066695,
+      "content": "Soo cool and weird \u00f0\u009f\u00a4\u00a9\u00f0\u009f\u00a4\u00a9",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3677683955090149550"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Platy Asmara",
+  "is_still_participant": true,
+  "thread_path": "inbox/platyasmara_1720397902687254",
+  "magic_words": [
+    
+  ]
+}

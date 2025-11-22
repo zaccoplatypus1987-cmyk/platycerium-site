@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "pigeon"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "pigeon",
+      "timestamp_ms": 1742312835296,
+      "content": "Hi do you sell any?",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "pigeon",
+  "is_still_participant": true,
+  "thread_path": "message_requests/pigeon_1659444725450848",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

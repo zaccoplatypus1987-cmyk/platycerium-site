@@ -1,0 +1,34 @@
+{
+  "participants": [
+    {
+      "name": "B3RNY_AR"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "B3RNY_AR",
+      "timestamp_ms": 1758663250411,
+      "content": "\u00f0\u009f\u0098\u008d",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3727977572752542077"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "B3RNY_AR",
+  "is_still_participant": true,
+  "thread_path": "inbox/b3rny_ar_1233175354743331",
+  "magic_words": [
+    
+  ]
+}

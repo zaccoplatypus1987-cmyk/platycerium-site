@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "Rosannryy"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Rosannryy",
+      "timestamp_ms": 1750841958804,
+      "content": "hi",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Rosannryy",
+  "is_still_participant": true,
+  "thread_path": "message_requests/rosannryy_18068055296286661",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

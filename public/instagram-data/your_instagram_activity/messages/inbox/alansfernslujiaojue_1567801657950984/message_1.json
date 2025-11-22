@@ -1,0 +1,86 @@
+{
+  "participants": [
+    {
+      "name": "Alan\u00e2\u0080\u0098s ferns \u00e9\u00b9\u00bf\u00e8\u00a7\u0092\u00e8\u0095\u00a8"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Alan\u00e2\u0080\u0098s ferns \u00e9\u00b9\u00bf\u00e8\u00a7\u0092\u00e8\u0095\u00a8",
+      "timestamp_ms": 1731932291721,
+      "sticker": {
+        "uri": "your_instagram_activity/messages/stickers_used/369239263222822.png",
+        "ai_stickers": [
+          
+        ]
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1731932242675,
+      "content": "\u00f0\u009f\u0091\u008f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Alan\u00e2\u0080\u0098s ferns \u00e9\u00b9\u00bf\u00e8\u00a7\u0092\u00e8\u0095\u00a8",
+      "timestamp_ms": 1731062472501,
+      "content": "\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1731063070
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1731059779890,
+      "content": "\u00e7\u00a7\u0081\u00e3\u0082\u0082\u00e5\u00ad\u0090\u00e6\u00a0\u00aa\u00e3\u0082\u0092\u00e8\u0082\u00b2\u00e3\u0081\u00a6\u00e3\u0081\u00a6\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0081\u008c\u00e3\u0080\u0081\u00e3\u0081\u00a8\u00e3\u0081\u00a6\u00e3\u0082\u0082\u00e8\u0089\u00af\u00e3\u0081\u0084willinckii \u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u00ad\u00ef\u00bc\u0081",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1731059730062,
+      "content": "\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086\u00e3\u0081\u0094\u00e3\u0081\u0096\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00f0\u009f\u0098\u008a",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Alan\u00e2\u0080\u0098s ferns \u00e9\u00b9\u00bf\u00e8\u00a7\u0092\u00e8\u0095\u00a8",
+      "timestamp_ms": 1731057254064,
+      "content": "\u00e3\u0081\u00af\u00e3\u0081\u0084\u00ef\u00bc\u0081\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0081\u00af\u00e7\u00a7\u0081\u00e3\u0081\u00ae\u00e6\u00af\u008d\u00e6\u00a4\u008d\u00e7\u0089\u00a9\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0080\u0082",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1731059724
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1731055554202,
+      "content": "\u00e3\u0081\u0093\u00e3\u0082\u008c\u00e3\u0081\u00afWillinckii Anne \u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u008b\u00ef\u00bc\u009f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Alan\u00e2\u0080\u0098s ferns \u00e9\u00b9\u00bf\u00e8\u00a7\u0092\u00e8\u0095\u00a8",
+  "is_still_participant": true,
+  "thread_path": "inbox/alansfernslujiaojue_1567801657950984",
+  "magic_words": [
+    
+  ]
+}

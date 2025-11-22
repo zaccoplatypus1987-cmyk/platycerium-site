@@ -1,0 +1,25 @@
+{
+  "participants": [
+    {
+      "name": "benjya_minb"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1735798039881,
+      "content": "\u00e6\u00ae\u008b\u00e5\u00bf\u00b5\u00ef\u00bc\u0081\n\u00e9\u008a\u0080\u00e8\u008f\u00af\u00e3\u0081\u00a7\u00e3\u0081\u0097\u00e3\u0081\u009f\u00f0\u009f\u0099\u008c",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "benjya_minb",
+  "is_still_participant": true,
+  "thread_path": "inbox/benjya_minb_17884006383115920",
+  "magic_words": [
+    
+  ]
+}

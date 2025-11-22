@@ -1,0 +1,34 @@
+{
+  "participants": [
+    {
+      "name": "NALA      e     PRETA"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "NALA      e     PRETA",
+      "timestamp_ms": 1741611604051,
+      "content": "\u00f0\u009f\u0098\u008d",
+      "reactions": [
+        {
+          "reaction": "\u00f0\u009f\u0091\u008d",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3585188028056741913"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "NALA      e     PRETA",
+  "is_still_participant": true,
+  "thread_path": "inbox/nalaepreta_17978876243810076",
+  "magic_words": [
+    
+  ]
+}

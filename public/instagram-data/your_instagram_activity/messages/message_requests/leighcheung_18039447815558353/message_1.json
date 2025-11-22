@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "Leigh Cheung"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Leigh Cheung",
+      "timestamp_ms": 1747443059929,
+      "content": "Hello,do you have spores for sale?Thank you!",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Leigh Cheung",
+  "is_still_participant": true,
+  "thread_path": "message_requests/leighcheung_18039447815558353",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

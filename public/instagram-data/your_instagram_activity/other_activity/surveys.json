@@ -1,0 +1,293 @@
+{
+  "timestamp": 1761922483,
+  "media": [
+    
+  ],
+  "label_values": [
+    {
+      "label": "Survey responses",
+      "vec": [
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Thank you for answering this short survey."
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "We would like to learn about your experience using social media and messaging apps."
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Have you ever used WhatsApp?"
+            },
+            {
+              "label": "Response",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Have you ever used Facebook?"
+            },
+            {
+              "label": "Response",
+              "value": "Yes"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Have you ever used Messenger?"
+            },
+            {
+              "label": "Response",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Now we would like to ask about your experience using Facebook."
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "How many Facebook accounts do you currently have? Please do not count any Facebook Pages that you have. A Facebook Page is a public profile specifically created for businesses, brands, celebrities, causes, or other organizations."
+            },
+            {
+              "label": "Response",
+              "value": "1 account"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "In the past 30 days, have you used your Facebook account?"
+            },
+            {
+              "label": "Response",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Now we would like to ask you some questions about how you use Instagram."
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "How many Instagram accounts do you currently have? Please include any Instagram Creator Accounts or Business Accounts that you have."
+            },
+            {
+              "label": "Response",
+              "value": "2 or more accounts"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "In the past 30 days, how many of your Instagram accounts have you used?"
+            },
+            {
+              "label": "Response",
+              "value": "1 account"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "What is your date of birth?"
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Now, we have a few questions about mobile phones to help us improve the Instagram experience on every device."
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "In the past 30 days, how many mobile phones did you use Instagram on?"
+            },
+            {
+              "label": "Response",
+              "value": "1 mobile phone"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "In the past 30 days, did anyone besides yourself use that mobile phone?"
+            },
+            {
+              "label": "Response",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "In the past 30 days, did anyone besides yourself use Instagram on that mobile phone?"
+            },
+            {
+              "label": "Response",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "What country do you currently live in?"
+            },
+            {
+              "label": "Response",
+              "value": "\u00e6\u0097\u00a5\u00e6\u009c\u00ac"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Do you live in {pred_city}?"
+            },
+            {
+              "label": "Response",
+              "value": "Correct"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "If no, please tell us what city or town you currently live in:"
+            },
+            {
+              "label": "Response",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "In your opinion, which best describes {pred_city}?"
+            },
+            {
+              "label": "Response",
+              "value": "Medium city"
+            }
+          ]
+        },
+        {
+          "dict": [
+            {
+              "label": "Question",
+              "value": "Do you live within the city limits of {pred_city}?"
+            },
+            {
+              "label": "Response",
+              "value": "Yes"
+            }
+          ]
+        }
+      ],
+      "description": "Your survey questions and responses"
+    },
+    {
+      "label": "Survey start time",
+      "timestamp_value": 1761946854,
+      "description": "The time when you first started this survey"
+    },
+    {
+      "label": "Last update time",
+      "timestamp_value": 1761946943,
+      "description": "The last time you updated this survey"
+    },
+    {
+      "label": "Survey completion time",
+      "timestamp_value": 1761946943,
+      "description": "The time you completed the entire survey"
+    },
+    {
+      "label": "Update time",
+      "timestamp_value": 1761946944
+    },
+    {
+      "label": "Survey responses",
+      "vec": [
+        
+      ],
+      "description": "Your survey questions and responses"
+    }
+  ],
+  "fbid": "1570807514089279"
+}

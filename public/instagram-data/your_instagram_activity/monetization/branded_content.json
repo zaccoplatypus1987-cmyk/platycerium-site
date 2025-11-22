@@ -1,0 +1,18 @@
+{
+  "monetization_branded_content": [
+    {
+      "title": "Your branded content interests",
+      "string_list_data": [
+        {
+          "value": "The interests you've selected to share with brands so they can see the type of branded content you're interested in creating:"
+        }
+      ]
+    },
+    {
+      "title": "Your branded content projects",
+      "string_map_data": {
+        
+      }
+    }
+  ]
+}

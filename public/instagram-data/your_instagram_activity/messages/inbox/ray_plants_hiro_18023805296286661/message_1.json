@@ -1,0 +1,39 @@
+{
+  "participants": [
+    {
+      "name": "ray_plants_hiro"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "ray_plants_hiro",
+      "timestamp_ms": 1735672466872,
+      "content": "\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086\u00e3\u0081\u0094\u00e3\u0081\u0096\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00f0\u009f\u0099\u0087",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1735797876
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1735647452365,
+      "content": "\u00e6\u00ad\u00a3\u00e8\u00a7\u00a3\u00f0\u009f\u0098\u0086\n\u00e3\u0081\u00aa\u00e3\u0081\u008b\u00e3\u0081\u00aa\u00e3\u0081\u008b\u00e5\u00a4\u0089\u00e6\u0085\u008b\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u00ad\u00f0\u009f\u0091\u008d",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "ray_plants_hiro",
+  "is_still_participant": true,
+  "thread_path": "inbox/ray_plants_hiro_18023805296286661",
+  "magic_words": [
+    
+  ]
+}

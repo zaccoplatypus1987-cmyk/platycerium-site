@@ -1,0 +1,39 @@
+{
+  "participants": [
+    {
+      "name": "\u00e3\u0081\u00be\u00e3\u0081\u00a3\u00e3\u0081\u0097\u00e3\u0082\u0085"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0081\u00be\u00e3\u0081\u00a3\u00e3\u0081\u0097\u00e3\u0082\u0085",
+      "timestamp_ms": 1731850107853,
+      "content": "Reacted \u00f0\u009f\u0098\u008d to your message ",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1731846467197,
+      "content": "\u00f0\u009f\u0091\u008f",
+      "reactions": [
+        {
+          "reaction": "\u00f0\u009f\u0098\u008d",
+          "actor": "\u00e3\u0081\u00be\u00e3\u0081\u00a3\u00e3\u0081\u0097\u00e3\u0082\u0085",
+          "timestamp": 1731850107
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e3\u0081\u00be\u00e3\u0081\u00a3\u00e3\u0081\u0097\u00e3\u0082\u0085",
+  "is_still_participant": true,
+  "thread_path": "inbox/masshu_17952014585710260",
+  "magic_words": [
+    
+  ]
+}

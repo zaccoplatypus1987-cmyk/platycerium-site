@@ -1,0 +1,40 @@
+{
+  "participants": [
+    {
+      "name": "Instagram User"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1755943787696,
+      "content": "Video chat ended",
+      "call_duration": 0,
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1755943778640,
+      "content": "You started a video chat",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Instagram User",
+      "timestamp_ms": 1755940878057,
+      "content": "\u00e3\u0081\u0093\u00e3\u0082\u0093\u00e3\u0081\u00ab\u00e3\u0081\u00a1\u00e3\u0081\u00af\u00ef\u00bc\u0081\u00ef\u00bc\u0081\n\n\u00e7\u00a7\u0081\u00e3\u0081\u00af\u00e3\u0082\u00aa\u00e3\u0083\u00b3\u00e3\u0083\u00a9\u00e3\u0082\u00a4\u00e3\u0083\u00b3\u00e6\u0096\u0099\u00e7\u0090\u0086\u00e7\u0095\u00aa\u00e7\u00b5\u0084\u00e3\u0081\u00ae\u00e3\u0082\u00a2\u00e3\u0083\u00b3\u00e3\u0083\u0090\u00e3\u0082\u00b5\u00e3\u0083\u0080\u00e3\u0083\u00bc\u00e3\u0081\u00ab\u00e7\u00ab\u008b\u00e5\u0080\u0099\u00e8\u00a3\u009c\u00e3\u0081\u0097\u00e3\u0081\u00a6\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0080\u0082\u00e3\u0081\u009c\u00e3\u0081\u00b2\u00e7\u00a7\u0081\u00e3\u0081\u00ab\u00e6\u008a\u0095\u00e7\u00a5\u00a8\u00e3\u0081\u0097\u00e3\u0081\u00a6\u00e3\u0081\u008f\u00e3\u0081\u00a0\u00e3\u0081\u0095\u00e3\u0081\u0084\u00e3\u0081\u00ad\u00f0\u009f\u0091\u00a8\u00e2\u0080\u008d\u00f0\u009f\u008d\u00b3\u00f0\u009f\u00a5\u0098\u00f0\u009f\u0099\u008f",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Instagram User",
+  "is_still_participant": true,
+  "thread_path": "inbox/instagramuser_17894491092290106",
+  "magic_words": [
+    
+  ]
+}

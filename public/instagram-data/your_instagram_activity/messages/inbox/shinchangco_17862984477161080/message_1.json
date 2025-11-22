@@ -1,0 +1,48 @@
+{
+  "participants": [
+    {
+      "name": "SHIN & CHANG CO."
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "SHIN & CHANG CO.",
+      "timestamp_ms": 1742548030080,
+      "content": "\u00e3\u0083\u0081\u00e3\u0082\u00a7\u00e3\u0083\u0083\u00e3\u0082\u00af\u00e3\u0081\u0095\u00e3\u0081\u009b\u00e3\u0081\u00a6\u00e3\u0082\u0082\u00e3\u0082\u0089\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00f0\u009f\u0098\u0081",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1742449641638,
+      "content": "\u00e3\u0081\u00aa\u00e3\u0081\u008b\u00e3\u0081\u00aa\u00e3\u0081\u008b\u00e8\u0089\u00af\u00e3\u0081\u0084\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0082\u0088\u00f0\u009f\u0099\u0086",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "SHIN & CHANG CO.",
+      "timestamp_ms": 1742443756165,
+      "content": "\u00e3\u0082\u0084\u00e3\u0081\u00b0\u00e3\u0081\u0084\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u00ad\u00e3\u0081\u0093\u00e3\u0082\u008c",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3591609869793024976"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "SHIN & CHANG CO.",
+  "is_still_participant": true,
+  "thread_path": "inbox/shinchangco_17862984477161080",
+  "magic_words": [
+    
+  ]
+}

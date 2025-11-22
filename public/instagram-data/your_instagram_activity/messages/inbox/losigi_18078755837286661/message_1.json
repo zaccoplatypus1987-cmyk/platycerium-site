@@ -1,0 +1,35 @@
+{
+  "participants": [
+    {
+      "name": "\u00eb\u00a1\u009c\u00ec\u008b\u009c\u00ea\u00b8\u00b0"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1759748882718,
+      "content": "\u00f0\u009f\u0091\u008d",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00eb\u00a1\u009c\u00ec\u008b\u009c\u00ea\u00b8\u00b0",
+      "timestamp_ms": 1759747619541,
+      "content": "\u00f0\u009f\u0098\u008d",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3737346767705408465"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00eb\u00a1\u009c\u00ec\u008b\u009c\u00ea\u00b8\u00b0",
+  "is_still_participant": true,
+  "thread_path": "inbox/losigi_18078755837286661",
+  "magic_words": [
+    
+  ]
+}

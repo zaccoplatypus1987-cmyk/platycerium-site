@@ -1,0 +1,26 @@
+{
+  "participants": [
+    {
+      "name": "\u00e6\u0098\u008e\u00e5\u00b4\u00b4"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e6\u0098\u008e\u00e5\u00b4\u00b4",
+      "timestamp_ms": 1732226059241,
+      "content": "Hi",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e6\u0098\u008e\u00e5\u00b4\u00b4",
+  "is_still_participant": true,
+  "thread_path": "message_requests/mingwai_17859006192295191",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

@@ -1,0 +1,32 @@
+{
+  "participants": [
+    {
+      "name": "yossy"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1736817880733,
+      "content": "\u00f0\u009f\u0098\u008b",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "yossy",
+      "timestamp_ms": 1736817789160,
+      "content": "\u00f0\u009f\u0098\u0086",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "yossy",
+  "is_still_participant": true,
+  "thread_path": "inbox/yossy_17930678969521122",
+  "magic_words": [
+    
+  ]
+}

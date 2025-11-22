@@ -1,0 +1,29 @@
+{
+  "participants": [
+    {
+      "name": "K E E D O N   W O N G"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "K E E D O N   W O N G",
+      "timestamp_ms": 1753877627587,
+      "content": "Would u have Group M for sale",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3688076056978154940"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "K E E D O N   W O N G",
+  "is_still_participant": true,
+  "thread_path": "message_requests/keedonwong_18071451116286661",
+  "magic_words": [
+    
+  ],
+  "is_pending": true
+}

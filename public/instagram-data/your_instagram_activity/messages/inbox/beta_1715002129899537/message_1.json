@@ -1,0 +1,38 @@
+{
+  "participants": [
+    {
+      "name": "Beta"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "Beta",
+      "timestamp_ms": 1749382108109,
+      "content": "Liked a message",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1749374292445,
+      "content": "\u00e6\u00ad\u00a3\u00e8\u00a7\u00a3\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00f0\u009f\u00a4\u00a3\n\n\u00e3\u0081\u00a7\u00e3\u0082\u0082\u00e6\u0083\u00b3\u00e5\u00ae\u009a\u00e3\u0081\u0097\u00e3\u0081\u00a6\u00e3\u0081\u0084\u00e3\u0081\u009f\u00e6\u00ad\u00a3\u00e8\u00a7\u00a3\u00e3\u0081\u00af\n\u00e5\u0085\u00a8\u00e3\u0081\u00a6\u00e3\u0083\u009c\u00e3\u0082\u00b4\u00e3\u0083\u00bc\u00e3\u0083\u00ab\u00e3\u0082\u00b9\u00e3\u0083\u00bc\u00e3\u0083\u0080\u00e3\u0083\u00b3\u00e3\u0081\u00ae\u00e3\u0082\u00b9\u00e3\u0083\u009d\u00e3\u0082\u00a2\u00e9\u0081\u00b8\u00e6\u008a\u009c\n\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00f0\u009f\u0099\u008c",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "Beta"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Beta",
+  "is_still_participant": true,
+  "thread_path": "inbox/beta_1715002129899537",
+  "magic_words": [
+    
+  ]
+}

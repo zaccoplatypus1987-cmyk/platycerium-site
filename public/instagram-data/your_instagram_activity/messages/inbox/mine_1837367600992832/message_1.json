@@ -1,0 +1,59 @@
+{
+  "participants": [
+    {
+      "name": "\u00e3\u0081\u00bf\u00e3\u0081\u00ad"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0081\u00bf\u00e3\u0081\u00ad",
+      "timestamp_ms": 1758716850828,
+      "content": "\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086\u00e3\u0081\u0094\u00e3\u0081\u0096\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00f0\u009f\u0099\u008c\u00f0\u009f\u008f\u00bb",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+        }
+      ],
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1758715438020,
+      "content": "\u00e3\u0081\u0093\u00e3\u0082\u0093\u00e3\u0081\u00b0\u00e3\u0082\u0093\u00e3\u0081\u00af\u00ef\u00bc\u0081\n\u00e3\u0081\u0093\u00e3\u0081\u00a1\u00e3\u0082\u0089\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00ef\u00bc\u0081",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1758715432603,
+      "content": "https://amzn.asia/d/eoDD69G",
+      "share": {
+        "link": "https://amzn.asia/d/eoDD69G",
+        "share_text": "https://amzn.asia/d/eoDD69G"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0081\u00bf\u00e3\u0081\u00ad",
+      "timestamp_ms": 1758630111290,
+      "content": "\u00e3\u0081\u0093\u00e3\u0082\u0093\u00e3\u0081\u00ab\u00e3\u0081\u00a1\u00e3\u0081\u00af\u00ef\u00bc\u0081\u00e3\u0081\u0093\u00e3\u0081\u00ae\u00e6\u009b\u00b2\u00e3\u0081\u0092\u00e3\u0082\u0089\u00e3\u0082\u008c\u00e3\u0082\u008b\u00e3\u0082\u00bd\u00e3\u0082\u00b1\u00e3\u0083\u0083\u00e3\u0083\u0088\u00e3\u0081\u00a9\u00e3\u0081\u0093\u00e3\u0081\u00ae\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00e3\u0081\u008b\u00ef\u00bc\u009f\u00ef\u00bc\u009f\u00ef\u00bc\u009f",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3727977572752542077"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e3\u0081\u00bf\u00e3\u0081\u00ad",
+  "is_still_participant": true,
+  "thread_path": "inbox/mine_1837367600992832",
+  "magic_words": [
+    
+  ]
+}

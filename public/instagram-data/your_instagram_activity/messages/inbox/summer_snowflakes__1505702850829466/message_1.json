@@ -1,0 +1,52 @@
+{
+  "participants": [
+    {
+      "name": "summer_snowflakes_"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1744532156441,
+      "content": "\u00e8\u00a6\u0097\u00e3\u0081\u0084\u00e3\u0081\u00a6\u00e3\u0081\u008a\u00e3\u0082\u008a\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e2\u0080\u00a6\u00f0\u009f\u0098\u0082",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "summer_snowflakes_",
+      "timestamp_ms": 1744504670403,
+      "content": "\u00e8\u00a6\u0097\u00e3\u0081\u0084\u00e3\u0081\u00a6\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0081\u00ad\u00e2\u0080\u00a6\u00f0\u009f\u00a4\u00ad",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3609201447965379460"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "summer_snowflakes_",
+      "timestamp_ms": 1732519482620,
+      "content": "\u00f0\u009f\u0098\u0082",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1732546405
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3508401768676398099"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "summer_snowflakes_",
+  "is_still_participant": true,
+  "thread_path": "inbox/summer_snowflakes__1505702850829466",
+  "magic_words": [
+    
+  ]
+}

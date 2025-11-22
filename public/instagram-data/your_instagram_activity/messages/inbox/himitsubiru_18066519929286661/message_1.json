@@ -1,0 +1,33 @@
+{
+  "participants": [
+    {
+      "name": "\u00e3\u0081\u00b2\u00e3\u0081\u00bf\u00e3\u0081\u00a4\u00e3\u0083\u0093\u00e3\u0083\u00bc\u00e3\u0083\u00ab"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0081\u00b2\u00e3\u0081\u00bf\u00e3\u0081\u00a4\u00e3\u0083\u0093\u00e3\u0083\u00bc\u00e3\u0083\u00ab",
+      "timestamp_ms": 1749508001789,
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1749474399961,
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3651178317132795424"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "\u00e3\u0081\u00b2\u00e3\u0081\u00bf\u00e3\u0081\u00a4\u00e3\u0083\u0093\u00e3\u0083\u00bc\u00e3\u0083\u00ab",
+  "is_still_participant": true,
+  "thread_path": "inbox/himitsubiru_18066519929286661",
+  "magic_words": [
+    
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "story_activities_emoji_sliders": [
+    {
+      "title": "bikaku_holic",
+      "string_list_data": [
+        {
+          "value": "100",
+          "timestamp": 1752564558
+        }
+      ]
+    },
+    {
+      "title": "d_tsuge",
+      "string_list_data": [
+        {
+          "value": "100",
+          "timestamp": 1739705882
+        }
+      ]
+    },
+    {
+      "title": "nari_plants",
+      "string_list_data": [
+        {
+          "value": "100",
+          "timestamp": 1738750277
+        }
+      ]
+    }
+  ]
+}

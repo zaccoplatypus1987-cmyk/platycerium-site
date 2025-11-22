@@ -1,0 +1,35 @@
+{
+  "participants": [
+    {
+      "name": "dog.keeper"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "dog.keeper",
+      "timestamp_ms": 1733041384287,
+      "content": "\u00f0\u009f\u0098\u0082",
+      "reactions": [
+        {
+          "reaction": "\u00e2\u009d\u00a4",
+          "actor": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+          "timestamp": 1733062707
+        }
+      ],
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3513309833058043670"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "dog.keeper",
+  "is_still_participant": true,
+  "thread_path": "inbox/dogkeeper_18009994637286661",
+  "magic_words": [
+    
+  ]
+}

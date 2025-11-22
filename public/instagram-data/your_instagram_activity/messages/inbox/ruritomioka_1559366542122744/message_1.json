@@ -1,0 +1,45 @@
+{
+  "participants": [
+    {
+      "name": "Ruri  Tomioka"
+    },
+    {
+      "name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c"
+    }
+  ],
+  "messages": [
+    {
+      "sender_name": "\u00e3\u0082\u00b8\u00e3\u0082\u00b5\u00e3\u0082\u00af\u00e3\u0083\u009c",
+      "timestamp_ms": 1748077825257,
+      "content": "\u00e3\u0081\u0082\u00e3\u0082\u008a\u00e3\u0081\u008c\u00e3\u0081\u00a8\u00e3\u0081\u0086\u00e3\u0081\u0094\u00e3\u0081\u0096\u00e3\u0081\u0084\u00e3\u0081\u00be\u00e3\u0081\u0099\u00f0\u009f\u0098\u0086",
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Ruri  Tomioka",
+      "timestamp_ms": 1748055478550,
+      "content": "\u00e3\u0082\u00b3\u00e3\u0083\u00a1\u00e3\u0083\u00b3\u00e3\u0083\u0088\u00e5\u00a4\u00b1\u00e7\u00a4\u00bc\u00e3\u0081\u0084\u00e3\u0081\u009f\u00e3\u0081\u0097\u00e3\u0081\u00be\u00e3\u0081\u0099\u00e3\u0080\u0082\n\u00e3\u0081\u0094\u00e3\u0082\u0081\u00e3\u0082\u0093\u00e3\u0081\u00aa\u00e3\u0081\u0095\u00e3\u0081\u0084\u00e3\u0080\u0081\u00e6\u00ad\u00af\u00e7\u00a3\u00a8\u00e3\u0081\u008d\u00e4\u00b8\u00ad\u00e3\u0081\u00ab\u00e5\u0090\u00b9\u00e3\u0081\u008d\u00e3\u0081\u00be\u00e3\u0081\u0097\u00e3\u0081\u009f\u00f0\u009f\u00a4\u00a3",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3639221730205953024"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    },
+    {
+      "sender_name": "Ruri  Tomioka",
+      "timestamp_ms": 1748055409043,
+      "content": "\u00f0\u009f\u0098\u0082",
+      "share": {
+        "link": "https://instagram.com/stories/j39bo/3639221730205953024"
+      },
+      "is_geoblocked_for_viewer": false,
+      "is_unsent_image_by_messenger_kid_parent": false
+    }
+  ],
+  "title": "Ruri  Tomioka",
+  "is_still_participant": true,
+  "thread_path": "inbox/ruritomioka_1559366542122744",
+  "magic_words": [
+    
+  ]
+}
