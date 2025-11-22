@@ -18,6 +18,17 @@ class DetailApp {
         this.init();
     }
 
+    /**
+     * HTMLエスケープ関数（XSS対策）
+     * 悪意のあるコードが実行されないように、特殊文字を安全な形式に変換します
+     */
+    escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
     async init() {
         try {
             // Get post ID from URL
@@ -369,11 +380,15 @@ class DetailApp {
         // 品種パラメータをURLに含める
         const speciesParam = speciesId ? `&species=${encodeURIComponent(speciesId)}` : '';
 
+        // URLパラメータを安全にエスケープ（XSS対策）
+        const prevPostId = navData.prevPost ? encodeURIComponent(navData.prevPost.id) : '';
+        const nextPostId = navData.nextPost ? encodeURIComponent(navData.nextPost.id) : '';
+
         // ナビゲーションボタン（Dayバッジを中央に配置）
         const navigationHTML = `
             <div class="navigation-buttons mb-6">
                 ${navData.prevPost ? `
-                    <a href="/detail?id=${navData.prevPost.id}${speciesParam}" class="nav-btn">
+                    <a href="/detail?id=${prevPostId}${speciesParam}" class="nav-btn">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
@@ -387,7 +402,7 @@ class DetailApp {
                 </div>
 
                 ${navData.nextPost ? `
-                    <a href="/detail?id=${navData.nextPost.id}${speciesParam}" class="nav-btn">
+                    <a href="/detail?id=${nextPostId}${speciesParam}" class="nav-btn">
                         次の投稿
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -474,6 +489,11 @@ class DetailApp {
         const caption = this.post.title || '';
         const hashtags = [];  // ハッシュタグセクション削除
 
+        // XSS対策: テキストデータを安全にエスケープ
+        const safeTitle = this.escapeHtml(title);
+        const safeDate = this.escapeHtml(date);
+        const safeCaption = this.escapeHtml(this.formatCaption(caption));
+
         container.innerHTML = `
             <article class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <!-- Image Section -->
@@ -490,18 +510,18 @@ class DetailApp {
                 <!-- Content Section -->
                 <div class="p-6 md:p-8">
                     <div class="mb-6">
-                        <h1 class="text-3xl md:text-4xl font-bold text-primary mb-3">${title}</h1>
+                        <h1 class="text-3xl md:text-4xl font-bold text-primary mb-3">${safeTitle}</h1>
                         <p class="text-gray-500 flex items-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                             </svg>
-                            ${date}
+                            ${safeDate}
                         </p>
                     </div>
 
                     <!-- Caption -->
                     <div class="mb-6 prose max-w-none">
-                        <div class="text-gray-700 whitespace-pre-wrap">${this.formatCaption(caption)}</div>
+                        <div class="text-gray-700 whitespace-pre-wrap">${safeCaption}</div>
                     </div>
 
                     <!-- Back Button -->
