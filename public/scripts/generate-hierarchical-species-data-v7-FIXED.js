@@ -569,10 +569,39 @@ function exportLowConfidenceCSV(lowConfidencePosts) {
 }
 
 /**
+ * 既存のdisplayNameを読み込んで保護する
+ */
+function loadExistingDisplayNames() {
+    const existingDisplayNames = new Map();
+
+    try {
+        if (fs.existsSync(OUTPUT_INDEX)) {
+            const existingIndex = JSON.parse(fs.readFileSync(OUTPUT_INDEX, 'utf-8'));
+
+            // speciesセクションから読み込み
+            if (existingIndex.species) {
+                existingIndex.species.forEach(species => {
+                    existingDisplayNames.set(species.id, species.displayName);
+                });
+            }
+
+            console.log(`📋 既存のdisplayName ${existingDisplayNames.size}件を読み込みました（保護対象）\n`);
+        }
+    } catch (err) {
+        console.warn('⚠️ 既存のインデックスファイルの読み込みに失敗（新規作成）');
+    }
+
+    return existingDisplayNames;
+}
+
+/**
  * メイン処理
  */
 async function main() {
     console.log('🏗️  階層構造品種データ生成開始（v7 品質検査官による修正版 + P0修正v2）\n');
+
+    // 【追加】既存のdisplayNameを読み込み
+    const existingDisplayNames = loadExistingDisplayNames();
 
     // データ読み込み
     const postsData = JSON.parse(fs.readFileSync(POSTS_FILE, 'utf-8'));
@@ -693,57 +722,68 @@ async function main() {
             }
         }
 
-        // 【P0修正v2】表示名の決定 - mainSpeciesと一致するタイトルを優先
-        let representativeTitle = tag;  // デフォルトはタグ
+        // 【P0修正v2+保護ロジック追加】表示名の決定
+        // 既存のdisplayNameがあれば、それを使用（変更しない）
+        let representativeTitle = existingDisplayNames.get(tagId);
 
-        // 全投稿のキャプション先頭行を収集
-        const firstLines = data.posts
-            .map(p => p.caption?.split('\n')[0].trim())
-            .filter(line => line && line.length > 0);
+        if (representativeTitle) {
+            // 既存のdisplayNameを保護
+            console.log(`🔒 displayName保護: ${tagId} = "${representativeTitle}"`);
+        } else {
+            // 新規の種の場合のみ、キャプションから抽出
+            representativeTitle = tag;  // デフォルトはタグ
 
-        // まず、投票で決まったmainSpeciesと一致するタイトルを抽出
-        const matchingLines = [];
-        if (determinedMainSpecies) {
-            for (const line of firstLines) {
-                const lineMainSpecies = detectMainSpecies(line, data.posts[0]?.hashtags || []);
-                if (lineMainSpecies === determinedMainSpecies) {
-                    matchingLines.push(line);
+            // 全投稿のキャプション先頭行を収集
+            const firstLines = data.posts
+                .map(p => p.caption?.split('\n')[0].trim())
+                .filter(line => line && line.length > 0);
+
+            // まず、投票で決まったmainSpeciesと一致するタイトルを抽出
+            const matchingLines = [];
+            if (determinedMainSpecies) {
+                for (const line of firstLines) {
+                    const lineMainSpecies = detectMainSpecies(line, data.posts[0]?.hashtags || []);
+                    if (lineMainSpecies === determinedMainSpecies) {
+                        matchingLines.push(line);
+                    }
                 }
             }
-        }
 
-        if (matchingLines.length > 0) {
-            // mainSpeciesが一致するタイトルの中で最も頻度の高いものを選ぶ
-            const lineCounts = {};
-            matchingLines.forEach(line => {
-                lineCounts[line] = (lineCounts[line] || 0) + 1;
-            });
-            representativeTitle = Object.entries(lineCounts)
-                .sort((a, b) => b[1] - a[1])[0][0];
-        } else {
-            // mainSpeciesが一致するタイトルがない場合、従来のロジック
-            // 優先順位1: "P." または "Platycerium" で始まる行
-            const platyceriumLines = firstLines.filter(line =>
-                line.match(/^(P[\.\s]+|Platycerium\s+)/i)
-            );
-
-            if (platyceriumLines.length > 0) {
-                // 最も頻度の高いものを選ぶ
+            if (matchingLines.length > 0) {
+                // mainSpeciesが一致するタイトルの中で最も頻度の高いものを選ぶ
                 const lineCounts = {};
-                platyceriumLines.forEach(line => {
+                matchingLines.forEach(line => {
                     lineCounts[line] = (lineCounts[line] || 0) + 1;
                 });
                 representativeTitle = Object.entries(lineCounts)
                     .sort((a, b) => b[1] - a[1])[0][0];
-            } else if (firstLines.length > 0) {
-                // 優先順位2: 最も頻度の高い先頭行
-                const lineCounts = {};
-                firstLines.forEach(line => {
-                    lineCounts[line] = (lineCounts[line] || 0) + 1;
-                });
-                representativeTitle = Object.entries(lineCounts)
-                    .sort((a, b) => b[1] - a[1])[0][0];
+            } else {
+                // mainSpeciesが一致するタイトルがない場合、従来のロジック
+                // 優先順位1: "P." または "Platycerium" で始まる行
+                const platyceriumLines = firstLines.filter(line =>
+                    line.match(/^(P[\.\s]+|Platycerium\s+)/i)
+                );
+
+                if (platyceriumLines.length > 0) {
+                    // 最も頻度の高いものを選ぶ
+                    const lineCounts = {};
+                    platyceriumLines.forEach(line => {
+                        lineCounts[line] = (lineCounts[line] || 0) + 1;
+                    });
+                    representativeTitle = Object.entries(lineCounts)
+                        .sort((a, b) => b[1] - a[1])[0][0];
+                } else if (firstLines.length > 0) {
+                    // 優先順位2: 最も頻度の高い先頭行
+                    const lineCounts = {};
+                    firstLines.forEach(line => {
+                        lineCounts[line] = (lineCounts[line] || 0) + 1;
+                    });
+                    representativeTitle = Object.entries(lineCounts)
+                        .sort((a, b) => b[1] - a[1])[0][0];
+                }
             }
+
+            console.log(`🆕 新規displayName: ${tagId} = "${representativeTitle}"`);
         }
 
         // 【v7追加+P0修正】displayNameからmainSpeciesを再検証
