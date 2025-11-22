@@ -5,7 +5,8 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout title="投稿詳細 - ジサクボ's ジサクログ">
-  <style>
+  <!-- 動的に生成される要素のスタイル（JavaScriptで生成されるため is:global 必須） -->
+  <style is:global>
     .carousel-container {
       position: relative;
       overflow: hidden;
@@ -112,7 +113,11 @@ import Footer from '../components/Footer.astro';
       pointer-events: none;
     }
 
-    .hidden {
+    /* 特定の要素にのみhiddenを適用（Tailwind CSSとの競合を避けるため） */
+    #breadcrumb.hidden,
+    #error.hidden,
+    #post-detail.hidden,
+    .carousel-btn.hidden {
       display: none;
     }
 
