@@ -625,7 +625,7 @@ import Footer from '../../components/Footer.astro';
                             <img src="/images/bikakin-excited-01.png" alt="興奮中ビカキンちゃん" class="w-10 h-10"
                                  style="filter: drop-shadow(0 4px 12px rgba(249, 115, 22, 0.3));">
                             <h3 class="text-3xl font-black text-orange-700 tracking-tight">
-                                交配種
+                                交雑種
                             </h3>
                         </div>
                         <p class="text-gray-600 text-sm ml-2">
@@ -663,7 +663,7 @@ import Footer from '../../components/Footer.astro';
             'grande': 'P. grande',
             'wallichii': 'P. wallichii',
             'madagascariense': 'P. madagascariense',
-            'hybrid': '交配種 (Hybrids)'
+            'hybrid': '交雑種 (Hybrids)'
         };
 
         // グローバル状態
@@ -690,7 +690,7 @@ import Footer from '../../components/Footer.astro';
                         });
                     });
                 } else {
-                    // 交配種または園芸品種なし原種
+                    // 交雑種または園芸品種なし原種
                     allTiles.push({
                         id: item.id,
                         name: item.displayName || item.name || speciesNameMap[item.id],
@@ -739,7 +739,7 @@ import Footer from '../../components/Footer.astro';
                 const data = await response.json();
                 console.log('Loaded data:', data);
 
-                // hierarchy配列から原種と交配種を分離
+                // hierarchy配列から原種と交雑種を分離
                 const hierarchyData = data.hierarchy || [];
                 allSpeciesData = hierarchyData;
 
@@ -770,12 +770,12 @@ import Footer from '../../components/Footer.astro';
             const container = document.getElementById('species-chips');
             if (!container) return;
 
-            // 投稿がある原種のみ（純粋な原種のみ、交配種は除外）
+            // 投稿がある原種のみ（純粋な原種のみ、交雑種は除外）
             const pureSpecies = hierarchyData.filter(item =>
                 item.type === 'pure' && item.totalPosts > 0
             );
 
-            // 交配種があるかチェック
+            // 交雑種があるかチェック
             const hasHybrids = hierarchyData.some(item => item.type === 'hybrid');
 
             // チップHTML生成
@@ -804,13 +804,13 @@ import Footer from '../../components/Footer.astro';
                 `);
             });
 
-            // 「交配種」チップ
+            // 「交雑種」チップ
             if (hasHybrids) {
                 chips.push(`
                     <button class="filter-chip px-4 py-2 border-2 border-emerald-500 rounded-full text-sm font-semibold text-gray-700 transition-all whitespace-nowrap"
                             data-category="hybrid"
                             onclick="selectCategory('hybrid', event)">
-                        交配種
+                        交雑種
                     </button>
                 `);
             }
@@ -859,10 +859,10 @@ import Footer from '../../components/Footer.astro';
         // カテゴリ表示
         function displayCategory(category) {
             if (category === 'all') {
-                // すべて：原種カードと交配種グループカードを表示
+                // すべて：原種カードと交雑種グループカードを表示
                 renderAllCategories();
             } else if (category === 'hybrid') {
-                // 交配種：全交配種の園芸品種カードを表示
+                // 交雑種：全交雑種の園芸品種カードを表示
                 renderHybridSubspecies();
             } else {
                 // 特定の原種：その原種の園芸品種カードを表示
@@ -873,7 +873,7 @@ import Footer from '../../components/Footer.astro';
             updateStats(category);
         }
 
-        // すべてのカテゴリを表示（原種カード + 交配種グループカード）
+        // すべてのカテゴリを表示（原種カード + 交雑種グループカード）
         function renderAllCategories() {
             const pureSection = document.getElementById('pure-species-section');
             const hybridSection = document.getElementById('hybrid-species-section');
@@ -891,7 +891,7 @@ import Footer from '../../components/Footer.astro';
                 pureSection.classList.add('hidden');
             }
 
-            // 交配種グループカード表示
+            // 交雑種グループカード表示
             if (hybridSpecies.length > 0) {
                 hybridGrid.innerHTML = createHybridGroupCard(hybridSpecies);
                 hybridSection.classList.remove('hidden');
@@ -900,7 +900,7 @@ import Footer from '../../components/Footer.astro';
             }
         }
 
-        // 交配種の園芸品種カードを表示
+        // 交雑種の園芸品種カードを表示
         function renderHybridSubspecies() {
             const pureSection = document.getElementById('pure-species-section');
             const hybridSection = document.getElementById('hybrid-species-section');
@@ -909,7 +909,7 @@ import Footer from '../../components/Footer.astro';
             const hybridSpecies = allSpeciesData.filter(item => item.type === 'hybrid');
 
             if (hybridSpecies.length > 0) {
-                // 交配種を園芸品種カードとして表示
+                // 交雑種を園芸品種カードとして表示
                 const subspeciesData = hybridSpecies.map(hybrid => {
                     return {
                         id: hybrid.id,
@@ -930,7 +930,7 @@ import Footer from '../../components/Footer.astro';
                 pureGrid.innerHTML = cards;
                 pureSection.classList.remove('hidden');
             } else {
-                pureGrid.innerHTML = '<p class="text-gray-600 col-span-full text-center py-12">交配種が見つかりませんでした</p>';
+                pureGrid.innerHTML = '<p class="text-gray-600 col-span-full text-center py-12">交雑種が見つかりませんでした</p>';
                 pureSection.classList.remove('hidden');
             }
 
@@ -970,7 +970,7 @@ import Footer from '../../components/Footer.astro';
             } else if (category === 'hybrid') {
                 const hybridSpecies = allSpeciesData.filter(item => item.type === 'hybrid');
                 const totalPosts = hybridSpecies.reduce((sum, item) => sum + (item.totalPosts || 0), 0);
-                statsElement.textContent = `交配種 / Hybrids - ${hybridSpecies.length}品種 / ${totalPosts}件`;
+                statsElement.textContent = `交雑種 / Hybrids - ${hybridSpecies.length}品種 / ${totalPosts}件`;
             } else {
                 const species = allSpeciesData.find(item => item.id === category);
                 if (species) {
@@ -1027,14 +1027,14 @@ import Footer from '../../components/Footer.astro';
             `;
         }
 
-        // 交配種グループカードを生成
+        // 交雑種グループカードを生成
         function createHybridGroupCard(allHybrids) {
             if (allHybrids.length === 0) return '';
 
             // 統計情報を集計
             const totalHybridCount = allHybrids.length;
 
-            // 代表画像を選択（投稿数が最も多い交配種の画像）
+            // 代表画像を選択（投稿数が最も多い交雑種の画像）
             const representativeHybrid = allHybrids.reduce((max, hybrid) =>
                 (hybrid.totalPosts || 0) > (max.totalPosts || 0) ? hybrid : max
             , allHybrids[0]);
@@ -1048,13 +1048,13 @@ import Footer from '../../components/Footer.astro';
                 <div class="species-card pure-species-card bg-white rounded-lg shadow-md overflow-hidden fade-in"
                      onclick="selectCategory('hybrid', event)">
                     <img src="${imageSrc}"
-                         alt="交配種 / Hybrids"
+                         alt="交雑種 / Hybrids"
                          class="species-thumbnail"
                          loading="lazy"
                          onerror="this.src='/images/placeholder-leaf.svg'">
                     <div class="species-card-content p-4">
                         <h3 class="text-lg font-bold text-forest-dark mb-2">
-                            交配種 / Hybrids
+                            交雑種 / Hybrids
                         </h3>
                         <p class="text-sm text-gray-500">
                             ${totalHybridCount}品種
@@ -1128,7 +1128,7 @@ import Footer from '../../components/Footer.astro';
 
             // hashに該当するカテゴリを選択して表示
             if (hash === 'hybrid') {
-                // 交配種セクションまでスクロール
+                // 交雑種セクションまでスクロール
                 // カテゴリチップをアクティブに
                 const chipElement = document.querySelector(`[data-category="hybrid"]`);
                 if (chipElement) {

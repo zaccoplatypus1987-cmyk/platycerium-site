@@ -164,7 +164,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       'grande': 'グランデ',
       'wallichii': 'ワリチー',
       'madagascariense': 'マダガスカリエンセ',
-      'hybrid': '交配種'
+      'hybrid': '交雑種'
     };
 
     // URLパラメータから原種IDを取得
@@ -205,7 +205,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         const data = await response.json();
         console.log('Loaded hierarchy data:', data);
 
-        // 交配種の場合
+        // 交雑種の場合
         if (parentId === 'hybrid') {
           await loadHybridSpecies(data);
           return;
@@ -267,7 +267,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     }
 
     /**
-     * 交配種一覧を表示
+     * 交雑種一覧を表示
      */
     async function loadHybridSpecies(data) {
       const loading = document.getElementById('loading');
@@ -279,13 +279,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       const parentDescription = document.getElementById('parent-description');
       const breadcrumbCurrent = document.getElementById('breadcrumb-current');
 
-      // hierarchy配列から交配種を抽出
+      // hierarchy配列から交雑種を抽出
       const hybridSpecies = data.hierarchy.filter(item => item.type === 'hybrid');
 
       if (hybridSpecies.length === 0) {
         subspeciesGrid.innerHTML = `
           <div class="col-span-full text-center py-12">
-            <p class="text-gray-500 text-lg">交配種はまだ登録されていません</p>
+            <p class="text-gray-500 text-lg">交雑種はまだ登録されていません</p>
             <a href="/gallery/" class="inline-block mt-4 text-forest-mid hover:text-forest-dark transition-colors">
               品種一覧に戻る
             </a>
@@ -300,15 +300,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       const totalPosts = hybridSpecies.reduce((sum, item) => sum + (item.totalPosts || 0), 0);
 
       // ヘッダー情報を更新
-      parentTitle.textContent = '交配種の園芸品種';
+      parentTitle.textContent = '交雑種の園芸品種';
       parentSubtitle.textContent = 'Hybrids';
       parentDescription.textContent = `${hybridSpecies.length}品種 / ${totalPosts}件の投稿`;
-      breadcrumbCurrent.textContent = '交配種 / Hybrids';
+      breadcrumbCurrent.textContent = '交雑種 / Hybrids';
 
       // ページタイトル更新
-      document.title = '交配種の園芸品種 - Platycerium Collection';
+      document.title = '交雑種の園芸品種 - Platycerium Collection';
 
-      // 交配種カードを生成（subspeciesと同じ形式）
+      // 交雑種カードを生成（subspeciesと同じ形式）
       const hybridCards = hybridSpecies.map(hybrid => {
         const linkUrl = `/gallery/detail?id=${hybrid.id}`;
         const imageSrc = hybrid.latestImage
