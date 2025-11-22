@@ -1,7 +1,7 @@
 {
   "species": {
     "id": "ジサクボシザーハンズ",
-    "mainSpecies": null,
+    "mainSpecies": "willinckii",
     "tag": "#ジサクボシザーハンズ",
     "displayName": "P.willinckii scissor hands",
     "count": 10,

@@ -1,7 +1,7 @@
 {
   "species": {
     "id": "ジサクボフィッシュボーン",
-    "mainSpecies": null,
+    "mainSpecies": "willinckii",
     "tag": "#ジサクボフィッシュボーン",
     "displayName": "P.willinckii fishbone",
     "count": 7,

@@ -1,7 +1,7 @@
 {
   "species": {
     "id": "ジサクボトバリ",
-    "mainSpecies": null,
+    "mainSpecies": "willinckii",
     "tag": "#ジサクボトバリ",
     "displayName": "P.willinckii tobari",
     "count": 6,
