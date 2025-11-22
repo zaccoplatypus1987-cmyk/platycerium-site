@@ -183,7 +183,7 @@
       "id": "ジサクボvp16",
       "tag": "#ジサクボvp16",
       "mainSpecies": "veitchii",
-      "displayName": "ベイチーワイルドvp16",
+      "displayName": "P.veitchii wild vp16",
       "count": 33,
       "file": "ジサクボvp16.json",
       "latestImage": "instagram-data/media/posts/202404/18054474895590695.jpg",
@@ -213,7 +213,7 @@
       "id": "ジサクボスーダン",
       "tag": "#ジサクボスーダン",
       "mainSpecies": "willinckii",
-      "displayName": "ボゴールスーダン",
+      "displayName": "P.willinckii bogor suddan",
       "count": 31,
       "file": "ジサクボスーダン.json",
       "latestImage": "instagram-data/media/posts/202402/17984730317466460.jpg",
@@ -413,7 +413,7 @@
       "id": "ジサクボjgs",
       "tag": "#ジサクボjgs",
       "mainSpecies": "willinckii",
-      "displayName": "JGs",
+      "displayName": "P.willinckii jade girl sporeling #1",
       "count": 14,
       "file": "ジサクボjgs.json",
       "latestImage": "instagram-data/media/posts/202306/18253128391087729.jpg",
@@ -463,7 +463,7 @@
       "id": "ジサクボjgs2",
       "tag": "#ジサクボjgs2",
       "mainSpecies": "willinckii",
-      "displayName": "JGs",
+      "displayName": "P.willinckii jade girl sporeling #2",
       "count": 10,
       "file": "ジサクボjgs2.json",
       "latestImage": "instagram-data/media/posts/202401/18011173556486932.jpg",
@@ -543,7 +543,7 @@
       "id": "ジサクボjgs6",
       "tag": "#ジサクボjgs6",
       "mainSpecies": null,
-      "displayName": "P.willinckii jade girl sporeling",
+      "displayName": "P.willinckii jade girl sporeling #6",
       "count": 8,
       "file": "ジサクボjgs6.json",
       "latestImage": "instagram-data/media/posts/202405/18017697422195233.jpg",
@@ -553,7 +553,7 @@
       "id": "ジサクボars4",
       "tag": "#ジサクボars4",
       "mainSpecies": "veitchii",
-      "displayName": "アーバンリバー胞子培養＃4",
+      "displayName": "P.veitchii auburn river胞子培養＃4",
       "count": 8,
       "file": "ジサクボars4.json",
       "latestImage": "instagram-data/media/posts/202401/17953838012727003.jpg",
@@ -653,7 +653,7 @@
       "id": "ジサクボjgs4",
       "tag": "#ジサクボjgs4",
       "mainSpecies": null,
-      "displayName": "P.willinckii jade girl sporeling",
+      "displayName": "P.willinckii jade girl sporeling #4",
       "count": 4,
       "file": "ジサクボjgs4.json",
       "latestImage": "instagram-data/media/posts/202401/17991029759591579.jpg",
@@ -663,7 +663,7 @@
       "id": "ジサクボjgs3",
       "tag": "#ジサクボjgs3",
       "mainSpecies": "willinckii",
-      "displayName": "JGs",
+      "displayName": "P.willinckii jade girl sporeling #3",
       "count": 4,
       "file": "ジサクボjgs3.json",
       "latestImage": "instagram-data/media/posts/202308/17968260380541351.jpg",
@@ -723,7 +723,7 @@
       "id": "ジサクボjgs5",
       "tag": "#ジサクボjgs5",
       "mainSpecies": null,
-      "displayName": "P.willinckii jade girl sporeling",
+      "displayName": "P.willinckii jade girl sporeling #5",
       "count": 2,
       "file": "ジサクボjgs5.json",
       "latestImage": "instagram-data/media/posts/202306/17988939695119625.jpg",
@@ -884,7 +884,7 @@
         {
           "id": "ジサクボスーダン",
           "tag": "#ジサクボスーダン",
-          "displayName": "ボゴールスーダン",
+          "displayName": "P.willinckii bogor suddan",
           "count": 31,
           "file": "ジサクボスーダン.json",
           "latestImage": "instagram-data/media/posts/202402/17984730317466460.jpg"
@@ -932,7 +932,7 @@
         {
           "id": "ジサクボjgs",
           "tag": "#ジサクボjgs",
-          "displayName": "JGs",
+          "displayName": "P.willinckii jade girl sporeling #1",
           "count": 14,
           "file": "ジサクボjgs.json",
           "latestImage": "instagram-data/media/posts/202306/18253128391087729.jpg"
@@ -940,7 +940,7 @@
         {
           "id": "ジサクボjgs2",
           "tag": "#ジサクボjgs2",
-          "displayName": "JGs",
+          "displayName": "P.willinckii jade girl sporeling #2",
           "count": 10,
           "file": "ジサクボjgs2.json",
           "latestImage": "instagram-data/media/posts/202401/18011173556486932.jpg"
@@ -964,7 +964,7 @@
         {
           "id": "ジサクボjgs3",
           "tag": "#ジサクボjgs3",
-          "displayName": "JGs",
+          "displayName": "P.willinckii jade girl sporeling #3",
           "count": 4,
           "file": "ジサクボjgs3.json",
           "latestImage": "instagram-data/media/posts/202308/17968260380541351.jpg"
@@ -998,7 +998,7 @@
         {
           "id": "ジサクボvp16",
           "tag": "#ジサクボvp16",
-          "displayName": "ベイチーワイルドvp16",
+          "displayName": "P.veitchii wild vp16",
           "count": 33,
           "file": "ジサクボvp16.json",
           "latestImage": "instagram-data/media/posts/202404/18054474895590695.jpg"
@@ -1038,7 +1038,7 @@
         {
           "id": "ジサクボars4",
           "tag": "#ジサクボars4",
-          "displayName": "アーバンリバー胞子培養＃4",
+          "displayName": "P.veitchii auburn river胞子培養＃4",
           "count": 8,
           "file": "ジサクボars4.json",
           "latestImage": "instagram-data/media/posts/202401/17953838012727003.jpg"
