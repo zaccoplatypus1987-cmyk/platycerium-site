@@ -415,6 +415,33 @@ function detectMainSpecies(caption, hashtags = []) {
 }
 
 /**
+ * 【新規追加】displayNameから原種を自動判定
+ *
+ * ルール:
+ * - P.の後に原種名（willinckii, veitchii等）が来る → その原種
+ * - P.の後にいきなり固有名詞（Elsa, Ginka等）が来る → 交雑種（null）
+ *
+ * @param {string} displayName - 品種の表示名（例: "P.willinckii anne"）
+ * @returns {string|null} - 原種名（例: "willinckii"）またはnull（交雑種）
+ */
+function detectMainSpeciesFromDisplayName(displayName) {
+    if (!displayName) return null;
+
+    // P.の後に原種名が来るパターンをチェック
+    const pureSpeciesPattern = new RegExp(
+        `P[\\.\\s]+(${PURE_SPECIES.join('|')})\\b`,
+        'i'
+    );
+
+    const match = displayName.match(pureSpeciesPattern);
+    if (match && match[1]) {
+        return match[1].toLowerCase();
+    }
+
+    return null; // 交雑種
+}
+
+/**
  * 文字列の類似度を計算（正規化後）
  */
 function calculateSimilarity(str1, str2) {
@@ -786,39 +813,28 @@ async function main() {
             console.log(`🆕 新規displayName: ${tagId} = "${representativeTitle}"`);
         }
 
-        // 【v7追加+P0修正】displayNameからmainSpeciesを再検証
-        // hashtagsを渡すために最初の投稿のhashtagsを使用
-        const firstPostHashtags = data.posts[0]?.hashtags || [];
-        const displayNameMainSpecies = detectMainSpecies(representativeTitle, firstPostHashtags);
+        // 【v7追加+P0修正+新規修正】displayNameからmainSpeciesを再検証
+        // displayNameベースの判定関数を使用し、こちらを優先
+        const displayNameMainSpecies = detectMainSpeciesFromDisplayName(representativeTitle);
 
-        if (displayNameMainSpecies && displayNameMainSpecies !== determinedMainSpecies) {
-            console.warn(`⚠️ mainSpecies不整合検出: ${tag}`);
-            console.warn(`   投票結果: ${determinedMainSpecies || 'null'}`);
-            console.warn(`   displayName由来: ${displayNameMainSpecies}`);
-            console.warn(`   displayName: ${representativeTitle}`);
-            console.warn(`   → 投票結果のmainSpeciesを維持します（displayNameを再選択）\n`);
-
-            inconsistencyCount++;
-
-            // 【P0修正v2】投票結果を優先し、displayNameを再選択
-            // mainSpeciesが一致するタイトルを再度探す
-            const correctLines = [];
-            for (const line of firstLines) {
-                const lineMainSpecies = detectMainSpecies(line, firstPostHashtags);
-                if (lineMainSpecies === determinedMainSpecies) {
-                    correctLines.push(line);
-                }
+        if (displayNameMainSpecies !== determinedMainSpecies) {
+            if (displayNameMainSpecies && determinedMainSpecies) {
+                console.warn(`⚠️ mainSpecies不整合検出（displayName優先）: ${tag}`);
+                console.warn(`   投票結果: ${determinedMainSpecies}`);
+                console.warn(`   displayName由来: ${displayNameMainSpecies}`);
+                console.warn(`   displayName: ${representativeTitle}`);
+                console.warn(`   → displayNameベースの判定を採用: ${displayNameMainSpecies}\n`);
+                inconsistencyCount++;
+            } else if (displayNameMainSpecies && !determinedMainSpecies) {
+                console.log(`✅ mainSpecies修正: ${tag}`);
+                console.log(`   null → ${displayNameMainSpecies}（displayNameから検出）\n`);
+            } else if (!displayNameMainSpecies && determinedMainSpecies) {
+                console.log(`✅ mainSpecies修正: ${tag}`);
+                console.log(`   ${determinedMainSpecies} → null（交雑種判定）\n`);
             }
 
-            if (correctLines.length > 0) {
-                const lineCounts = {};
-                correctLines.forEach(line => {
-                    lineCounts[line] = (lineCounts[line] || 0) + 1;
-                });
-                representativeTitle = Object.entries(lineCounts)
-                    .sort((a, b) => b[1] - a[1])[0][0];
-                console.warn(`   → 修正後displayName: ${representativeTitle}\n`);
-            }
+            // displayNameベースの判定を優先
+            determinedMainSpecies = displayNameMainSpecies;
         }
 
         // 【v7追加】交配種の場合はmainSpecies = null
